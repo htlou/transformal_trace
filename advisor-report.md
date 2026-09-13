@@ -17,11 +17,13 @@ Neither compiler knows these cross-language relations. A translation may therefo
 
 On a difficult 192-case diagnostic benchmark, the resulting judge was much more reliable than asking the same model directly:
 
-| Method | Correct, counting abstentions as wrong | Cases with valid evidence | Real mismatches found |
+| Method | Accuracy | Mismatch precision | Mismatch recall |
 |---|---:|---:|---:|
-| Raw LLM | 59.90% | 76.56% | 80.00% |
-| Codex agent | 53.65% | 69.27% | 83.33% |
-| Transformal judge | **79.17%** | **95.31%** | **93.33%** |
+| Raw LLM | 59.90% | 46.15% | 80.00% |
+| Codex agent | 53.65% | 48.08% | 83.33% |
+| Transformal judge | **79.17%** | **48.28%** | **93.33%** |
+
+Here, a mismatch (`not_aligned`) is the positive class. Accuracy counts abstentions and invalid outputs as wrong; precision asks how many reported mismatches are real, while recall asks how many of the 30 real mismatches were found.
 
 The main conclusion is not that LLMs are poor at formal reasoning. The same models can be strong proof and implementation generators. The difficulty is that proof generation starts from a fixed statement, whereas semantic judging must first discover what the correct comparison should be.
 
