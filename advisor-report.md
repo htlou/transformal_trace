@@ -163,29 +163,18 @@ These are stable semantic-policy errors, not mainly random mistakes.
 
 ## 3. Why proof generation can succeed while semantic judging fails
 
-The two tasks place the model in different situations.
+Proof and implementation generation start from a fixed, machine-checkable
+goal. Compiler errors provide immediate local feedback, allowing the model to
+repair its work. Semantic judging must instead infer the cross-language
+specification: which inputs correspond, what output is observable, and which
+interface must be preserved. A wrong relation can still produce two compiling
+repositories, so neither compiler exposes the mistake.
 
-First, proof generation has a fixed goal. Given a Lean proposition, the model
-searches for a proof term, and the kernel gives an exact success or failure
-signal. Semantic judging must first infer the valid input relation, observable
-output, and intended public interface. A model can reason perfectly after
-choosing the wrong relation.
-
-Second, implementation has dense local feedback. Unknown names, type errors,
-unsolved goals, and failed builds point to specific repairs. A wrong
-cross-language relation can still produce two programs that compile. Neither
-compiler can report that the programs were called on non-corresponding values.
-
-Third, implementation rewards convenient target-language choices. Replacing a
-rich Coq structure with a simpler Lean proposition may make every downstream
-proof easier. That same simplification can erase data or proof-relevant
-information that the source exposes. Successful proof generation then confirms
-the weakened target statement, not the fidelity of the translation.
-
-Finally, positive and negative evidence are asymmetric. One valid
-counterexample can refute universal alignment. Three agreeing examples cannot
-prove it. Positive judgments still require structural reasoning about the
-declarations and their dependencies; otherwise the judge should abstain.
+Target-language simplifications deepen the problem: replacing a rich Coq
+structure with a simpler Lean proposition may make proofs easier while erasing
+data or proof-relevant information. Moreover, one counterexample can refute
+alignment, but a few agreeing examples cannot prove it. Successful generation
+therefore validates the Lean artifact, not its fidelity to the source.
 
 ## 4. What happened on translated repositories?
 
