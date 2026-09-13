@@ -53,13 +53,11 @@ The judge can also recover this metadata on its own when it is used outside the 
 
 The current program-synthesis support consists of increasingly strong forms of extra information around the LLM:
 
-| Layer | What it contributes | Typical failure addressed |
-|---|---|---|
-| Compiler grounding | Exact types, arguments, dependencies, and interface differences | Comparing the wrong declarations or arguments |
-| Symbolic exposure | Reduced Coq terms, Lean equations, and simple branch conditions | Missing behavior hidden behind helper definitions |
-| Bounded witness generation | Values near branch boundaries, rounding probes, and typed call skeletons | Missing edge cases or constructing invalid inputs |
-| Deterministic validation | Binding, trust, compiler, and observed-output checks | Tests that compile but do not establish the claimed result |
-| Diagnostic repair | The failed program and exact compiler error | Incomplete or malformed counterexamples |
+- **Compiler grounding:** supplies exact types, arguments, dependencies, and interface differences, preventing comparisons between the wrong declarations or arguments.
+- **Symbolic exposure:** reduces Coq terms and Lean equations and exposes simple branch conditions, revealing behavior hidden behind helper definitions.
+- **Bounded witness generation:** supplies values near branch boundaries, rounding probes, and typed call skeletons, helping the LLM find edge cases without constructing invalid inputs.
+- **Deterministic validation:** checks bindings, trust assumptions, compiler results, and observed outputs, rejecting tests that compile but do not establish the claimed result.
+- **Diagnostic repair:** returns the failed program and exact compiler error, helping repair incomplete or malformed counterexamples.
 
 These are tools used to support synthesis; Codex itself is not one of the layers. The current symbolic component is deliberately bounded. It is not a general symbolic executor or a complete equivalence checker.
 
