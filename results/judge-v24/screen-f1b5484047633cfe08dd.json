@@ -1,0 +1,961 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "command": {
+        "command": [
+          "bwrap",
+          "--die-with-parent",
+          "--unshare-user",
+          "--unshare-ipc",
+          "--unshare-pid",
+          "--unshare-uts",
+          "--unshare-cgroup",
+          "--ro-bind",
+          "/",
+          "/",
+          "--dev",
+          "/dev",
+          "--proc",
+          "/proc",
+          "--tmpfs",
+          "/tmp",
+          "--tmpfs",
+          "/mnt",
+          "--tmpfs",
+          "/srv/home/hantaolou/code/transformal",
+          "--tmpfs",
+          "/srv/home/hantaolou/.codex",
+          "--dir",
+          "/srv/home/hantaolou/code/transformal/pipeline",
+          "--dir",
+          "/srv/home/hantaolou/code/transformal/sources",
+          "--dir",
+          "/srv/home/hantaolou/code/transformal/pipeline/.tools",
+          "--dir",
+          "/srv/home/hantaolou/code/transformal/sources/flocq",
+          "--dir",
+          "/srv/home/hantaolou/code/transformal/pipeline/.tools/opam-root-reglang",
+          "--ro-bind",
+          "/srv/home/hantaolou/code/transformal/floatspec-pipeline",
+          "/srv/home/hantaolou/code/transformal/floatspec-pipeline",
+          "--ro-bind",
+          "/srv/home/hantaolou/code/transformal/pipeline/.tools/opam-root-reglang/reglang-coq-8.20",
+          "/srv/home/hantaolou/code/transformal/pipeline/.tools/opam-root-reglang/reglang-coq-8.20",
+          "--ro-bind",
+          "/srv/home/hantaolou/code/transformal/sources/flocq/src",
+          "/srv/home/hantaolou/code/transformal/sources/flocq/src",
+          "--bind",
+          "/tmp/transformal-blind-home-xbho_3br/home",
+          "/mnt/transformal-blind-home",
+          "--bind",
+          "/tmp/transformal-judge-03l4vh2c",
+          "/tmp/transformal-blind-work",
+          "--setenv",
+          "HOME",
+          "/mnt/transformal-blind-home",
+          "--setenv",
+          "CODEX_HOME",
+          "/mnt/transformal-blind-home/.codex",
+          "--setenv",
+          "TRANSFORMAL_BLIND_EVAL_ACTIVE",
+          "1",
+          "--setenv",
+          "PATH",
+          "/srv/home/hantaolou/code/transformal/pipeline/.tools/opam-root-reglang/reglang-coq-8.20/bin:/srv/home/hantaolou/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/hantaolou/.elan/bin:/home/hantaolou/.local/bin:/srv/home/hantaolou/.codex/tmp/arg0/codex-arg09WUqyi:/srv/home/hantaolou/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/hantaolou/.local/bin:/home/hantaolou/.elan/bin:/home/hantaolou/.local/bin:/srv/home/hantaolou/.local/bin:/home/hantaolou/.elan/bin:/srv/home/hantaolou/miniconda3/condabin:/home/hantaolou/.nvm/versions/node/v24.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+          "/srv/home/hantaolou/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/bin/codex",
+          "exec",
+          "--dangerously-bypass-approvals-and-sandbox",
+          "--config",
+          "features.unified_exec=false",
+          "--ephemeral",
+          "--skip-git-repo-check",
+          "--ignore-user-config",
+          "--cd",
+          "/srv/home/hantaolou/code/transformal/sources/flocq/src",
+          "--add-dir",
+          "/srv/home/hantaolou/code/transformal/floatspec-pipeline",
+          "--model",
+          "gpt-5.6-sol",
+          "--config",
+          "model_reasoning_effort=\"high\"",
+          "--output-schema",
+          "/tmp/transformal-blind-work/verdict-schema.json",
+          "--output-last-message",
+          "/tmp/transformal-blind-work/verdict.json",
+          "-"
+        ],
+        "returncode": 0,
+        "stderr": "\nEOF\" in /srv/home/hantaolou/code/transformal/floatspec-pipeline\nexec\n/bin/bash -lc \"/srv/home/hantaolou/code/transformal/pipeline/.tools/opam-root-reglang/reglang-coq-8.20/bin/coqtop -quiet -Q . Flocq <<'EOF'\nFrom Coq Require Import ZArith.\nFrom Flocq Require Import Core.FLT.\nOpen Scope Z_scope.\nExample flt_exp_below : FLT_exp (-10) 3 (-20) = -10 := eq_refl.\nExample flt_exp_at : FLT_exp (-10) 3 (-7) = -10 := eq_refl.\nExample flt_exp_above : FLT_exp (-10) 3 5 = 2 := eq_refl.\nPrint flt_exp_below.\nPrint flt_exp_at.\nPrint flt_exp_above.\nEOF\" in /srv/home/hantaolou/code/transformal/sources/flocq/src\n succeeded in 288ms:\n[Loading ML file ring_plugin.cmxs (using legacy method) ... done]\n[Loading ML file zify_plugin.cmxs (using legacy method) ... done]\n[Loading ML file micromega_core_plugin.cmxs (using legacy method) ... done]\n[Loading ML file micromega_plugin.cmxs (using legacy method) ... done]\n[Loading ML file btauto_plugin.cmxs (using legacy method) ... done]\n\nCoq < \nCoq < \nCoq < flt_exp_below is defined\n\nCoq < flt_exp_at is defined\n\nCoq < flt_exp_above is defined\n\nCoq < flt_exp_below = eq_refl\n     : FLT_exp (-10) 3 (-20) = -10\n\nCoq < flt_exp_at = eq_refl\n     : FLT_exp (-10) 3 (-7) = -10\n\nCoq < flt_exp_above = eq_refl\n     : FLT_exp (-10) 3 5 = 2\n\nCoq < \n\n succeeded in 3807ms:\ntheorem flt_exp_below : FloatSpec.Core.FLT.FLT_exp 3 (-10) (-20) = -10 :=\nEq.refl (FloatSpec.Core.FLT.FLT_exp 3 (-10) (-20))\ntheorem flt_exp_at : FloatSpec.Core.FLT.FLT_exp 3 (-10) (-7) = -10 :=\nEq.refl (FloatSpec.Core.FLT.FLT_exp 3 (-10) (-7))\ntheorem flt_exp_above : FloatSpec.Core.FLT.FLT_exp 3 (-10) 5 = 2 :=\nEq.refl (FloatSpec.Core.FLT.FLT_exp 3 (-10) 5)\n\nexec\n/bin/bash -lc \"lake env lean --stdin <<'EOF'\nimport FloatSpec.src.Core.FLT\nnamespace FLTExpBelowHarness\ntheorem observe : FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int) = (-10 : Int) := by rfl\nend FLTExpBelowHarness\nnamespace FLTExpAtHarness\ntheorem observe : FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int) = (-10 : Int) := by rfl\nend FLTExpAtHarness\nnamespace FLTExpAboveHarness\ntheorem observe : FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int) = (2 : Int) := by rfl\nend FLTExpAboveHarness\n#check FLTExpBelowHarness.observe\n#check FLTExpAtHarness.observe\n#check FLTExpAboveHarness.observe\nEOF\" in /srv/home/hantaolou/code/transformal/floatspec-pipeline\nexec\n/bin/bash -lc \"/srv/home/hantaolou/code/transformal/pipeline/.tools/opam-root-reglang/reglang-coq-8.20/bin/coqtop -quiet -Q . Flocq <<'EOF'\nFrom Coq Require Import ZArith.\nFrom Flocq Require Import Core.FLT.\nModule FLTExpBelowHarness.\nExample observe : FLT_exp ((-10)%Z) (3%Z) ((-20)%Z) = (-10)%Z := eq_refl.\nEnd FLTExpBelowHarness.\nModule FLTExpAtHarness.\nExample observe : FLT_exp ((-10)%Z) (3%Z) ((-7)%Z) = (-10)%Z := eq_refl.\nEnd FLTExpAtHarness.\nModule FLTExpAboveHarness.\nExample observe : FLT_exp ((-10)%Z) (3%Z) (5%Z) = (2%Z) := eq_refl.\nEnd FLTExpAboveHarness.\nCheck FLTExpBelowHarness.observe : FLT_exp ((-10)%Z) (3%Z) ((-20)%Z) = (-10)%Z.\nCheck FLTExpAtHarness.observe : FLT_exp ((-10)%Z) (3%Z) ((-7)%Z) = (-10)%Z.\nCheck FLTExpAboveHarness.observe : FLT_exp ((-10)%Z) (3%Z) (5%Z) = (2%Z).\nEOF\" in /srv/home/hantaolou/code/transformal/sources/flocq/src\n succeeded in 310ms:\n[Loading ML file ring_plugin.cmxs (using legacy method) ... done]\n[Loading ML file zify_plugin.cmxs (using legacy method) ... done]\n[Loading ML file micromega_core_plugin.cmxs (using legacy method) ... done]\n[Loading ML file micromega_plugin.cmxs (using legacy method) ... done]\n[Loading ML file btauto_plugin.cmxs (using legacy method) ... done]\n\nCoq < \nCoq < Interactive Module FLTExpBelowHarness started\n\nCoq < observe is defined\n\nCoq < Module FLTExpBelowHarness is defined\n\nCoq < Interactive Module FLTExpAtHarness started\n\nCoq < observe is defined\n\nCoq < Module FLTExpAtHarness is defined\n\nCoq < Interactive Module FLTExpAboveHarness started\n\nCoq < observe is defined\n\nCoq < Module FLTExpAboveHarness is defined\n\nCoq < FLTExpBelowHarness.observe : FLT_exp (-10) 3 (-20) = (-10)%Z\n     : FLT_exp (-10) 3 (-20) = (-10)%Z\n\nCoq < FLTExpAtHarness.observe : FLT_exp (-10) 3 (-7) = (-10)%Z\n     : FLT_exp (-10) 3 (-7) = (-10)%Z\n\nCoq < FLTExpAboveHarness.observe : FLT_exp (-10) 3 5 = 2%Z\n     : FLT_exp (-10) 3 5 = 2%Z\n\nCoq < \n\n succeeded in 3423ms:\nFLTExpBelowHarness.observe : FloatSpec.Core.FLT.FLT_exp 3 (-10) (-20) = -10\nFLTExpAtHarness.observe : FloatSpec.Core.FLT.FLT_exp 3 (-10) (-7) = -10\nFLTExpAboveHarness.observe : FloatSpec.Core.FLT.FLT_exp 3 (-10) 5 = 2\n\ncodex\n{\"alignment\":\"aligned\",\"compiler_surface_checks\":[],\"confidence\":0.99,\"counterexamples\":[],\"differences\":[\"The exported source argument order is `(emin, prec, e)`, whereas the target order is `(prec, emin, e)`; the role-preserving bridge swaps the first two arguments.\",\"Coq `Z` corresponds canonically to Lean `Int`.\",\"Neither the source Section variables `beta` and `prec_gt_0_` nor the target ambient `Prec_gt_0` instance occur in the exported definition type.\"],\"evidence\":[{\"description\":\"The source defines `FLT_exp e := Z.max (e - prec) emin`; compiler `Check`/`Print` gives `FLT_exp : Z -> Z -> Z -> Z` with arguments `(emin prec e)`.\",\"file\":\"Core/FLT.v\",\"line\":41,\"side\":\"source\"},{\"description\":\"The target defines `FLT_exp (e : Int) := max (e - prec) emin`; its elaborated interface is `Int → Int → Int → Int` with arguments `(prec, emin, e)`.\",\"file\":\"FloatSpec/src/Core/FLT.lean\",\"line\":43,\"side\":\"target\"}],\"examples\":[{\"id\":\"below-lower-bound\",\"input_alignment\":{\"reason\":\"Both inputs denote `emin = -10`, `prec = 3`, and `e = -20`; the argument permutation follows the declarations' semantic parameter roles.\",\"status\":\"same\"},\"output_alignment\":{\"reason\":\"Both invocations return the canonical integer `-10`, selecting `emin` because `e - prec = -23 < -10`.\",\"status\":\"same\"},\"source\":{\"input\":{\"description\":\"Arguments `(emin, prec, e)` below the lower-bound transition.\",\"expression\":\"((-10)%Z) (3%Z) ((-20)%Z)\"},\"output\":{\"description\":\"The instantiated input/output equality.\",\"expression\":\"FLT_exp ((-10)%Z) (3%Z) ((-20)%Z) = (-10)%Z\"},\"run\":{\"claim\":\"FLT_exp ((-10)%Z) (3%Z) ((-20)%Z) = (-10)%Z\",\"code\":\"From Coq Require Import ZArith.\\nFrom Flocq Require Import Core.FLT.\\nModule FLTExpBelowHarness.\\nExample observe : FLT_exp ((-10)%Z) (3%Z) ((-20)%Z) = (-10)%Z := eq_refl.\\nEnd FLTExpBelowHarness.\",\"entrypoint\":\"FLTExpBelowHarness.observe\",\"expected_stdout\":null,\"invocation\":\"FLT_exp ((-10)%Z) (3%Z) ((-20)%Z)\",\"language\":\"coq\",\"mode\":\"prove\"},\"subject\":\"FLT_exp\"},\"target\":{\"input\":{\"description\":\"Corresponding arguments `(prec, emin, e)` below the lower-bound transition.\",\"expression\":\"(3 : Int) (-10 : Int) (-20 : Int)\"},\"output\":{\"description\":\"The instantiated input/output equality.\",\"expression\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int) = (-10 : Int)\"},\"run\":{\"claim\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int) = (-10 : Int)\",\"code\":\"import FloatSpec.src.Core.FLT\\nnamespace FLTExpBelowHarness\\ntheorem observe : FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int) = (-10 : Int) := by\\n  rfl\\nend FLTExpBelowHarness\",\"entrypoint\":\"FLTExpBelowHarness.observe\",\"expected_stdout\":null,\"invocation\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int)\",\"language\":\"lean\",\"mode\":\"prove\"},\"subject\":\"FloatSpec.Core.FLT.FLT_exp\"}},{\"id\":\"at-lower-bound\",\"input_alignment\":{\"reason\":\"Both inputs denote `emin = -10`, `prec = 3`, and `e = -7`; the source and target merely order `emin` and `prec` differently.\",\"status\":\"same\"},\"output_alignment\":{\"reason\":\"Both invocations return the canonical integer `-10` at the equality boundary `e - prec = emin`.\",\"status\":\"same\"},\"source\":{\"input\":{\"description\":\"Arguments `(emin, prec, e)` exactly at `e - prec = emin`.\",\"expression\":\"((-10)%Z) (3%Z) ((-7)%Z)\"},\"output\":{\"description\":\"The instantiated input/output equality.\",\"expression\":\"FLT_exp ((-10)%Z) (3%Z) ((-7)%Z) = (-10)%Z\"},\"run\":{\"claim\":\"FLT_exp ((-10)%Z) (3%Z) ((-7)%Z) = (-10)%Z\",\"code\":\"From Coq Require Import ZArith.\\nFrom Flocq Require Import Core.FLT.\\nModule FLTExpAtHarness.\\nExample observe : FLT_exp ((-10)%Z) (3%Z) ((-7)%Z) = (-10)%Z := eq_refl.\\nEnd FLTExpAtHarness.\",\"entrypoint\":\"FLTExpAtHarness.observe\",\"expected_stdout\":null,\"invocation\":\"FLT_exp ((-10)%Z) (3%Z) ((-7)%Z)\",\"language\":\"coq\",\"mode\":\"prove\"},\"subject\":\"FLT_exp\"},\"target\":{\"input\":{\"description\":\"Corresponding arguments `(prec, emin, e)` exactly at `e - prec = emin`.\",\"expression\":\"(3 : Int) (-10 : Int) (-7 : Int)\"},\"output\":{\"description\":\"The instantiated input/output equality.\",\"expression\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int) = (-10 : Int)\"},\"run\":{\"claim\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int) = (-10 : Int)\",\"code\":\"import FloatSpec.src.Core.FLT\\nnamespace FLTExpAtHarness\\ntheorem observe : FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int) = (-10 : Int) := by\\n  rfl\\nend FLTExpAtHarness\",\"entrypoint\":\"FLTExpAtHarness.observe\",\"expected_stdout\":null,\"invocation\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int)\",\"language\":\"lean\",\"mode\":\"prove\"},\"subject\":\"FloatSpec.Core.FLT.FLT_exp\"}},{\"id\":\"above-lower-bound\",\"input_alignment\":{\"reason\":\"Both inputs denote `emin = -10`, `prec = 3`, and `e = 5`, using the role-preserving argument permutation.\",\"status\":\"same\"},\"output_alignment\":{\"reason\":\"Both invocations return the canonical integer `2`, selecting `e - prec` because `2 > -10`.\",\"status\":\"same\"},\"source\":{\"input\":{\"description\":\"Arguments `(emin, prec, e)` above the lower-bound transition.\",\"expression\":\"((-10)%Z) (3%Z) (5%Z)\"},\"output\":{\"description\":\"The instantiated input/output equality.\",\"expression\":\"FLT_exp ((-10)%Z) (3%Z) (5%Z) = (2%Z)\"},\"run\":{\"claim\":\"FLT_exp ((-10)%Z) (3%Z) (5%Z) = (2%Z)\",\"code\":\"From Coq Require Import ZArith.\\nFrom Flocq Require Import Core.FLT.\\nModule FLTExpAboveHarness.\\nExample observe : FLT_exp ((-10)%Z) (3%Z) (5%Z) = (2%Z) := eq_refl.\\nEnd FLTExpAboveHarness.\",\"entrypoint\":\"FLTExpAboveHarness.observe\",\"expected_stdout\":null,\"invocation\":\"FLT_exp ((-10)%Z) (3%Z) (5%Z)\",\"language\":\"coq\",\"mode\":\"prove\"},\"subject\":\"FLT_exp\"},\"target\":{\"input\":{\"description\":\"Corresponding arguments `(prec, emin, e)` above the lower-bound transition.\",\"expression\":\"(3 : Int) (-10 : Int) (5 : Int)\"},\"output\":{\"description\":\"The instantiated input/output equality.\",\"expression\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int) = (2 : Int)\"},\"run\":{\"claim\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int) = (2 : Int)\",\"code\":\"import FloatSpec.src.Core.FLT\\nnamespace FLTExpAboveHarness\\ntheorem observe : FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int) = (2 : Int) := by\\n  rfl\\nend FLTExpAboveHarness\",\"entrypoint\":\"FLTExpAboveHarness.observe\",\"expected_stdout\":null,\"invocation\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int)\",\"language\":\"lean\",\"mode\":\"prove\"},\"subject\":\"FloatSpec.Core.FLT.FLT_exp\"}}],\"failure_categories\":[],\"interface_witness\":{\"compiler_validated\":true,\"explanation\":\"Compiler inspection establishes equal three-integer interfaces after the role-preserving permutation `(emin, prec, e) ↦ (prec, emin, e)`. The ambient radix and positivity assumptions are absent from both exported definition types, so the heuristic arity warning is rejected.\",\"kind\":null,\"source_interface\":\"FLT_exp : Z -> Z -> Z -> Z, with arguments (emin prec e)\",\"status\":\"not_applicable\",\"target_interface\":\"FloatSpec.Core.FLT.FLT_exp : Int -> Int -> Int -> Int, with arguments (prec emin e)\"},\"match_status\":\"confirmed\",\"source_id\":\"Core/FLT.v:FLT_exp:1184\",\"source_summary\":\"A total integer exponent function `max (e - prec) emin`, exported with arguments `(emin, prec, e)`.\",\"suggested_target\":null,\"target_disposition\":null,\"target_id\":\"FloatSpec/src/Core/FLT.lean:FLT_exp:43\",\"target_summary\":\"The corresponding total Lean integer exponent function `max (e - prec) emin`, exported with arguments `(prec, emin, e)`.\"}\ntokens used\n32,620\n",
+        "stdout": "{\"alignment\":\"aligned\",\"compiler_surface_checks\":[],\"confidence\":0.99,\"counterexamples\":[],\"differences\":[\"The exported source argument order is `(emin, prec, e)`, whereas the target order is `(prec, emin, e)`; the role-preserving bridge swaps the first two arguments.\",\"Coq `Z` corresponds canonically to Lean `Int`.\",\"Neither the source Section variables `beta` and `prec_gt_0_` nor the target ambient `Prec_gt_0` instance occur in the exported definition type.\"],\"evidence\":[{\"description\":\"The source defines `FLT_exp e := Z.max (e - prec) emin`; compiler `Check`/`Print` gives `FLT_exp : Z -> Z -> Z -> Z` with arguments `(emin prec e)`.\",\"file\":\"Core/FLT.v\",\"line\":41,\"side\":\"source\"},{\"description\":\"The target defines `FLT_exp (e : Int) := max (e - prec) emin`; its elaborated interface is `Int → Int → Int → Int` with arguments `(prec, emin, e)`.\",\"file\":\"FloatSpec/src/Core/FLT.lean\",\"line\":43,\"side\":\"target\"}],\"examples\":[{\"id\":\"below-lower-bound\",\"input_alignment\":{\"reason\":\"Both inputs denote `emin = -10`, `prec = 3`, and `e = -20`; the argument permutation follows the declarations' semantic parameter roles.\",\"status\":\"same\"},\"output_alignment\":{\"reason\":\"Both invocations return the canonical integer `-10`, selecting `emin` because `e - prec = -23 < -10`.\",\"status\":\"same\"},\"source\":{\"input\":{\"description\":\"Arguments `(emin, prec, e)` below the lower-bound transition.\",\"expression\":\"((-10)%Z) (3%Z) ((-20)%Z)\"},\"output\":{\"description\":\"The instantiated input/output equality.\",\"expression\":\"FLT_exp ((-10)%Z) (3%Z) ((-20)%Z) = (-10)%Z\"},\"run\":{\"claim\":\"FLT_exp ((-10)%Z) (3%Z) ((-20)%Z) = (-10)%Z\",\"code\":\"From Coq Require Import ZArith.\\nFrom Flocq Require Import Core.FLT.\\nModule FLTExpBelowHarness.\\nExample observe : FLT_exp ((-10)%Z) (3%Z) ((-20)%Z) = (-10)%Z := eq_refl.\\nEnd FLTExpBelowHarness.\",\"entrypoint\":\"FLTExpBelowHarness.observe\",\"expected_stdout\":null,\"invocation\":\"FLT_exp ((-10)%Z) (3%Z) ((-20)%Z)\",\"language\":\"coq\",\"mode\":\"prove\"},\"subject\":\"FLT_exp\"},\"target\":{\"input\":{\"description\":\"Corresponding arguments `(prec, emin, e)` below the lower-bound transition.\",\"expression\":\"(3 : Int) (-10 : Int) (-20 : Int)\"},\"output\":{\"description\":\"The instantiated input/output equality.\",\"expression\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int) = (-10 : Int)\"},\"run\":{\"claim\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int) = (-10 : Int)\",\"code\":\"import FloatSpec.src.Core.FLT\\nnamespace FLTExpBelowHarness\\ntheorem observe : FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int) = (-10 : Int) := by\\n  rfl\\nend FLTExpBelowHarness\",\"entrypoint\":\"FLTExpBelowHarness.observe\",\"expected_stdout\":null,\"invocation\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int)\",\"language\":\"lean\",\"mode\":\"prove\"},\"subject\":\"FloatSpec.Core.FLT.FLT_exp\"}},{\"id\":\"at-lower-bound\",\"input_alignment\":{\"reason\":\"Both inputs denote `emin = -10`, `prec = 3`, and `e = -7`; the source and target merely order `emin` and `prec` differently.\",\"status\":\"same\"},\"output_alignment\":{\"reason\":\"Both invocations return the canonical integer `-10` at the equality boundary `e - prec = emin`.\",\"status\":\"same\"},\"source\":{\"input\":{\"description\":\"Arguments `(emin, prec, e)` exactly at `e - prec = emin`.\",\"expression\":\"((-10)%Z) (3%Z) ((-7)%Z)\"},\"output\":{\"description\":\"The instantiated input/output equality.\",\"expression\":\"FLT_exp ((-10)%Z) (3%Z) ((-7)%Z) = (-10)%Z\"},\"run\":{\"claim\":\"FLT_exp ((-10)%Z) (3%Z) ((-7)%Z) = (-10)%Z\",\"code\":\"From Coq Require Import ZArith.\\nFrom Flocq Require Import Core.FLT.\\nModule FLTExpAtHarness.\\nExample observe : FLT_exp ((-10)%Z) (3%Z) ((-7)%Z) = (-10)%Z := eq_refl.\\nEnd FLTExpAtHarness.\",\"entrypoint\":\"FLTExpAtHarness.observe\",\"expected_stdout\":null,\"invocation\":\"FLT_exp ((-10)%Z) (3%Z) ((-7)%Z)\",\"language\":\"coq\",\"mode\":\"prove\"},\"subject\":\"FLT_exp\"},\"target\":{\"input\":{\"description\":\"Corresponding arguments `(prec, emin, e)` exactly at `e - prec = emin`.\",\"expression\":\"(3 : Int) (-10 : Int) (-7 : Int)\"},\"output\":{\"description\":\"The instantiated input/output equality.\",\"expression\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int) = (-10 : Int)\"},\"run\":{\"claim\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int) = (-10 : Int)\",\"code\":\"import FloatSpec.src.Core.FLT\\nnamespace FLTExpAtHarness\\ntheorem observe : FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int) = (-10 : Int) := by\\n  rfl\\nend FLTExpAtHarness\",\"entrypoint\":\"FLTExpAtHarness.observe\",\"expected_stdout\":null,\"invocation\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int)\",\"language\":\"lean\",\"mode\":\"prove\"},\"subject\":\"FloatSpec.Core.FLT.FLT_exp\"}},{\"id\":\"above-lower-bound\",\"input_alignment\":{\"reason\":\"Both inputs denote `emin = -10`, `prec = 3`, and `e = 5`, using the role-preserving argument permutation.\",\"status\":\"same\"},\"output_alignment\":{\"reason\":\"Both invocations return the canonical integer `2`, selecting `e - prec` because `2 > -10`.\",\"status\":\"same\"},\"source\":{\"input\":{\"description\":\"Arguments `(emin, prec, e)` above the lower-bound transition.\",\"expression\":\"((-10)%Z) (3%Z) (5%Z)\"},\"output\":{\"description\":\"The instantiated input/output equality.\",\"expression\":\"FLT_exp ((-10)%Z) (3%Z) (5%Z) = (2%Z)\"},\"run\":{\"claim\":\"FLT_exp ((-10)%Z) (3%Z) (5%Z) = (2%Z)\",\"code\":\"From Coq Require Import ZArith.\\nFrom Flocq Require Import Core.FLT.\\nModule FLTExpAboveHarness.\\nExample observe : FLT_exp ((-10)%Z) (3%Z) (5%Z) = (2%Z) := eq_refl.\\nEnd FLTExpAboveHarness.\",\"entrypoint\":\"FLTExpAboveHarness.observe\",\"expected_stdout\":null,\"invocation\":\"FLT_exp ((-10)%Z) (3%Z) (5%Z)\",\"language\":\"coq\",\"mode\":\"prove\"},\"subject\":\"FLT_exp\"},\"target\":{\"input\":{\"description\":\"Corresponding arguments `(prec, emin, e)` above the lower-bound transition.\",\"expression\":\"(3 : Int) (-10 : Int) (5 : Int)\"},\"output\":{\"description\":\"The instantiated input/output equality.\",\"expression\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int) = (2 : Int)\"},\"run\":{\"claim\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int) = (2 : Int)\",\"code\":\"import FloatSpec.src.Core.FLT\\nnamespace FLTExpAboveHarness\\ntheorem observe : FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int) = (2 : Int) := by\\n  rfl\\nend FLTExpAboveHarness\",\"entrypoint\":\"FLTExpAboveHarness.observe\",\"expected_stdout\":null,\"invocation\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int)\",\"language\":\"lean\",\"mode\":\"prove\"},\"subject\":\"FloatSpec.Core.FLT.FLT_exp\"}}],\"failure_categories\":[],\"interface_witness\":{\"compiler_validated\":true,\"explanation\":\"Compiler inspection establishes equal three-integer interfaces after the role-preserving permutation `(emin, prec, e) ↦ (prec, emin, e)`. The ambient radix and positivity assumptions are absent from both exported definition types, so the heuristic arity warning is rejected.\",\"kind\":null,\"source_interface\":\"FLT_exp : Z -> Z -> Z -> Z, with arguments (emin prec e)\",\"status\":\"not_applicable\",\"target_interface\":\"FloatSpec.Core.FLT.FLT_exp : Int -> Int -> Int -> Int, with arguments (prec emin e)\"},\"match_status\":\"confirmed\",\"source_id\":\"Core/FLT.v:FLT_exp:1184\",\"source_summary\":\"A total integer exponent function `max (e - prec) emin`, exported with arguments `(emin, prec, e)`.\",\"suggested_target\":null,\"target_disposition\":null,\"target_id\":\"FloatSpec/src/Core/FLT.lean:FLT_exp:43\",\"target_summary\":\"The corresponding total Lean integer exponent function `max (e - prec) emin`, exported with arguments `(prec, emin, e)`.\"}\n",
+        "timed_out": false
+      },
+      "prompt_sha256": "4e598878fd2b5cc8f4e2631b0516179648b81b9064b08caeafb1bb636904c611",
+      "validation_errors": [],
+      "verdict": {
+        "alignment": "aligned",
+        "compiler_surface_checks": [],
+        "confidence": 0.99,
+        "counterexamples": [],
+        "differences": [
+          "The exported source argument order is `(emin, prec, e)`, whereas the target order is `(prec, emin, e)`; the role-preserving bridge swaps the first two arguments.",
+          "Coq `Z` corresponds canonically to Lean `Int`.",
+          "Neither the source Section variables `beta` and `prec_gt_0_` nor the target ambient `Prec_gt_0` instance occur in the exported definition type."
+        ],
+        "evidence": [
+          {
+            "description": "The source defines `FLT_exp e := Z.max (e - prec) emin`; compiler `Check`/`Print` gives `FLT_exp : Z -> Z -> Z -> Z` with arguments `(emin prec e)`.",
+            "file": "Core/FLT.v",
+            "line": 41,
+            "side": "source"
+          },
+          {
+            "description": "The target defines `FLT_exp (e : Int) := max (e - prec) emin`; its elaborated interface is `Int → Int → Int → Int` with arguments `(prec, emin, e)`.",
+            "file": "FloatSpec/src/Core/FLT.lean",
+            "line": 43,
+            "side": "target"
+          }
+        ],
+        "examples": [
+          {
+            "id": "below-lower-bound",
+            "input_alignment": {
+              "reason": "Both inputs denote `emin = -10`, `prec = 3`, and `e = -20`; the argument permutation follows the declarations' semantic parameter roles.",
+              "status": "same"
+            },
+            "output_alignment": {
+              "reason": "Both invocations return the canonical integer `-10`, selecting `emin` because `e - prec = -23 < -10`.",
+              "status": "same"
+            },
+            "source": {
+              "input": {
+                "description": "Arguments `(emin, prec, e)` below the lower-bound transition.",
+                "expression": "((-10)%Z) (3%Z) ((-20)%Z)"
+              },
+              "output": {
+                "description": "The instantiated input/output equality.",
+                "expression": "FLT_exp ((-10)%Z) (3%Z) ((-20)%Z) = (-10)%Z"
+              },
+              "run": {
+                "claim": "FLT_exp ((-10)%Z) (3%Z) ((-20)%Z) = (-10)%Z",
+                "code": "From Coq Require Import ZArith.\nFrom Flocq Require Import Core.FLT.\nModule FLTExpBelowHarness.\nExample observe : FLT_exp ((-10)%Z) (3%Z) ((-20)%Z) = (-10)%Z := eq_refl.\nEnd FLTExpBelowHarness.",
+                "entrypoint": "FLTExpBelowHarness.observe",
+                "expected_stdout": null,
+                "invocation": "FLT_exp ((-10)%Z) (3%Z) ((-20)%Z)",
+                "language": "coq",
+                "mode": "prove"
+              },
+              "subject": "FLT_exp"
+            },
+            "target": {
+              "input": {
+                "description": "Corresponding arguments `(prec, emin, e)` below the lower-bound transition.",
+                "expression": "(3 : Int) (-10 : Int) (-20 : Int)"
+              },
+              "output": {
+                "description": "The instantiated input/output equality.",
+                "expression": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int) = (-10 : Int)"
+              },
+              "run": {
+                "claim": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int) = (-10 : Int)",
+                "code": "import FloatSpec.src.Core.FLT\nnamespace FLTExpBelowHarness\ntheorem observe : FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int) = (-10 : Int) := by\n  rfl\nend FLTExpBelowHarness",
+                "entrypoint": "FLTExpBelowHarness.observe",
+                "expected_stdout": null,
+                "invocation": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int)",
+                "language": "lean",
+                "mode": "prove"
+              },
+              "subject": "FloatSpec.Core.FLT.FLT_exp"
+            }
+          },
+          {
+            "id": "at-lower-bound",
+            "input_alignment": {
+              "reason": "Both inputs denote `emin = -10`, `prec = 3`, and `e = -7`; the source and target merely order `emin` and `prec` differently.",
+              "status": "same"
+            },
+            "output_alignment": {
+              "reason": "Both invocations return the canonical integer `-10` at the equality boundary `e - prec = emin`.",
+              "status": "same"
+            },
+            "source": {
+              "input": {
+                "description": "Arguments `(emin, prec, e)` exactly at `e - prec = emin`.",
+                "expression": "((-10)%Z) (3%Z) ((-7)%Z)"
+              },
+              "output": {
+                "description": "The instantiated input/output equality.",
+                "expression": "FLT_exp ((-10)%Z) (3%Z) ((-7)%Z) = (-10)%Z"
+              },
+              "run": {
+                "claim": "FLT_exp ((-10)%Z) (3%Z) ((-7)%Z) = (-10)%Z",
+                "code": "From Coq Require Import ZArith.\nFrom Flocq Require Import Core.FLT.\nModule FLTExpAtHarness.\nExample observe : FLT_exp ((-10)%Z) (3%Z) ((-7)%Z) = (-10)%Z := eq_refl.\nEnd FLTExpAtHarness.",
+                "entrypoint": "FLTExpAtHarness.observe",
+                "expected_stdout": null,
+                "invocation": "FLT_exp ((-10)%Z) (3%Z) ((-7)%Z)",
+                "language": "coq",
+                "mode": "prove"
+              },
+              "subject": "FLT_exp"
+            },
+            "target": {
+              "input": {
+                "description": "Corresponding arguments `(prec, emin, e)` exactly at `e - prec = emin`.",
+                "expression": "(3 : Int) (-10 : Int) (-7 : Int)"
+              },
+              "output": {
+                "description": "The instantiated input/output equality.",
+                "expression": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int) = (-10 : Int)"
+              },
+              "run": {
+                "claim": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int) = (-10 : Int)",
+                "code": "import FloatSpec.src.Core.FLT\nnamespace FLTExpAtHarness\ntheorem observe : FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int) = (-10 : Int) := by\n  rfl\nend FLTExpAtHarness",
+                "entrypoint": "FLTExpAtHarness.observe",
+                "expected_stdout": null,
+                "invocation": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int)",
+                "language": "lean",
+                "mode": "prove"
+              },
+              "subject": "FloatSpec.Core.FLT.FLT_exp"
+            }
+          },
+          {
+            "id": "above-lower-bound",
+            "input_alignment": {
+              "reason": "Both inputs denote `emin = -10`, `prec = 3`, and `e = 5`, using the role-preserving argument permutation.",
+              "status": "same"
+            },
+            "output_alignment": {
+              "reason": "Both invocations return the canonical integer `2`, selecting `e - prec` because `2 > -10`.",
+              "status": "same"
+            },
+            "source": {
+              "input": {
+                "description": "Arguments `(emin, prec, e)` above the lower-bound transition.",
+                "expression": "((-10)%Z) (3%Z) (5%Z)"
+              },
+              "output": {
+                "description": "The instantiated input/output equality.",
+                "expression": "FLT_exp ((-10)%Z) (3%Z) (5%Z) = (2%Z)"
+              },
+              "run": {
+                "claim": "FLT_exp ((-10)%Z) (3%Z) (5%Z) = (2%Z)",
+                "code": "From Coq Require Import ZArith.\nFrom Flocq Require Import Core.FLT.\nModule FLTExpAboveHarness.\nExample observe : FLT_exp ((-10)%Z) (3%Z) (5%Z) = (2%Z) := eq_refl.\nEnd FLTExpAboveHarness.",
+                "entrypoint": "FLTExpAboveHarness.observe",
+                "expected_stdout": null,
+                "invocation": "FLT_exp ((-10)%Z) (3%Z) (5%Z)",
+                "language": "coq",
+                "mode": "prove"
+              },
+              "subject": "FLT_exp"
+            },
+            "target": {
+              "input": {
+                "description": "Corresponding arguments `(prec, emin, e)` above the lower-bound transition.",
+                "expression": "(3 : Int) (-10 : Int) (5 : Int)"
+              },
+              "output": {
+                "description": "The instantiated input/output equality.",
+                "expression": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int) = (2 : Int)"
+              },
+              "run": {
+                "claim": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int) = (2 : Int)",
+                "code": "import FloatSpec.src.Core.FLT\nnamespace FLTExpAboveHarness\ntheorem observe : FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int) = (2 : Int) := by\n  rfl\nend FLTExpAboveHarness",
+                "entrypoint": "FLTExpAboveHarness.observe",
+                "expected_stdout": null,
+                "invocation": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int)",
+                "language": "lean",
+                "mode": "prove"
+              },
+              "subject": "FloatSpec.Core.FLT.FLT_exp"
+            }
+          }
+        ],
+        "failure_categories": [],
+        "interface_witness": {
+          "compiler_validated": true,
+          "explanation": "Compiler inspection establishes equal three-integer interfaces after the role-preserving permutation `(emin, prec, e) ↦ (prec, emin, e)`. The ambient radix and positivity assumptions are absent from both exported definition types, so the heuristic arity warning is rejected.",
+          "kind": null,
+          "source_interface": "FLT_exp : Z -> Z -> Z -> Z, with arguments (emin prec e)",
+          "status": "not_applicable",
+          "target_interface": "FloatSpec.Core.FLT.FLT_exp : Int -> Int -> Int -> Int, with arguments (prec emin e)"
+        },
+        "match_status": "confirmed",
+        "source_id": "Core/FLT.v:FLT_exp:1184",
+        "source_summary": "A total integer exponent function `max (e - prec) emin`, exported with arguments `(emin, prec, e)`.",
+        "suggested_target": null,
+        "target_disposition": null,
+        "target_id": "FloatSpec/src/Core/FLT.lean:FLT_exp:43",
+        "target_summary": "The corresponding total Lean integer exponent function `max (e - prec) emin`, exported with arguments `(prec, emin, e)`."
+      }
+    }
+  ],
+  "command": {
+    "command": [
+      "bwrap",
+      "--die-with-parent",
+      "--unshare-user",
+      "--unshare-ipc",
+      "--unshare-pid",
+      "--unshare-uts",
+      "--unshare-cgroup",
+      "--ro-bind",
+      "/",
+      "/",
+      "--dev",
+      "/dev",
+      "--proc",
+      "/proc",
+      "--tmpfs",
+      "/tmp",
+      "--tmpfs",
+      "/mnt",
+      "--tmpfs",
+      "/srv/home/hantaolou/code/transformal",
+      "--tmpfs",
+      "/srv/home/hantaolou/.codex",
+      "--dir",
+      "/srv/home/hantaolou/code/transformal/pipeline",
+      "--dir",
+      "/srv/home/hantaolou/code/transformal/sources",
+      "--dir",
+      "/srv/home/hantaolou/code/transformal/pipeline/.tools",
+      "--dir",
+      "/srv/home/hantaolou/code/transformal/sources/flocq",
+      "--dir",
+      "/srv/home/hantaolou/code/transformal/pipeline/.tools/opam-root-reglang",
+      "--ro-bind",
+      "/srv/home/hantaolou/code/transformal/floatspec-pipeline",
+      "/srv/home/hantaolou/code/transformal/floatspec-pipeline",
+      "--ro-bind",
+      "/srv/home/hantaolou/code/transformal/pipeline/.tools/opam-root-reglang/reglang-coq-8.20",
+      "/srv/home/hantaolou/code/transformal/pipeline/.tools/opam-root-reglang/reglang-coq-8.20",
+      "--ro-bind",
+      "/srv/home/hantaolou/code/transformal/sources/flocq/src",
+      "/srv/home/hantaolou/code/transformal/sources/flocq/src",
+      "--bind",
+      "/tmp/transformal-blind-home-xbho_3br/home",
+      "/mnt/transformal-blind-home",
+      "--bind",
+      "/tmp/transformal-judge-03l4vh2c",
+      "/tmp/transformal-blind-work",
+      "--setenv",
+      "HOME",
+      "/mnt/transformal-blind-home",
+      "--setenv",
+      "CODEX_HOME",
+      "/mnt/transformal-blind-home/.codex",
+      "--setenv",
+      "TRANSFORMAL_BLIND_EVAL_ACTIVE",
+      "1",
+      "--setenv",
+      "PATH",
+      "/srv/home/hantaolou/code/transformal/pipeline/.tools/opam-root-reglang/reglang-coq-8.20/bin:/srv/home/hantaolou/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/hantaolou/.elan/bin:/home/hantaolou/.local/bin:/srv/home/hantaolou/.codex/tmp/arg0/codex-arg09WUqyi:/srv/home/hantaolou/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/hantaolou/.local/bin:/home/hantaolou/.elan/bin:/home/hantaolou/.local/bin:/srv/home/hantaolou/.local/bin:/home/hantaolou/.elan/bin:/srv/home/hantaolou/miniconda3/condabin:/home/hantaolou/.nvm/versions/node/v24.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+      "/srv/home/hantaolou/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/bin/codex",
+      "exec",
+      "--dangerously-bypass-approvals-and-sandbox",
+      "--config",
+      "features.unified_exec=false",
+      "--ephemeral",
+      "--skip-git-repo-check",
+      "--ignore-user-config",
+      "--cd",
+      "/srv/home/hantaolou/code/transformal/sources/flocq/src",
+      "--add-dir",
+      "/srv/home/hantaolou/code/transformal/floatspec-pipeline",
+      "--model",
+      "gpt-5.6-sol",
+      "--config",
+      "model_reasoning_effort=\"high\"",
+      "--output-schema",
+      "/tmp/transformal-blind-work/verdict-schema.json",
+      "--output-last-message",
+      "/tmp/transformal-blind-work/verdict.json",
+      "-"
+    ],
+    "returncode": 0,
+    "stderr": "\nEOF\" in /srv/home/hantaolou/code/transformal/floatspec-pipeline\nexec\n/bin/bash -lc \"/srv/home/hantaolou/code/transformal/pipeline/.tools/opam-root-reglang/reglang-coq-8.20/bin/coqtop -quiet -Q . Flocq <<'EOF'\nFrom Coq Require Import ZArith.\nFrom Flocq Require Import Core.FLT.\nOpen Scope Z_scope.\nExample flt_exp_below : FLT_exp (-10) 3 (-20) = -10 := eq_refl.\nExample flt_exp_at : FLT_exp (-10) 3 (-7) = -10 := eq_refl.\nExample flt_exp_above : FLT_exp (-10) 3 5 = 2 := eq_refl.\nPrint flt_exp_below.\nPrint flt_exp_at.\nPrint flt_exp_above.\nEOF\" in /srv/home/hantaolou/code/transformal/sources/flocq/src\n succeeded in 288ms:\n[Loading ML file ring_plugin.cmxs (using legacy method) ... done]\n[Loading ML file zify_plugin.cmxs (using legacy method) ... done]\n[Loading ML file micromega_core_plugin.cmxs (using legacy method) ... done]\n[Loading ML file micromega_plugin.cmxs (using legacy method) ... done]\n[Loading ML file btauto_plugin.cmxs (using legacy method) ... done]\n\nCoq < \nCoq < \nCoq < flt_exp_below is defined\n\nCoq < flt_exp_at is defined\n\nCoq < flt_exp_above is defined\n\nCoq < flt_exp_below = eq_refl\n     : FLT_exp (-10) 3 (-20) = -10\n\nCoq < flt_exp_at = eq_refl\n     : FLT_exp (-10) 3 (-7) = -10\n\nCoq < flt_exp_above = eq_refl\n     : FLT_exp (-10) 3 5 = 2\n\nCoq < \n\n succeeded in 3807ms:\ntheorem flt_exp_below : FloatSpec.Core.FLT.FLT_exp 3 (-10) (-20) = -10 :=\nEq.refl (FloatSpec.Core.FLT.FLT_exp 3 (-10) (-20))\ntheorem flt_exp_at : FloatSpec.Core.FLT.FLT_exp 3 (-10) (-7) = -10 :=\nEq.refl (FloatSpec.Core.FLT.FLT_exp 3 (-10) (-7))\ntheorem flt_exp_above : FloatSpec.Core.FLT.FLT_exp 3 (-10) 5 = 2 :=\nEq.refl (FloatSpec.Core.FLT.FLT_exp 3 (-10) 5)\n\nexec\n/bin/bash -lc \"lake env lean --stdin <<'EOF'\nimport FloatSpec.src.Core.FLT\nnamespace FLTExpBelowHarness\ntheorem observe : FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int) = (-10 : Int) := by rfl\nend FLTExpBelowHarness\nnamespace FLTExpAtHarness\ntheorem observe : FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int) = (-10 : Int) := by rfl\nend FLTExpAtHarness\nnamespace FLTExpAboveHarness\ntheorem observe : FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int) = (2 : Int) := by rfl\nend FLTExpAboveHarness\n#check FLTExpBelowHarness.observe\n#check FLTExpAtHarness.observe\n#check FLTExpAboveHarness.observe\nEOF\" in /srv/home/hantaolou/code/transformal/floatspec-pipeline\nexec\n/bin/bash -lc \"/srv/home/hantaolou/code/transformal/pipeline/.tools/opam-root-reglang/reglang-coq-8.20/bin/coqtop -quiet -Q . Flocq <<'EOF'\nFrom Coq Require Import ZArith.\nFrom Flocq Require Import Core.FLT.\nModule FLTExpBelowHarness.\nExample observe : FLT_exp ((-10)%Z) (3%Z) ((-20)%Z) = (-10)%Z := eq_refl.\nEnd FLTExpBelowHarness.\nModule FLTExpAtHarness.\nExample observe : FLT_exp ((-10)%Z) (3%Z) ((-7)%Z) = (-10)%Z := eq_refl.\nEnd FLTExpAtHarness.\nModule FLTExpAboveHarness.\nExample observe : FLT_exp ((-10)%Z) (3%Z) (5%Z) = (2%Z) := eq_refl.\nEnd FLTExpAboveHarness.\nCheck FLTExpBelowHarness.observe : FLT_exp ((-10)%Z) (3%Z) ((-20)%Z) = (-10)%Z.\nCheck FLTExpAtHarness.observe : FLT_exp ((-10)%Z) (3%Z) ((-7)%Z) = (-10)%Z.\nCheck FLTExpAboveHarness.observe : FLT_exp ((-10)%Z) (3%Z) (5%Z) = (2%Z).\nEOF\" in /srv/home/hantaolou/code/transformal/sources/flocq/src\n succeeded in 310ms:\n[Loading ML file ring_plugin.cmxs (using legacy method) ... done]\n[Loading ML file zify_plugin.cmxs (using legacy method) ... done]\n[Loading ML file micromega_core_plugin.cmxs (using legacy method) ... done]\n[Loading ML file micromega_plugin.cmxs (using legacy method) ... done]\n[Loading ML file btauto_plugin.cmxs (using legacy method) ... done]\n\nCoq < \nCoq < Interactive Module FLTExpBelowHarness started\n\nCoq < observe is defined\n\nCoq < Module FLTExpBelowHarness is defined\n\nCoq < Interactive Module FLTExpAtHarness started\n\nCoq < observe is defined\n\nCoq < Module FLTExpAtHarness is defined\n\nCoq < Interactive Module FLTExpAboveHarness started\n\nCoq < observe is defined\n\nCoq < Module FLTExpAboveHarness is defined\n\nCoq < FLTExpBelowHarness.observe : FLT_exp (-10) 3 (-20) = (-10)%Z\n     : FLT_exp (-10) 3 (-20) = (-10)%Z\n\nCoq < FLTExpAtHarness.observe : FLT_exp (-10) 3 (-7) = (-10)%Z\n     : FLT_exp (-10) 3 (-7) = (-10)%Z\n\nCoq < FLTExpAboveHarness.observe : FLT_exp (-10) 3 5 = 2%Z\n     : FLT_exp (-10) 3 5 = 2%Z\n\nCoq < \n\n succeeded in 3423ms:\nFLTExpBelowHarness.observe : FloatSpec.Core.FLT.FLT_exp 3 (-10) (-20) = -10\nFLTExpAtHarness.observe : FloatSpec.Core.FLT.FLT_exp 3 (-10) (-7) = -10\nFLTExpAboveHarness.observe : FloatSpec.Core.FLT.FLT_exp 3 (-10) 5 = 2\n\ncodex\n{\"alignment\":\"aligned\",\"compiler_surface_checks\":[],\"confidence\":0.99,\"counterexamples\":[],\"differences\":[\"The exported source argument order is `(emin, prec, e)`, whereas the target order is `(prec, emin, e)`; the role-preserving bridge swaps the first two arguments.\",\"Coq `Z` corresponds canonically to Lean `Int`.\",\"Neither the source Section variables `beta` and `prec_gt_0_` nor the target ambient `Prec_gt_0` instance occur in the exported definition type.\"],\"evidence\":[{\"description\":\"The source defines `FLT_exp e := Z.max (e - prec) emin`; compiler `Check`/`Print` gives `FLT_exp : Z -> Z -> Z -> Z` with arguments `(emin prec e)`.\",\"file\":\"Core/FLT.v\",\"line\":41,\"side\":\"source\"},{\"description\":\"The target defines `FLT_exp (e : Int) := max (e - prec) emin`; its elaborated interface is `Int → Int → Int → Int` with arguments `(prec, emin, e)`.\",\"file\":\"FloatSpec/src/Core/FLT.lean\",\"line\":43,\"side\":\"target\"}],\"examples\":[{\"id\":\"below-lower-bound\",\"input_alignment\":{\"reason\":\"Both inputs denote `emin = -10`, `prec = 3`, and `e = -20`; the argument permutation follows the declarations' semantic parameter roles.\",\"status\":\"same\"},\"output_alignment\":{\"reason\":\"Both invocations return the canonical integer `-10`, selecting `emin` because `e - prec = -23 < -10`.\",\"status\":\"same\"},\"source\":{\"input\":{\"description\":\"Arguments `(emin, prec, e)` below the lower-bound transition.\",\"expression\":\"((-10)%Z) (3%Z) ((-20)%Z)\"},\"output\":{\"description\":\"The instantiated input/output equality.\",\"expression\":\"FLT_exp ((-10)%Z) (3%Z) ((-20)%Z) = (-10)%Z\"},\"run\":{\"claim\":\"FLT_exp ((-10)%Z) (3%Z) ((-20)%Z) = (-10)%Z\",\"code\":\"From Coq Require Import ZArith.\\nFrom Flocq Require Import Core.FLT.\\nModule FLTExpBelowHarness.\\nExample observe : FLT_exp ((-10)%Z) (3%Z) ((-20)%Z) = (-10)%Z := eq_refl.\\nEnd FLTExpBelowHarness.\",\"entrypoint\":\"FLTExpBelowHarness.observe\",\"expected_stdout\":null,\"invocation\":\"FLT_exp ((-10)%Z) (3%Z) ((-20)%Z)\",\"language\":\"coq\",\"mode\":\"prove\"},\"subject\":\"FLT_exp\"},\"target\":{\"input\":{\"description\":\"Corresponding arguments `(prec, emin, e)` below the lower-bound transition.\",\"expression\":\"(3 : Int) (-10 : Int) (-20 : Int)\"},\"output\":{\"description\":\"The instantiated input/output equality.\",\"expression\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int) = (-10 : Int)\"},\"run\":{\"claim\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int) = (-10 : Int)\",\"code\":\"import FloatSpec.src.Core.FLT\\nnamespace FLTExpBelowHarness\\ntheorem observe : FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int) = (-10 : Int) := by\\n  rfl\\nend FLTExpBelowHarness\",\"entrypoint\":\"FLTExpBelowHarness.observe\",\"expected_stdout\":null,\"invocation\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int)\",\"language\":\"lean\",\"mode\":\"prove\"},\"subject\":\"FloatSpec.Core.FLT.FLT_exp\"}},{\"id\":\"at-lower-bound\",\"input_alignment\":{\"reason\":\"Both inputs denote `emin = -10`, `prec = 3`, and `e = -7`; the source and target merely order `emin` and `prec` differently.\",\"status\":\"same\"},\"output_alignment\":{\"reason\":\"Both invocations return the canonical integer `-10` at the equality boundary `e - prec = emin`.\",\"status\":\"same\"},\"source\":{\"input\":{\"description\":\"Arguments `(emin, prec, e)` exactly at `e - prec = emin`.\",\"expression\":\"((-10)%Z) (3%Z) ((-7)%Z)\"},\"output\":{\"description\":\"The instantiated input/output equality.\",\"expression\":\"FLT_exp ((-10)%Z) (3%Z) ((-7)%Z) = (-10)%Z\"},\"run\":{\"claim\":\"FLT_exp ((-10)%Z) (3%Z) ((-7)%Z) = (-10)%Z\",\"code\":\"From Coq Require Import ZArith.\\nFrom Flocq Require Import Core.FLT.\\nModule FLTExpAtHarness.\\nExample observe : FLT_exp ((-10)%Z) (3%Z) ((-7)%Z) = (-10)%Z := eq_refl.\\nEnd FLTExpAtHarness.\",\"entrypoint\":\"FLTExpAtHarness.observe\",\"expected_stdout\":null,\"invocation\":\"FLT_exp ((-10)%Z) (3%Z) ((-7)%Z)\",\"language\":\"coq\",\"mode\":\"prove\"},\"subject\":\"FLT_exp\"},\"target\":{\"input\":{\"description\":\"Corresponding arguments `(prec, emin, e)` exactly at `e - prec = emin`.\",\"expression\":\"(3 : Int) (-10 : Int) (-7 : Int)\"},\"output\":{\"description\":\"The instantiated input/output equality.\",\"expression\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int) = (-10 : Int)\"},\"run\":{\"claim\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int) = (-10 : Int)\",\"code\":\"import FloatSpec.src.Core.FLT\\nnamespace FLTExpAtHarness\\ntheorem observe : FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int) = (-10 : Int) := by\\n  rfl\\nend FLTExpAtHarness\",\"entrypoint\":\"FLTExpAtHarness.observe\",\"expected_stdout\":null,\"invocation\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int)\",\"language\":\"lean\",\"mode\":\"prove\"},\"subject\":\"FloatSpec.Core.FLT.FLT_exp\"}},{\"id\":\"above-lower-bound\",\"input_alignment\":{\"reason\":\"Both inputs denote `emin = -10`, `prec = 3`, and `e = 5`, using the role-preserving argument permutation.\",\"status\":\"same\"},\"output_alignment\":{\"reason\":\"Both invocations return the canonical integer `2`, selecting `e - prec` because `2 > -10`.\",\"status\":\"same\"},\"source\":{\"input\":{\"description\":\"Arguments `(emin, prec, e)` above the lower-bound transition.\",\"expression\":\"((-10)%Z) (3%Z) (5%Z)\"},\"output\":{\"description\":\"The instantiated input/output equality.\",\"expression\":\"FLT_exp ((-10)%Z) (3%Z) (5%Z) = (2%Z)\"},\"run\":{\"claim\":\"FLT_exp ((-10)%Z) (3%Z) (5%Z) = (2%Z)\",\"code\":\"From Coq Require Import ZArith.\\nFrom Flocq Require Import Core.FLT.\\nModule FLTExpAboveHarness.\\nExample observe : FLT_exp ((-10)%Z) (3%Z) (5%Z) = (2%Z) := eq_refl.\\nEnd FLTExpAboveHarness.\",\"entrypoint\":\"FLTExpAboveHarness.observe\",\"expected_stdout\":null,\"invocation\":\"FLT_exp ((-10)%Z) (3%Z) (5%Z)\",\"language\":\"coq\",\"mode\":\"prove\"},\"subject\":\"FLT_exp\"},\"target\":{\"input\":{\"description\":\"Corresponding arguments `(prec, emin, e)` above the lower-bound transition.\",\"expression\":\"(3 : Int) (-10 : Int) (5 : Int)\"},\"output\":{\"description\":\"The instantiated input/output equality.\",\"expression\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int) = (2 : Int)\"},\"run\":{\"claim\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int) = (2 : Int)\",\"code\":\"import FloatSpec.src.Core.FLT\\nnamespace FLTExpAboveHarness\\ntheorem observe : FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int) = (2 : Int) := by\\n  rfl\\nend FLTExpAboveHarness\",\"entrypoint\":\"FLTExpAboveHarness.observe\",\"expected_stdout\":null,\"invocation\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int)\",\"language\":\"lean\",\"mode\":\"prove\"},\"subject\":\"FloatSpec.Core.FLT.FLT_exp\"}}],\"failure_categories\":[],\"interface_witness\":{\"compiler_validated\":true,\"explanation\":\"Compiler inspection establishes equal three-integer interfaces after the role-preserving permutation `(emin, prec, e) ↦ (prec, emin, e)`. The ambient radix and positivity assumptions are absent from both exported definition types, so the heuristic arity warning is rejected.\",\"kind\":null,\"source_interface\":\"FLT_exp : Z -> Z -> Z -> Z, with arguments (emin prec e)\",\"status\":\"not_applicable\",\"target_interface\":\"FloatSpec.Core.FLT.FLT_exp : Int -> Int -> Int -> Int, with arguments (prec emin e)\"},\"match_status\":\"confirmed\",\"source_id\":\"Core/FLT.v:FLT_exp:1184\",\"source_summary\":\"A total integer exponent function `max (e - prec) emin`, exported with arguments `(emin, prec, e)`.\",\"suggested_target\":null,\"target_disposition\":null,\"target_id\":\"FloatSpec/src/Core/FLT.lean:FLT_exp:43\",\"target_summary\":\"The corresponding total Lean integer exponent function `max (e - prec) emin`, exported with arguments `(prec, emin, e)`.\"}\ntokens used\n32,620\n",
+    "stdout": "{\"alignment\":\"aligned\",\"compiler_surface_checks\":[],\"confidence\":0.99,\"counterexamples\":[],\"differences\":[\"The exported source argument order is `(emin, prec, e)`, whereas the target order is `(prec, emin, e)`; the role-preserving bridge swaps the first two arguments.\",\"Coq `Z` corresponds canonically to Lean `Int`.\",\"Neither the source Section variables `beta` and `prec_gt_0_` nor the target ambient `Prec_gt_0` instance occur in the exported definition type.\"],\"evidence\":[{\"description\":\"The source defines `FLT_exp e := Z.max (e - prec) emin`; compiler `Check`/`Print` gives `FLT_exp : Z -> Z -> Z -> Z` with arguments `(emin prec e)`.\",\"file\":\"Core/FLT.v\",\"line\":41,\"side\":\"source\"},{\"description\":\"The target defines `FLT_exp (e : Int) := max (e - prec) emin`; its elaborated interface is `Int → Int → Int → Int` with arguments `(prec, emin, e)`.\",\"file\":\"FloatSpec/src/Core/FLT.lean\",\"line\":43,\"side\":\"target\"}],\"examples\":[{\"id\":\"below-lower-bound\",\"input_alignment\":{\"reason\":\"Both inputs denote `emin = -10`, `prec = 3`, and `e = -20`; the argument permutation follows the declarations' semantic parameter roles.\",\"status\":\"same\"},\"output_alignment\":{\"reason\":\"Both invocations return the canonical integer `-10`, selecting `emin` because `e - prec = -23 < -10`.\",\"status\":\"same\"},\"source\":{\"input\":{\"description\":\"Arguments `(emin, prec, e)` below the lower-bound transition.\",\"expression\":\"((-10)%Z) (3%Z) ((-20)%Z)\"},\"output\":{\"description\":\"The instantiated input/output equality.\",\"expression\":\"FLT_exp ((-10)%Z) (3%Z) ((-20)%Z) = (-10)%Z\"},\"run\":{\"claim\":\"FLT_exp ((-10)%Z) (3%Z) ((-20)%Z) = (-10)%Z\",\"code\":\"From Coq Require Import ZArith.\\nFrom Flocq Require Import Core.FLT.\\nModule FLTExpBelowHarness.\\nExample observe : FLT_exp ((-10)%Z) (3%Z) ((-20)%Z) = (-10)%Z := eq_refl.\\nEnd FLTExpBelowHarness.\",\"entrypoint\":\"FLTExpBelowHarness.observe\",\"expected_stdout\":null,\"invocation\":\"FLT_exp ((-10)%Z) (3%Z) ((-20)%Z)\",\"language\":\"coq\",\"mode\":\"prove\"},\"subject\":\"FLT_exp\"},\"target\":{\"input\":{\"description\":\"Corresponding arguments `(prec, emin, e)` below the lower-bound transition.\",\"expression\":\"(3 : Int) (-10 : Int) (-20 : Int)\"},\"output\":{\"description\":\"The instantiated input/output equality.\",\"expression\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int) = (-10 : Int)\"},\"run\":{\"claim\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int) = (-10 : Int)\",\"code\":\"import FloatSpec.src.Core.FLT\\nnamespace FLTExpBelowHarness\\ntheorem observe : FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int) = (-10 : Int) := by\\n  rfl\\nend FLTExpBelowHarness\",\"entrypoint\":\"FLTExpBelowHarness.observe\",\"expected_stdout\":null,\"invocation\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int)\",\"language\":\"lean\",\"mode\":\"prove\"},\"subject\":\"FloatSpec.Core.FLT.FLT_exp\"}},{\"id\":\"at-lower-bound\",\"input_alignment\":{\"reason\":\"Both inputs denote `emin = -10`, `prec = 3`, and `e = -7`; the source and target merely order `emin` and `prec` differently.\",\"status\":\"same\"},\"output_alignment\":{\"reason\":\"Both invocations return the canonical integer `-10` at the equality boundary `e - prec = emin`.\",\"status\":\"same\"},\"source\":{\"input\":{\"description\":\"Arguments `(emin, prec, e)` exactly at `e - prec = emin`.\",\"expression\":\"((-10)%Z) (3%Z) ((-7)%Z)\"},\"output\":{\"description\":\"The instantiated input/output equality.\",\"expression\":\"FLT_exp ((-10)%Z) (3%Z) ((-7)%Z) = (-10)%Z\"},\"run\":{\"claim\":\"FLT_exp ((-10)%Z) (3%Z) ((-7)%Z) = (-10)%Z\",\"code\":\"From Coq Require Import ZArith.\\nFrom Flocq Require Import Core.FLT.\\nModule FLTExpAtHarness.\\nExample observe : FLT_exp ((-10)%Z) (3%Z) ((-7)%Z) = (-10)%Z := eq_refl.\\nEnd FLTExpAtHarness.\",\"entrypoint\":\"FLTExpAtHarness.observe\",\"expected_stdout\":null,\"invocation\":\"FLT_exp ((-10)%Z) (3%Z) ((-7)%Z)\",\"language\":\"coq\",\"mode\":\"prove\"},\"subject\":\"FLT_exp\"},\"target\":{\"input\":{\"description\":\"Corresponding arguments `(prec, emin, e)` exactly at `e - prec = emin`.\",\"expression\":\"(3 : Int) (-10 : Int) (-7 : Int)\"},\"output\":{\"description\":\"The instantiated input/output equality.\",\"expression\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int) = (-10 : Int)\"},\"run\":{\"claim\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int) = (-10 : Int)\",\"code\":\"import FloatSpec.src.Core.FLT\\nnamespace FLTExpAtHarness\\ntheorem observe : FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int) = (-10 : Int) := by\\n  rfl\\nend FLTExpAtHarness\",\"entrypoint\":\"FLTExpAtHarness.observe\",\"expected_stdout\":null,\"invocation\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int)\",\"language\":\"lean\",\"mode\":\"prove\"},\"subject\":\"FloatSpec.Core.FLT.FLT_exp\"}},{\"id\":\"above-lower-bound\",\"input_alignment\":{\"reason\":\"Both inputs denote `emin = -10`, `prec = 3`, and `e = 5`, using the role-preserving argument permutation.\",\"status\":\"same\"},\"output_alignment\":{\"reason\":\"Both invocations return the canonical integer `2`, selecting `e - prec` because `2 > -10`.\",\"status\":\"same\"},\"source\":{\"input\":{\"description\":\"Arguments `(emin, prec, e)` above the lower-bound transition.\",\"expression\":\"((-10)%Z) (3%Z) (5%Z)\"},\"output\":{\"description\":\"The instantiated input/output equality.\",\"expression\":\"FLT_exp ((-10)%Z) (3%Z) (5%Z) = (2%Z)\"},\"run\":{\"claim\":\"FLT_exp ((-10)%Z) (3%Z) (5%Z) = (2%Z)\",\"code\":\"From Coq Require Import ZArith.\\nFrom Flocq Require Import Core.FLT.\\nModule FLTExpAboveHarness.\\nExample observe : FLT_exp ((-10)%Z) (3%Z) (5%Z) = (2%Z) := eq_refl.\\nEnd FLTExpAboveHarness.\",\"entrypoint\":\"FLTExpAboveHarness.observe\",\"expected_stdout\":null,\"invocation\":\"FLT_exp ((-10)%Z) (3%Z) (5%Z)\",\"language\":\"coq\",\"mode\":\"prove\"},\"subject\":\"FLT_exp\"},\"target\":{\"input\":{\"description\":\"Corresponding arguments `(prec, emin, e)` above the lower-bound transition.\",\"expression\":\"(3 : Int) (-10 : Int) (5 : Int)\"},\"output\":{\"description\":\"The instantiated input/output equality.\",\"expression\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int) = (2 : Int)\"},\"run\":{\"claim\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int) = (2 : Int)\",\"code\":\"import FloatSpec.src.Core.FLT\\nnamespace FLTExpAboveHarness\\ntheorem observe : FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int) = (2 : Int) := by\\n  rfl\\nend FLTExpAboveHarness\",\"entrypoint\":\"FLTExpAboveHarness.observe\",\"expected_stdout\":null,\"invocation\":\"FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int)\",\"language\":\"lean\",\"mode\":\"prove\"},\"subject\":\"FloatSpec.Core.FLT.FLT_exp\"}}],\"failure_categories\":[],\"interface_witness\":{\"compiler_validated\":true,\"explanation\":\"Compiler inspection establishes equal three-integer interfaces after the role-preserving permutation `(emin, prec, e) ↦ (prec, emin, e)`. The ambient radix and positivity assumptions are absent from both exported definition types, so the heuristic arity warning is rejected.\",\"kind\":null,\"source_interface\":\"FLT_exp : Z -> Z -> Z -> Z, with arguments (emin prec e)\",\"status\":\"not_applicable\",\"target_interface\":\"FloatSpec.Core.FLT.FLT_exp : Int -> Int -> Int -> Int, with arguments (prec emin e)\"},\"match_status\":\"confirmed\",\"source_id\":\"Core/FLT.v:FLT_exp:1184\",\"source_summary\":\"A total integer exponent function `max (e - prec) emin`, exported with arguments `(emin, prec, e)`.\",\"suggested_target\":null,\"target_disposition\":null,\"target_id\":\"FloatSpec/src/Core/FLT.lean:FLT_exp:43\",\"target_summary\":\"The corresponding total Lean integer exponent function `max (e - prec) emin`, exported with arguments `(prec, emin, e)`.\"}\n",
+    "timed_out": false
+  },
+  "job_key": "screen-f1b5484047633cfe08dd",
+  "observation_verification": {
+    "all_chains_verified": true,
+    "errors": [],
+    "records": [
+      {
+        "kind": "example",
+        "observation": {
+          "id": "below-lower-bound",
+          "input_alignment": {
+            "reason": "Both inputs denote `emin = -10`, `prec = 3`, and `e = -20`; the argument permutation follows the declarations' semantic parameter roles.",
+            "status": "same"
+          },
+          "output_alignment": {
+            "reason": "Both invocations return the canonical integer `-10`, selecting `emin` because `e - prec = -23 < -10`.",
+            "status": "same"
+          },
+          "source": {
+            "input": {
+              "description": "Arguments `(emin, prec, e)` below the lower-bound transition.",
+              "expression": "((-10)%Z) (3%Z) ((-20)%Z)"
+            },
+            "output": {
+              "description": "The instantiated input/output equality.",
+              "expression": "FLT_exp ((-10)%Z) (3%Z) ((-20)%Z) = (-10)%Z"
+            },
+            "run": {
+              "claim": "FLT_exp ((-10)%Z) (3%Z) ((-20)%Z) = (-10)%Z",
+              "code": "From Coq Require Import ZArith.\nFrom Flocq Require Import Core.FLT.\nModule FLTExpBelowHarness.\nExample observe : FLT_exp ((-10)%Z) (3%Z) ((-20)%Z) = (-10)%Z := eq_refl.\nEnd FLTExpBelowHarness.",
+              "entrypoint": "FLTExpBelowHarness.observe",
+              "expected_stdout": null,
+              "invocation": "FLT_exp ((-10)%Z) (3%Z) ((-20)%Z)",
+              "language": "coq",
+              "mode": "prove"
+            },
+            "subject": "FLT_exp"
+          },
+          "target": {
+            "input": {
+              "description": "Corresponding arguments `(prec, emin, e)` below the lower-bound transition.",
+              "expression": "(3 : Int) (-10 : Int) (-20 : Int)"
+            },
+            "output": {
+              "description": "The instantiated input/output equality.",
+              "expression": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int) = (-10 : Int)"
+            },
+            "run": {
+              "claim": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int) = (-10 : Int)",
+              "code": "import FloatSpec.src.Core.FLT\nnamespace FLTExpBelowHarness\ntheorem observe : FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int) = (-10 : Int) := by\n  rfl\nend FLTExpBelowHarness",
+              "entrypoint": "FLTExpBelowHarness.observe",
+              "expected_stdout": null,
+              "invocation": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int)",
+              "language": "lean",
+              "mode": "prove"
+            },
+            "subject": "FloatSpec.Core.FLT.FLT_exp"
+          }
+        },
+        "verification": {
+          "chain_verified": true,
+          "id": "below-lower-bound",
+          "input_alignment": {
+            "reason": "Both inputs denote `emin = -10`, `prec = 3`, and `e = -20`; the argument permutation follows the declarations' semantic parameter roles.",
+            "status": "same"
+          },
+          "output_alignment": {
+            "reason": "Both invocations return the canonical integer `-10`, selecting `emin` because `e - prec = -23 < -10`.",
+            "status": "same"
+          },
+          "source": {
+            "actual_result": "pass",
+            "binding_status": "verified",
+            "claim_sha256": "7a5febd28f3b6c6306d64ed0554115d533712d8c0ef4e724f1e3c137d5edeb15",
+            "claimed_output": "FLT_exp ((-10)%Z) (3%Z) ((-20)%Z) = (-10)%Z",
+            "code_sha256": "8d075654c539e36a678ca4fc1940e5adc63edfe0da9badc0f660fedc1551f278",
+            "expected_result": "pass",
+            "input_expression": "((-10)%Z) (3%Z) ((-20)%Z)",
+            "invocation": "FLT_exp ((-10)%Z) (3%Z) ((-20)%Z)",
+            "language": "coq",
+            "observed_output": "FLT_exp ((-10)%Z) (3%Z) ((-20)%Z) = (-10)%Z",
+            "result": {
+              "command": [
+                "/srv/home/hantaolou/code/transformal/pipeline/.tools/opam-root-reglang/reglang-coq-8.20/bin/coqc",
+                "-R",
+                "/srv/home/hantaolou/code/transformal/sources/flocq/src",
+                "Flocq",
+                "/tmp/transformal-counterexample-2tjagdhg/Counterexample.v"
+              ],
+              "returncode": 0,
+              "stderr": "",
+              "stdout": "FLTExpBelowHarness.observe : FLT_exp (-10) 3 (-20) = (-10)%Z\n     : FLT_exp (-10) 3 (-20) = (-10)%Z\n",
+              "timed_out": false
+            },
+            "status": "verified",
+            "subject": "FLT_exp",
+            "verification_note": null
+          },
+          "target": {
+            "actual_result": "pass",
+            "binding_status": "verified",
+            "claim_sha256": "b916fdbf5c3c76502532f16c444738562a5f1f6568c84f2414c4d291d34935d7",
+            "claimed_output": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int) = (-10 : Int)",
+            "code_sha256": "7afe138f387c064780cfc3b0d7e7fc1b8273ff2240d0f5f64855cc7acf91f850",
+            "expected_result": "pass",
+            "input_expression": "(3 : Int) (-10 : Int) (-20 : Int)",
+            "invocation": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int)",
+            "language": "lean",
+            "observed_output": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int) = (-10 : Int)",
+            "result": {
+              "command": [
+                "lake",
+                "env",
+                "lean",
+                "/tmp/transformal-counterexample-h4sf7uuc/Counterexample.lean"
+              ],
+              "returncode": 0,
+              "stderr": "",
+              "stdout": "FLTExpBelowHarness.observe : FloatSpec.Core.FLT.FLT_exp 3 (-10) (-20) = -10\n",
+              "timed_out": false
+            },
+            "status": "verified",
+            "subject": "FloatSpec.Core.FLT.FLT_exp",
+            "verification_note": null
+          }
+        }
+      },
+      {
+        "kind": "example",
+        "observation": {
+          "id": "at-lower-bound",
+          "input_alignment": {
+            "reason": "Both inputs denote `emin = -10`, `prec = 3`, and `e = -7`; the source and target merely order `emin` and `prec` differently.",
+            "status": "same"
+          },
+          "output_alignment": {
+            "reason": "Both invocations return the canonical integer `-10` at the equality boundary `e - prec = emin`.",
+            "status": "same"
+          },
+          "source": {
+            "input": {
+              "description": "Arguments `(emin, prec, e)` exactly at `e - prec = emin`.",
+              "expression": "((-10)%Z) (3%Z) ((-7)%Z)"
+            },
+            "output": {
+              "description": "The instantiated input/output equality.",
+              "expression": "FLT_exp ((-10)%Z) (3%Z) ((-7)%Z) = (-10)%Z"
+            },
+            "run": {
+              "claim": "FLT_exp ((-10)%Z) (3%Z) ((-7)%Z) = (-10)%Z",
+              "code": "From Coq Require Import ZArith.\nFrom Flocq Require Import Core.FLT.\nModule FLTExpAtHarness.\nExample observe : FLT_exp ((-10)%Z) (3%Z) ((-7)%Z) = (-10)%Z := eq_refl.\nEnd FLTExpAtHarness.",
+              "entrypoint": "FLTExpAtHarness.observe",
+              "expected_stdout": null,
+              "invocation": "FLT_exp ((-10)%Z) (3%Z) ((-7)%Z)",
+              "language": "coq",
+              "mode": "prove"
+            },
+            "subject": "FLT_exp"
+          },
+          "target": {
+            "input": {
+              "description": "Corresponding arguments `(prec, emin, e)` exactly at `e - prec = emin`.",
+              "expression": "(3 : Int) (-10 : Int) (-7 : Int)"
+            },
+            "output": {
+              "description": "The instantiated input/output equality.",
+              "expression": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int) = (-10 : Int)"
+            },
+            "run": {
+              "claim": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int) = (-10 : Int)",
+              "code": "import FloatSpec.src.Core.FLT\nnamespace FLTExpAtHarness\ntheorem observe : FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int) = (-10 : Int) := by\n  rfl\nend FLTExpAtHarness",
+              "entrypoint": "FLTExpAtHarness.observe",
+              "expected_stdout": null,
+              "invocation": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int)",
+              "language": "lean",
+              "mode": "prove"
+            },
+            "subject": "FloatSpec.Core.FLT.FLT_exp"
+          }
+        },
+        "verification": {
+          "chain_verified": true,
+          "id": "at-lower-bound",
+          "input_alignment": {
+            "reason": "Both inputs denote `emin = -10`, `prec = 3`, and `e = -7`; the source and target merely order `emin` and `prec` differently.",
+            "status": "same"
+          },
+          "output_alignment": {
+            "reason": "Both invocations return the canonical integer `-10` at the equality boundary `e - prec = emin`.",
+            "status": "same"
+          },
+          "source": {
+            "actual_result": "pass",
+            "binding_status": "verified",
+            "claim_sha256": "d2cbdaa9ac0d184dd64f42eb99fb34451d2dd2ae52753da9bf563b64a1ebf4d1",
+            "claimed_output": "FLT_exp ((-10)%Z) (3%Z) ((-7)%Z) = (-10)%Z",
+            "code_sha256": "c4286f4dcfdc9e6b9da0d0fae039f30341b9677436dc1d7c681111b5e99abb78",
+            "expected_result": "pass",
+            "input_expression": "((-10)%Z) (3%Z) ((-7)%Z)",
+            "invocation": "FLT_exp ((-10)%Z) (3%Z) ((-7)%Z)",
+            "language": "coq",
+            "observed_output": "FLT_exp ((-10)%Z) (3%Z) ((-7)%Z) = (-10)%Z",
+            "result": {
+              "command": [
+                "/srv/home/hantaolou/code/transformal/pipeline/.tools/opam-root-reglang/reglang-coq-8.20/bin/coqc",
+                "-R",
+                "/srv/home/hantaolou/code/transformal/sources/flocq/src",
+                "Flocq",
+                "/tmp/transformal-counterexample-fsy0bsh2/Counterexample.v"
+              ],
+              "returncode": 0,
+              "stderr": "",
+              "stdout": "FLTExpAtHarness.observe : FLT_exp (-10) 3 (-7) = (-10)%Z\n     : FLT_exp (-10) 3 (-7) = (-10)%Z\n",
+              "timed_out": false
+            },
+            "status": "verified",
+            "subject": "FLT_exp",
+            "verification_note": null
+          },
+          "target": {
+            "actual_result": "pass",
+            "binding_status": "verified",
+            "claim_sha256": "4cac6b0daafb4b1d9fa82e4ba5970c77161875e4fb12e5da6e40f963660a1326",
+            "claimed_output": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int) = (-10 : Int)",
+            "code_sha256": "94ba9072a4dfc34a88bfa0a0b656880c88a7bab60ffa8802978d94dae3bc44f8",
+            "expected_result": "pass",
+            "input_expression": "(3 : Int) (-10 : Int) (-7 : Int)",
+            "invocation": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int)",
+            "language": "lean",
+            "observed_output": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int) = (-10 : Int)",
+            "result": {
+              "command": [
+                "lake",
+                "env",
+                "lean",
+                "/tmp/transformal-counterexample-bezicrf3/Counterexample.lean"
+              ],
+              "returncode": 0,
+              "stderr": "",
+              "stdout": "FLTExpAtHarness.observe : FloatSpec.Core.FLT.FLT_exp 3 (-10) (-7) = -10\n",
+              "timed_out": false
+            },
+            "status": "verified",
+            "subject": "FloatSpec.Core.FLT.FLT_exp",
+            "verification_note": null
+          }
+        }
+      },
+      {
+        "kind": "example",
+        "observation": {
+          "id": "above-lower-bound",
+          "input_alignment": {
+            "reason": "Both inputs denote `emin = -10`, `prec = 3`, and `e = 5`, using the role-preserving argument permutation.",
+            "status": "same"
+          },
+          "output_alignment": {
+            "reason": "Both invocations return the canonical integer `2`, selecting `e - prec` because `2 > -10`.",
+            "status": "same"
+          },
+          "source": {
+            "input": {
+              "description": "Arguments `(emin, prec, e)` above the lower-bound transition.",
+              "expression": "((-10)%Z) (3%Z) (5%Z)"
+            },
+            "output": {
+              "description": "The instantiated input/output equality.",
+              "expression": "FLT_exp ((-10)%Z) (3%Z) (5%Z) = (2%Z)"
+            },
+            "run": {
+              "claim": "FLT_exp ((-10)%Z) (3%Z) (5%Z) = (2%Z)",
+              "code": "From Coq Require Import ZArith.\nFrom Flocq Require Import Core.FLT.\nModule FLTExpAboveHarness.\nExample observe : FLT_exp ((-10)%Z) (3%Z) (5%Z) = (2%Z) := eq_refl.\nEnd FLTExpAboveHarness.",
+              "entrypoint": "FLTExpAboveHarness.observe",
+              "expected_stdout": null,
+              "invocation": "FLT_exp ((-10)%Z) (3%Z) (5%Z)",
+              "language": "coq",
+              "mode": "prove"
+            },
+            "subject": "FLT_exp"
+          },
+          "target": {
+            "input": {
+              "description": "Corresponding arguments `(prec, emin, e)` above the lower-bound transition.",
+              "expression": "(3 : Int) (-10 : Int) (5 : Int)"
+            },
+            "output": {
+              "description": "The instantiated input/output equality.",
+              "expression": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int) = (2 : Int)"
+            },
+            "run": {
+              "claim": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int) = (2 : Int)",
+              "code": "import FloatSpec.src.Core.FLT\nnamespace FLTExpAboveHarness\ntheorem observe : FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int) = (2 : Int) := by\n  rfl\nend FLTExpAboveHarness",
+              "entrypoint": "FLTExpAboveHarness.observe",
+              "expected_stdout": null,
+              "invocation": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int)",
+              "language": "lean",
+              "mode": "prove"
+            },
+            "subject": "FloatSpec.Core.FLT.FLT_exp"
+          }
+        },
+        "verification": {
+          "chain_verified": true,
+          "id": "above-lower-bound",
+          "input_alignment": {
+            "reason": "Both inputs denote `emin = -10`, `prec = 3`, and `e = 5`, using the role-preserving argument permutation.",
+            "status": "same"
+          },
+          "output_alignment": {
+            "reason": "Both invocations return the canonical integer `2`, selecting `e - prec` because `2 > -10`.",
+            "status": "same"
+          },
+          "source": {
+            "actual_result": "pass",
+            "binding_status": "verified",
+            "claim_sha256": "50c94e0b8b4036319aa18cbbcd6b7f473a3b78f88c52ed56078057cfd5e9edae",
+            "claimed_output": "FLT_exp ((-10)%Z) (3%Z) (5%Z) = (2%Z)",
+            "code_sha256": "4bbdab8b4681edd893a535690212f5275145ebb4976acbea377e88a9a21f883e",
+            "expected_result": "pass",
+            "input_expression": "((-10)%Z) (3%Z) (5%Z)",
+            "invocation": "FLT_exp ((-10)%Z) (3%Z) (5%Z)",
+            "language": "coq",
+            "observed_output": "FLT_exp ((-10)%Z) (3%Z) (5%Z) = (2%Z)",
+            "result": {
+              "command": [
+                "/srv/home/hantaolou/code/transformal/pipeline/.tools/opam-root-reglang/reglang-coq-8.20/bin/coqc",
+                "-R",
+                "/srv/home/hantaolou/code/transformal/sources/flocq/src",
+                "Flocq",
+                "/tmp/transformal-counterexample-xgt63ccp/Counterexample.v"
+              ],
+              "returncode": 0,
+              "stderr": "",
+              "stdout": "FLTExpAboveHarness.observe : FLT_exp (-10) 3 5 = 2%Z\n     : FLT_exp (-10) 3 5 = 2%Z\n",
+              "timed_out": false
+            },
+            "status": "verified",
+            "subject": "FLT_exp",
+            "verification_note": null
+          },
+          "target": {
+            "actual_result": "pass",
+            "binding_status": "verified",
+            "claim_sha256": "e57e858778eeec1db93542653e7ffa409b55e5bcdca59005ef5032cf943e7cb7",
+            "claimed_output": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int) = (2 : Int)",
+            "code_sha256": "3d816f5ebb5c15d7b5e325cc618fd16a2960aaae736d9050734c5cccca656819",
+            "expected_result": "pass",
+            "input_expression": "(3 : Int) (-10 : Int) (5 : Int)",
+            "invocation": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int)",
+            "language": "lean",
+            "observed_output": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int) = (2 : Int)",
+            "result": {
+              "command": [
+                "lake",
+                "env",
+                "lean",
+                "/tmp/transformal-counterexample-awy4_rxg/Counterexample.lean"
+              ],
+              "returncode": 0,
+              "stderr": "",
+              "stdout": "FLTExpAboveHarness.observe : FloatSpec.Core.FLT.FLT_exp 3 (-10) 5 = 2\n",
+              "timed_out": false
+            },
+            "status": "verified",
+            "subject": "FloatSpec.Core.FLT.FLT_exp",
+            "verification_note": null
+          }
+        }
+      }
+    ],
+    "verdict_sha256": "d6698eb8e4f058566caa0c55e01c1ae9398279485ea72ec0a15065d26dc03c16",
+    "version": 1
+  },
+  "prompt_sha256": "4e598878fd2b5cc8f4e2631b0516179648b81b9064b08caeafb1bb636904c611",
+  "runner": {
+    "auth": {
+      "mode": "subscription_cli",
+      "status": "Logged in using ChatGPT"
+    },
+    "backend": "codex_subscription",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "high"
+  },
+  "validation_errors": [],
+  "verdict": {
+    "alignment": "aligned",
+    "compiler_surface_checks": [],
+    "confidence": 0.99,
+    "counterexamples": [],
+    "differences": [
+      "The exported source argument order is `(emin, prec, e)`, whereas the target order is `(prec, emin, e)`; the role-preserving bridge swaps the first two arguments.",
+      "Coq `Z` corresponds canonically to Lean `Int`.",
+      "Neither the source Section variables `beta` and `prec_gt_0_` nor the target ambient `Prec_gt_0` instance occur in the exported definition type."
+    ],
+    "evidence": [
+      {
+        "description": "The source defines `FLT_exp e := Z.max (e - prec) emin`; compiler `Check`/`Print` gives `FLT_exp : Z -> Z -> Z -> Z` with arguments `(emin prec e)`.",
+        "file": "Core/FLT.v",
+        "line": 41,
+        "side": "source"
+      },
+      {
+        "description": "The target defines `FLT_exp (e : Int) := max (e - prec) emin`; its elaborated interface is `Int → Int → Int → Int` with arguments `(prec, emin, e)`.",
+        "file": "FloatSpec/src/Core/FLT.lean",
+        "line": 43,
+        "side": "target"
+      }
+    ],
+    "examples": [
+      {
+        "id": "below-lower-bound",
+        "input_alignment": {
+          "reason": "Both inputs denote `emin = -10`, `prec = 3`, and `e = -20`; the argument permutation follows the declarations' semantic parameter roles.",
+          "status": "same"
+        },
+        "output_alignment": {
+          "reason": "Both invocations return the canonical integer `-10`, selecting `emin` because `e - prec = -23 < -10`.",
+          "status": "same"
+        },
+        "source": {
+          "input": {
+            "description": "Arguments `(emin, prec, e)` below the lower-bound transition.",
+            "expression": "((-10)%Z) (3%Z) ((-20)%Z)"
+          },
+          "output": {
+            "description": "The instantiated input/output equality.",
+            "expression": "FLT_exp ((-10)%Z) (3%Z) ((-20)%Z) = (-10)%Z"
+          },
+          "run": {
+            "claim": "FLT_exp ((-10)%Z) (3%Z) ((-20)%Z) = (-10)%Z",
+            "code": "From Coq Require Import ZArith.\nFrom Flocq Require Import Core.FLT.\nModule FLTExpBelowHarness.\nExample observe : FLT_exp ((-10)%Z) (3%Z) ((-20)%Z) = (-10)%Z := eq_refl.\nEnd FLTExpBelowHarness.",
+            "entrypoint": "FLTExpBelowHarness.observe",
+            "expected_stdout": null,
+            "invocation": "FLT_exp ((-10)%Z) (3%Z) ((-20)%Z)",
+            "language": "coq",
+            "mode": "prove"
+          },
+          "subject": "FLT_exp"
+        },
+        "target": {
+          "input": {
+            "description": "Corresponding arguments `(prec, emin, e)` below the lower-bound transition.",
+            "expression": "(3 : Int) (-10 : Int) (-20 : Int)"
+          },
+          "output": {
+            "description": "The instantiated input/output equality.",
+            "expression": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int) = (-10 : Int)"
+          },
+          "run": {
+            "claim": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int) = (-10 : Int)",
+            "code": "import FloatSpec.src.Core.FLT\nnamespace FLTExpBelowHarness\ntheorem observe : FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int) = (-10 : Int) := by\n  rfl\nend FLTExpBelowHarness",
+            "entrypoint": "FLTExpBelowHarness.observe",
+            "expected_stdout": null,
+            "invocation": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-20 : Int)",
+            "language": "lean",
+            "mode": "prove"
+          },
+          "subject": "FloatSpec.Core.FLT.FLT_exp"
+        }
+      },
+      {
+        "id": "at-lower-bound",
+        "input_alignment": {
+          "reason": "Both inputs denote `emin = -10`, `prec = 3`, and `e = -7`; the source and target merely order `emin` and `prec` differently.",
+          "status": "same"
+        },
+        "output_alignment": {
+          "reason": "Both invocations return the canonical integer `-10` at the equality boundary `e - prec = emin`.",
+          "status": "same"
+        },
+        "source": {
+          "input": {
+            "description": "Arguments `(emin, prec, e)` exactly at `e - prec = emin`.",
+            "expression": "((-10)%Z) (3%Z) ((-7)%Z)"
+          },
+          "output": {
+            "description": "The instantiated input/output equality.",
+            "expression": "FLT_exp ((-10)%Z) (3%Z) ((-7)%Z) = (-10)%Z"
+          },
+          "run": {
+            "claim": "FLT_exp ((-10)%Z) (3%Z) ((-7)%Z) = (-10)%Z",
+            "code": "From Coq Require Import ZArith.\nFrom Flocq Require Import Core.FLT.\nModule FLTExpAtHarness.\nExample observe : FLT_exp ((-10)%Z) (3%Z) ((-7)%Z) = (-10)%Z := eq_refl.\nEnd FLTExpAtHarness.",
+            "entrypoint": "FLTExpAtHarness.observe",
+            "expected_stdout": null,
+            "invocation": "FLT_exp ((-10)%Z) (3%Z) ((-7)%Z)",
+            "language": "coq",
+            "mode": "prove"
+          },
+          "subject": "FLT_exp"
+        },
+        "target": {
+          "input": {
+            "description": "Corresponding arguments `(prec, emin, e)` exactly at `e - prec = emin`.",
+            "expression": "(3 : Int) (-10 : Int) (-7 : Int)"
+          },
+          "output": {
+            "description": "The instantiated input/output equality.",
+            "expression": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int) = (-10 : Int)"
+          },
+          "run": {
+            "claim": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int) = (-10 : Int)",
+            "code": "import FloatSpec.src.Core.FLT\nnamespace FLTExpAtHarness\ntheorem observe : FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int) = (-10 : Int) := by\n  rfl\nend FLTExpAtHarness",
+            "entrypoint": "FLTExpAtHarness.observe",
+            "expected_stdout": null,
+            "invocation": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (-7 : Int)",
+            "language": "lean",
+            "mode": "prove"
+          },
+          "subject": "FloatSpec.Core.FLT.FLT_exp"
+        }
+      },
+      {
+        "id": "above-lower-bound",
+        "input_alignment": {
+          "reason": "Both inputs denote `emin = -10`, `prec = 3`, and `e = 5`, using the role-preserving argument permutation.",
+          "status": "same"
+        },
+        "output_alignment": {
+          "reason": "Both invocations return the canonical integer `2`, selecting `e - prec` because `2 > -10`.",
+          "status": "same"
+        },
+        "source": {
+          "input": {
+            "description": "Arguments `(emin, prec, e)` above the lower-bound transition.",
+            "expression": "((-10)%Z) (3%Z) (5%Z)"
+          },
+          "output": {
+            "description": "The instantiated input/output equality.",
+            "expression": "FLT_exp ((-10)%Z) (3%Z) (5%Z) = (2%Z)"
+          },
+          "run": {
+            "claim": "FLT_exp ((-10)%Z) (3%Z) (5%Z) = (2%Z)",
+            "code": "From Coq Require Import ZArith.\nFrom Flocq Require Import Core.FLT.\nModule FLTExpAboveHarness.\nExample observe : FLT_exp ((-10)%Z) (3%Z) (5%Z) = (2%Z) := eq_refl.\nEnd FLTExpAboveHarness.",
+            "entrypoint": "FLTExpAboveHarness.observe",
+            "expected_stdout": null,
+            "invocation": "FLT_exp ((-10)%Z) (3%Z) (5%Z)",
+            "language": "coq",
+            "mode": "prove"
+          },
+          "subject": "FLT_exp"
+        },
+        "target": {
+          "input": {
+            "description": "Corresponding arguments `(prec, emin, e)` above the lower-bound transition.",
+            "expression": "(3 : Int) (-10 : Int) (5 : Int)"
+          },
+          "output": {
+            "description": "The instantiated input/output equality.",
+            "expression": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int) = (2 : Int)"
+          },
+          "run": {
+            "claim": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int) = (2 : Int)",
+            "code": "import FloatSpec.src.Core.FLT\nnamespace FLTExpAboveHarness\ntheorem observe : FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int) = (2 : Int) := by\n  rfl\nend FLTExpAboveHarness",
+            "entrypoint": "FLTExpAboveHarness.observe",
+            "expected_stdout": null,
+            "invocation": "FloatSpec.Core.FLT.FLT_exp (3 : Int) (-10 : Int) (5 : Int)",
+            "language": "lean",
+            "mode": "prove"
+          },
+          "subject": "FloatSpec.Core.FLT.FLT_exp"
+        }
+      }
+    ],
+    "failure_categories": [],
+    "interface_witness": {
+      "compiler_validated": true,
+      "explanation": "Compiler inspection establishes equal three-integer interfaces after the role-preserving permutation `(emin, prec, e) ↦ (prec, emin, e)`. The ambient radix and positivity assumptions are absent from both exported definition types, so the heuristic arity warning is rejected.",
+      "kind": null,
+      "source_interface": "FLT_exp : Z -> Z -> Z -> Z, with arguments (emin prec e)",
+      "status": "not_applicable",
+      "target_interface": "FloatSpec.Core.FLT.FLT_exp : Int -> Int -> Int -> Int, with arguments (prec emin e)"
+    },
+    "match_status": "confirmed",
+    "source_id": "Core/FLT.v:FLT_exp:1184",
+    "source_summary": "A total integer exponent function `max (e - prec) emin`, exported with arguments `(emin, prec, e)`.",
+    "suggested_target": null,
+    "target_disposition": null,
+    "target_id": "FloatSpec/src/Core/FLT.lean:FLT_exp:43",
+    "target_summary": "The corresponding total Lean integer exponent function `max (e - prec) emin`, exported with arguments `(prec, emin, e)`."
+  },
+  "version": 9
+}

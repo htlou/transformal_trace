@@ -1,0 +1,406 @@
+{
+  "case_id": "judge-3e5eaf1b07793615dc02",
+  "ground_truth": {
+    "alignment": "not_aligned",
+    "counterexamples": [
+      {
+        "id": "empty-state-map-delimiters",
+        "input_alignment": {
+          "reason": "Both inputs denote an EIP-20 state with total supply zero and empty balances and allowances maps over a singleton address domain.",
+          "status": "same"
+        },
+        "kind": "counterexample",
+        "output_alignment": {
+          "reason": "The source renders empty finite maps as \"[]\", whereas the target renders them as \"{}\"; consequently the complete state strings differ.",
+          "status": "different"
+        },
+        "reviewed_executable": true,
+        "source": {
+          "input": {
+            "description": "An EIP-20 state with zero total supply and both finite maps empty.",
+            "expression": "@EIP20Token.build_state Base 0%N AddressMap.empty AddressMap.empty"
+          },
+          "output": {
+            "description": "The kernel-proved source rendering, using square brackets for empty maps.",
+            "expression": "@show _ showTokenState (@EIP20Token.build_state Base 0%N AddressMap.empty AddressMap.empty) = \"State{total_supply: 0, balances: [], allowances: []}\"%string"
+          },
+          "run": {
+            "claim": "@show _ showTokenState (@EIP20Token.build_state Base 0%N AddressMap.empty AddressMap.empty) = \"State{total_supply: 0, balances: [], allowances: []}\"%string",
+            "code": "From Stdlib Require Import String List NArith.\nFrom QuickChick Require Import QuickChick.\nFrom ConCert.Execution Require Import Blockchain Containers ContractCommon Serializable.\nFrom ConCert.Examples.EIP20 Require Import EIP20Token.\nImport ListNotations.\nLocal Open Scope string_scope.\n\nDefinition sep : string := \", \".\n\nDefinition string_of_FMap {A B : Type}\n    `{countable.Countable A} `{stdpp.base.EqDecision A}\n    (showA : A -> string) (showB : B -> string) (m : FMap A B) : string :=\n  \"[\" ++ String.concat \"; \"\n    (map (fun '(a, b) => showA a ++ \"-->\" ++ showB b) (FMap.elements m)) ++ \"]\".\n\n#[export] Instance showFMap {A B : Type}\n    `{countable.Countable A} `{stdpp.base.EqDecision A}\n    `{Show A} `{Show B} : Show (FMap A B) :=\n  {| show := string_of_FMap show show |}.\n\nDefinition unit_address_eqb (_ _ : unit) : bool := true.\n\nLemma unit_address_eqb_spec (a b : unit) :\n    Bool.reflect (a = b) (unit_address_eqb a b).\nProof. destruct a, b. constructor. reflexivity. Qed.\n\nDefinition Base : ChainBase :=\n  {| Address := unit;\n     address_eqb := unit_address_eqb;\n     address_eqb_spec := unit_address_eqb_spec;\n     address_is_contract _ := false |}.\n\n#[export] Instance showAddress : Show (@Address Base) :=\n  {| show _ := \"unused\" |}.\n\n#[export] Instance showTokenState : Show (@EIP20Token.State Base) :=\n  {| show s := \"State{total_supply: \" ++ show s.(EIP20Token.total_supply) ++ sep\n      ++ \"balances: \" ++ show s.(EIP20Token.balances) ++ sep\n      ++ \"allowances: \" ++ show s.(EIP20Token.allowances) ++ \"}\" |}.\n\nTheorem source_empty_state :\n  @show _ showTokenState\n    (@EIP20Token.build_state Base 0%N AddressMap.empty AddressMap.empty) =\n  \"State{total_supply: 0, balances: [], allowances: []}\"%string.\nProof. reflexivity. Qed.\n",
+            "entrypoint": "source_empty_state",
+            "expected_stdout": null,
+            "invocation": "@show _ showTokenState (@EIP20Token.build_state Base 0%N AddressMap.empty AddressMap.empty)",
+            "language": "coq",
+            "mode": "prove"
+          },
+          "subject": "showTokenState",
+          "verification": {
+            "actual_result": "pass",
+            "binding_status": "verified",
+            "claim_sha256": "e00da93ba1d9d23a13cb79fcf780472e4b1a26c26fb745785dd692dbfc31f600",
+            "claimed_output": "@show _ showTokenState (@EIP20Token.build_state Base 0%N AddressMap.empty AddressMap.empty) = \"State{total_supply: 0, balances: [], allowances: []}\"%string",
+            "code_sha256": "0f44c67bb1e079c25c4f74300cdd621e5dcce306657f7a14b5646c26505edf9b",
+            "expected_result": "pass",
+            "input_expression": "@EIP20Token.build_state Base 0%N AddressMap.empty AddressMap.empty",
+            "invocation": "@show _ showTokenState (@EIP20Token.build_state Base 0%N AddressMap.empty AddressMap.empty)",
+            "language": "coq",
+            "observed_output": "@show _ showTokenState (@EIP20Token.build_state Base 0%N AddressMap.empty AddressMap.empty) = \"State{total_supply: 0, balances: [], allowances: []}\"%string",
+            "result": {
+              "command": [
+                "/srv/home/hantaolou/code/transformal/pipeline/.tools/opam-root-reglang/eip20-rocq-9.1/bin/rocq",
+                "compile",
+                "-Q",
+                "_build/default/utils/theories",
+                "ConCert.Utils",
+                "-Q",
+                "_build/default/execution/theories",
+                "ConCert.Execution",
+                "-Q",
+                "_build/default/extraction/theories",
+                "ConCert.Extraction",
+                "-Q",
+                "_build/default/embedding/theories",
+                "ConCert.Embedding",
+                "-R",
+                "_build/default/embedding/extraction",
+                "ConCert.Embedding.Extraction",
+                "-R",
+                "_build/default/examples/eip20",
+                "ConCert.Examples.EIP20",
+                "/tmp/transformal-counterexample-ip23yg9_/Counterexample.v"
+              ],
+              "returncode": 0,
+              "stderr": "",
+              "stdout": "source_empty_state\n:\nshow\n  {|\n    total_supply := 0%N;\n    balances := AddressMap.empty;\n    allowances := AddressMap.empty\n  |} =\n\"State{total_supply: 0, balances: [], allowances: []}\"\n     : show\n         {|\n           total_supply := 0%N;\n           balances := AddressMap.empty;\n           allowances := AddressMap.empty\n         |} =\n       \"State{total_supply: 0, balances: [], allowances: []}\"\n",
+              "timed_out": false
+            },
+            "status": "verified",
+            "subject": "showTokenState",
+            "verification_note": null
+          }
+        },
+        "target": {
+          "input": {
+            "description": "An EIP-20 state with zero total supply and both finite maps empty.",
+            "expression": "@EIP20Base.EIP20Token.build_state testChainBase 0 EIP20Base.FMap.empty EIP20Base.FMap.empty"
+          },
+          "output": {
+            "description": "The kernel-proved target rendering, using braces for empty maps.",
+            "expression": "(@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState testChainBase)) (@EIP20Base.EIP20Token.build_state testChainBase 0 EIP20Base.FMap.empty EIP20Base.FMap.empty) = \"State{total_supply: 0, balances: {}, allowances: {}}\""
+          },
+          "run": {
+            "claim": "(@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState testChainBase)) (@EIP20Base.EIP20Token.build_state testChainBase 0 EIP20Base.FMap.empty EIP20Base.FMap.empty) = \"State{total_supply: 0, balances: {}, allowances: {}}\"",
+            "code": "import EIP20Base.Printers\n\nopen EIP20Base\n\ndef testChainBase : ChainBase where\n  Address := Unit\n  addressLinearOrder := inferInstance\n  addressRepr := inferInstance\n  zeroAddress := ()\n\ntheorem target_empty_state :\n    (@EIP20Base.Show.render _\n      (@EIP20Base.EIP20Token.showTokenState testChainBase))\n      (@EIP20Base.EIP20Token.build_state testChainBase 0\n        EIP20Base.FMap.empty EIP20Base.FMap.empty) =\n    \"State{total_supply: 0, balances: {}, allowances: {}}\" := by\n  native_decide\n",
+            "entrypoint": "target_empty_state",
+            "expected_stdout": null,
+            "invocation": "(@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState testChainBase)) (@EIP20Base.EIP20Token.build_state testChainBase 0 EIP20Base.FMap.empty EIP20Base.FMap.empty)",
+            "language": "lean",
+            "mode": "prove"
+          },
+          "subject": "EIP20Base.EIP20Token.showTokenState",
+          "verification": {
+            "actual_result": "pass",
+            "binding_status": "verified",
+            "claim_sha256": "ffc07fdb1785347c679c29b520eccef5ba967b1df381c3cc6f951509fbb3ffd4",
+            "claimed_output": "(@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState testChainBase)) (@EIP20Base.EIP20Token.build_state testChainBase 0 EIP20Base.FMap.empty EIP20Base.FMap.empty) = \"State{total_supply: 0, balances: {}, allowances: {}}\"",
+            "code_sha256": "a388cd40d3d025e01bb0bb8451c7ff2e04034b97cf05861933167bbf09e15b7d",
+            "expected_result": "pass",
+            "input_expression": "@EIP20Base.EIP20Token.build_state testChainBase 0 EIP20Base.FMap.empty EIP20Base.FMap.empty",
+            "invocation": "(@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState testChainBase)) (@EIP20Base.EIP20Token.build_state testChainBase 0 EIP20Base.FMap.empty EIP20Base.FMap.empty)",
+            "language": "lean",
+            "observed_output": "(@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState testChainBase)) (@EIP20Base.EIP20Token.build_state testChainBase 0 EIP20Base.FMap.empty EIP20Base.FMap.empty) = \"State{total_supply: 0, balances: {}, allowances: {}}\"",
+            "result": {
+              "command": [
+                "lake",
+                "env",
+                "lean",
+                "/tmp/transformal-counterexample-a5f8afgy/Counterexample.lean"
+              ],
+              "returncode": 0,
+              "stderr": "",
+              "stdout": "/tmp/transformal-counterexample-a5f8afgy/Counterexample.lean:5:0: warning: Definition `testChainBase` of class type must be marked with `@[reducible]` or `@[implicit_reducible]`\ntarget_empty_state : Show.render (EIP20Token.build_state 0 FMap.empty FMap.empty) =\n  \"State{total_supply: 0, balances: {}, allowances: {}}\"\n",
+              "timed_out": false
+            },
+            "status": "verified",
+            "subject": "EIP20Base.EIP20Token.showTokenState",
+            "verification_note": null
+          }
+        }
+      }
+    ],
+    "examples": [],
+    "failure_categories": [
+      "definition_behavior_mismatch"
+    ],
+    "rationale": "Manually audited true positive with both source and target harnesses passing.",
+    "review": {
+      "artifact": "pipeline/runs/judge-v12-executed-eip20-r2-20260816/manual-audit/README.md",
+      "method": "manual_audit",
+      "reason": "Manually audited true positive with both source and target harnesses passing.",
+      "status": "accepted"
+    }
+  },
+  "integrity": {
+    "payload_sha256": "2614433bf3d05c6c9c92c3f38315a35f88758fe7b959b358b6d22b5acbde92c5"
+  },
+  "provenance": {
+    "historical_outcomes": [
+      {
+        "alignment": "uncertain",
+        "job_key": "d194a782f4ec760ef47e",
+        "module_accepted": false,
+        "pipeline_family": "historical",
+        "run": "pipeline/runs/api-base-eip20-20260803",
+        "valid": true
+      },
+      {
+        "alignment": "not_aligned",
+        "job_key": "d194a782f4ec760ef47e",
+        "module_accepted": false,
+        "pipeline_family": "historical",
+        "run": "pipeline/runs/eip20-counterexample-subscription-20260808",
+        "valid": true
+      },
+      {
+        "alignment": "not_aligned",
+        "job_key": "d194a782f4ec760ef47e",
+        "module_accepted": false,
+        "pipeline_family": "historical",
+        "run": "pipeline/runs/eip20-direct-judge-v4-codex-full-20260807",
+        "valid": true
+      },
+      {
+        "alignment": "not_run",
+        "job_key": "d194a782f4ec760ef47e",
+        "module_accepted": false,
+        "pipeline_family": "historical",
+        "run": "pipeline/runs/judge-v12-executed-eip20-20260816",
+        "valid": false
+      },
+      {
+        "alignment": "not_aligned",
+        "job_key": "d194a782f4ec760ef47e",
+        "module_accepted": false,
+        "pipeline_family": "historical",
+        "run": "pipeline/runs/judge-v12-executed-eip20-r2-20260816",
+        "valid": true
+      },
+      {
+        "alignment": "not_aligned",
+        "job_key": "d194a782f4ec760ef47e",
+        "module_accepted": false,
+        "pipeline_family": "new_hierarchical",
+        "run": "pipeline/runs/judge-v13-hierarchical-eip20-litellm-20260818",
+        "valid": false
+      }
+    ],
+    "job_key": "d194a782f4ec760ef47e",
+    "model_payload_projection": "interface_complete_proof_body_elided_v1",
+    "prompt_version": "semantic-alignment-v12",
+    "run": "pipeline/runs/judge-v12-executed-eip20-r2-20260816",
+    "source_index_sha256": "c2c602c34a33de85c99212976b28a0e2ebfae817b783ecb125b4db29dd507e72",
+    "target_index_sha256": "2cea524ec171b6ed9faf64fe39642a6db3818c595c505a49dfe6b42d058c2c1c"
+  },
+  "repository": {
+    "source_language": "coq",
+    "source_revision": "341f440abb955b58066c269ebe0a231e8172e403",
+    "source_root": "/srv/home/hantaolou/code/transformal/sources/concert/examples/eip20",
+    "target_root": "/srv/home/hantaolou/code/transformal/pipeline/candidates/api-base-eip20-20260803",
+    "target_snapshot": "2cea524ec171b6ed9faf64fe39642a6db3818c595c505a49dfe6b42d058c2c1c",
+    "task_config": "pipeline/tasks/api-base-20260803/eip20.json",
+    "task_id": "api-base-eip20-20260803"
+  },
+  "selection": {
+    "complexity": {
+      "context_characters": 8780,
+      "source_dependency_count": 0,
+      "target_dependency_count": 11
+    },
+    "hard_suite": {
+      "selection_correct": false,
+      "selection_is_not_final_score": true,
+      "selection_prediction": "uncertain",
+      "selection_run": "raw-direct-expanded-screen-v1-20260830"
+    },
+    "priority_reason": "Newest hierarchical pipeline did not produce an accepted correct label.",
+    "priority_tier": 1
+  },
+  "source": {
+    "context": {
+      "closure_complete": true,
+      "dependencies": [],
+      "dependency_ids": [],
+      "projection": "exact transitive parent closure; theorem proof bodies omitted; declaration interfaces and non-theorem bodies retained",
+      "unresolved_dependencies": []
+    },
+    "item": {
+      "attributes": [],
+      "compiler_declarations": [],
+      "context": [],
+      "context_is_typed": false,
+      "default_proof_using": null,
+      "dependencies": [],
+      "dependency_edges": [],
+      "dependency_extraction": "lexical_fallback",
+      "dependency_ids": [],
+      "file": "EIP20TokenPrinters.v",
+      "fully_qualified_name": "showTokenState",
+      "id": "EIP20TokenPrinters.v:showTokenState:984",
+      "kind": "Instance",
+      "language": "coq",
+      "metadata": {
+        "default_proof_using": null,
+        "proof_using": null,
+        "section_path": []
+      },
+      "modifiers": [],
+      "module": "EIP20TokenPrinters",
+      "module_path": [],
+      "name": "showTokenState",
+      "program_obligation_count": 0,
+      "program_obligations": [],
+      "proof": null,
+      "proof_terminator": null,
+      "proof_using": null,
+      "qualified_name": "showTokenState",
+      "section_context": [],
+      "section_path": [],
+      "source_end_line": 46,
+      "source_end_offset": 1240,
+      "source_file": "EIP20TokenPrinters.v",
+      "source_line": 40,
+      "source_name": "showTokenState",
+      "source_offset": 984,
+      "source_signature": "#[export]\nInstance showTokenState : Show EIP20Token.State :=\n{|\n  show s := \"State{total_supply: \" ++ show s.(total_supply) ++ sep\n               ++ \"balances: \" ++ show s.(balances) ++ sep\n               ++ \"allowances: \" ++ show s.(allowances) ++ \"}\"\n|}.",
+      "source_signature_sha256": "7d92262971f52151e6b046149b405699a000e4b08e0954d2ecb2d6739937e0b5",
+      "source_span": {
+        "end_line": 46,
+        "end_offset": 1240,
+        "start_line": 40,
+        "start_offset": 984
+      },
+      "stable_id": "EIP20TokenPrinters.v:showTokenState:984",
+      "statement": "#[export]\nInstance showTokenState : Show EIP20Token.State :=\n{|\n  show s := \"State{total_supply: \" ++ show s.(total_supply) ++ sep\n               ++ \"balances: \" ++ show s.(balances) ++ sep\n               ++ \"allowances: \" ++ show s.(allowances) ++ \"}\"\n|}.",
+      "type_signature": null,
+      "visibility": "public"
+    },
+    "language": "coq"
+  },
+  "target": {
+    "context": {
+      "closure_complete": true,
+      "dependencies": [
+        {
+          "kind": "class",
+          "name": "Show",
+          "qualified_name": "EIP20Base.Show",
+          "target_text": "class Show (α : Type) where\n  render : α → String"
+        },
+        {
+          "kind": "def",
+          "name": "sep",
+          "qualified_name": "EIP20Base.sep",
+          "target_text": "def sep : String := \", \""
+        },
+        {
+          "kind": "abbrev",
+          "name": "Address",
+          "qualified_name": "EIP20Base.Address",
+          "target_text": "abbrev Address [b : ChainBase] := b.Address"
+        },
+        {
+          "kind": "class",
+          "name": "ChainBase",
+          "qualified_name": "EIP20Base.ChainBase",
+          "target_text": "class ChainBase where\n  Address : Type\n  addressLinearOrder : LinearOrder Address\n  addressRepr : Repr Address\n  zeroAddress : Address\n\nattribute [instance, reducible] ChainBase.addressLinearOrder ChainBase.addressRepr"
+        },
+        {
+          "kind": "abbrev",
+          "name": "FMap",
+          "qualified_name": "EIP20Base.FMap",
+          "target_text": "abbrev FMap (κ : Type) (ν : Type) := Finmap (fun _ : κ => ν)\n\nnamespace FMap"
+        },
+        {
+          "kind": "def",
+          "name": "elements",
+          "qualified_name": "EIP20Base.FMap.elements",
+          "target_text": "def elements {κ ν : Type} [LinearOrder κ] (map : FMap κ ν) : List (κ × ν) :=\n  (map.keys.sort (· ≤ ·)).filterMap fun key => (map.lookup key).map fun value => (key, value)"
+        },
+        {
+          "kind": "def",
+          "name": "showValue",
+          "qualified_name": "EIP20Base.showValue",
+          "target_text": "def showValue [Show α] (value : α) : String := Show.render value"
+        },
+        {
+          "kind": "def",
+          "name": "showMap",
+          "qualified_name": "EIP20Base.showMap",
+          "target_text": "def showMap [LinearOrder κ] [Show κ] [Show ν] (map : FMap κ ν) : String :=\n  \"{\" ++ String.intercalate \"; \" ((FMap.elements map).map fun (k, v) =>\n    showValue k ++ \" ↦ \" ++ showValue v) ++ \"}\"\n\nnamespace EIP20Token\n\nvariable [ChainBase]"
+        },
+        {
+          "kind": "abbrev",
+          "name": "TokenValue",
+          "qualified_name": "EIP20Base.EIP20Token.TokenValue",
+          "target_text": "abbrev TokenValue := EIP20Base.TokenValue"
+        },
+        {
+          "kind": "abbrev",
+          "name": "TokenValue",
+          "qualified_name": "EIP20Base.TokenValue",
+          "target_text": "abbrev TokenValue := Nat"
+        },
+        {
+          "kind": "structure",
+          "name": "State",
+          "qualified_name": "EIP20Base.EIP20Token.State",
+          "target_text": "structure State where\n  total_supply : TokenValue\n  balances : FMap Address TokenValue\n  allowances : FMap Address (FMap Address TokenValue)\nderiving DecidableEq"
+        }
+      ],
+      "dependency_ids": [
+        "EIP20Base/Printers.lean:Show:7",
+        "EIP20Base/Printers.lean:sep:11",
+        "EIP20Base/Common.lean:Address:16",
+        "EIP20Base/Common.lean:ChainBase:8",
+        "EIP20Base/Common.lean:FMap:35",
+        "EIP20Base/Common.lean:elements:52",
+        "EIP20Base/Printers.lean:showValue:10",
+        "EIP20Base/Printers.lean:showMap:25",
+        "EIP20Base/Token.lean:TokenValue:8",
+        "EIP20Base/Common.lean:TokenValue:18",
+        "EIP20Base/Token.lean:State:17"
+      ],
+      "projection": "exact transitive parent closure; theorem proof bodies omitted; declaration interfaces and non-theorem bodies retained",
+      "unresolved_dependencies": []
+    },
+    "item": {
+      "dependencies": [
+        "EIP20Base/Printers.lean:Show:7",
+        "EIP20Base/Printers.lean:sep:11",
+        "EIP20Base/Printers.lean:showMap:25",
+        "EIP20Base/Printers.lean:showValue:10",
+        "EIP20Base/Token.lean:State:17"
+      ],
+      "elaborated_type": "[inst : EIP20Base.ChainBase] → EIP20Base.Show EIP20Base.EIP20Token.State",
+      "environment_confirmed": true,
+      "environment_kind": "def",
+      "environment_partial": false,
+      "environment_unsafe": false,
+      "id": "EIP20Base/Printers.lean:showTokenState:48",
+      "judge_eligible": true,
+      "kind": "instance",
+      "match_eligible": true,
+      "modifiers": [],
+      "name": "showTokenState",
+      "qualified_name": "EIP20Base.EIP20Token.showTokenState",
+      "role": "public",
+      "target_file": "EIP20Base/Printers.lean",
+      "target_line": 48,
+      "target_signature": "instance showTokenState : Show State",
+      "target_text": "instance showTokenState : Show State := ⟨fun state =>\n  \"State{total_supply: \" ++ showValue state.total_supply ++ sep ++\n  \"balances: \" ++ showMap state.balances ++ sep ++\n  \"allowances: \" ++ showMap state.allowances ++ \"}\"⟩",
+      "unmatched_eligible": true
+    },
+    "language": "lean"
+  },
+  "version": 1
+}

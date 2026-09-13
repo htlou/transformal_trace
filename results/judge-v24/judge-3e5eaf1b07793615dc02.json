@@ -1,0 +1,1663 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "command": {
+        "command": [
+          "bwrap",
+          "--die-with-parent",
+          "--unshare-user",
+          "--unshare-ipc",
+          "--unshare-pid",
+          "--unshare-uts",
+          "--unshare-cgroup",
+          "--ro-bind",
+          "/",
+          "/",
+          "--dev",
+          "/dev",
+          "--proc",
+          "/proc",
+          "--tmpfs",
+          "/tmp",
+          "--tmpfs",
+          "/mnt",
+          "--tmpfs",
+          "/srv/home/hantaolou/code/transformal",
+          "--tmpfs",
+          "/srv/home/hantaolou/.codex",
+          "--dir",
+          "/srv/home/hantaolou/code/transformal/pipeline",
+          "--dir",
+          "/srv/home/hantaolou/code/transformal/sources",
+          "--dir",
+          "/srv/home/hantaolou/code/transformal/pipeline/.tools",
+          "--dir",
+          "/srv/home/hantaolou/code/transformal/pipeline/candidates",
+          "--dir",
+          "/srv/home/hantaolou/code/transformal/sources/concert",
+          "--dir",
+          "/srv/home/hantaolou/code/transformal/pipeline/.tools/opam-root-reglang",
+          "--dir",
+          "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801",
+          "--dir",
+          "/srv/home/hantaolou/code/transformal/sources/concert/examples",
+          "--dir",
+          "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake",
+          "--dir",
+          "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages",
+          "--ro-bind",
+          "/srv/home/hantaolou/code/transformal/pipeline/.tools/opam-root-reglang/eip20-rocq-9.1",
+          "/srv/home/hantaolou/code/transformal/pipeline/.tools/opam-root-reglang/eip20-rocq-9.1",
+          "--ro-bind",
+          "/srv/home/hantaolou/code/transformal/pipeline/candidates/api-base-eip20-20260803",
+          "/srv/home/hantaolou/code/transformal/pipeline/candidates/api-base-eip20-20260803",
+          "--ro-bind",
+          "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/Cli",
+          "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/Cli",
+          "--ro-bind",
+          "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/LeanSearchClient",
+          "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/LeanSearchClient",
+          "--ro-bind",
+          "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/Qq",
+          "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/Qq",
+          "--ro-bind",
+          "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/aesop",
+          "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/aesop",
+          "--ro-bind",
+          "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/batteries",
+          "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/batteries",
+          "--ro-bind",
+          "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/importGraph",
+          "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/importGraph",
+          "--ro-bind",
+          "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/mathlib",
+          "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/mathlib",
+          "--ro-bind",
+          "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/plausible",
+          "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/plausible",
+          "--ro-bind",
+          "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/proofwidgets",
+          "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/proofwidgets",
+          "--ro-bind",
+          "/srv/home/hantaolou/code/transformal/sources/concert/examples/eip20",
+          "/srv/home/hantaolou/code/transformal/sources/concert/examples/eip20",
+          "--bind",
+          "/tmp/transformal-blind-home-gugkacwg/home",
+          "/mnt/transformal-blind-home",
+          "--bind",
+          "/tmp/transformal-judge-4brupkso",
+          "/tmp/transformal-blind-work",
+          "--setenv",
+          "HOME",
+          "/mnt/transformal-blind-home",
+          "--setenv",
+          "CODEX_HOME",
+          "/mnt/transformal-blind-home/.codex",
+          "--setenv",
+          "TRANSFORMAL_BLIND_EVAL_ACTIVE",
+          "1",
+          "--setenv",
+          "PATH",
+          "/srv/home/hantaolou/code/transformal/pipeline/.tools/opam-root-reglang/eip20-rocq-9.1/bin:/srv/home/hantaolou/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/hantaolou/.elan/bin:/home/hantaolou/.local/bin:/srv/home/hantaolou/.codex/tmp/arg0/codex-arg09WUqyi:/srv/home/hantaolou/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/hantaolou/.local/bin:/home/hantaolou/.elan/bin:/home/hantaolou/.local/bin:/srv/home/hantaolou/.local/bin:/home/hantaolou/.elan/bin:/srv/home/hantaolou/miniconda3/condabin:/home/hantaolou/.nvm/versions/node/v24.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+          "/srv/home/hantaolou/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/bin/codex",
+          "exec",
+          "--dangerously-bypass-approvals-and-sandbox",
+          "--config",
+          "features.unified_exec=false",
+          "--ephemeral",
+          "--skip-git-repo-check",
+          "--ignore-user-config",
+          "--cd",
+          "/srv/home/hantaolou/code/transformal/sources/concert/examples/eip20",
+          "--add-dir",
+          "/srv/home/hantaolou/code/transformal/pipeline/candidates/api-base-eip20-20260803",
+          "--model",
+          "gpt-5.6-sol",
+          "--config",
+          "model_reasoning_effort=\"high\"",
+          "--output-schema",
+          "/tmp/transformal-blind-work/verdict-schema.json",
+          "--output-last-message",
+          "/tmp/transformal-blind-work/verdict.json",
+          "-"
+        ],
+        "returncode": 0,
+        "stderr": "nce and allowance maps. The source BoundedN 256 address space corresponds to the target Fin 256 address space; because the maps are empty, address representation is unobservable here.\",\"status\":\"same\"},\"output_alignment\":{\"reason\":\"The source finite-map Show implementation renders an empty map as [], while the target showMap renders it as {}. Consequently, the complete state-rendering strings differ.\",\"status\":\"different\"},\"source\":{\"input\":{\"description\":\"A state over the source LocalChainBase representation with total_supply 0 and empty balance and allowance maps.\",\"expression\":\"@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))\"},\"output\":{\"description\":\"The source printer renders both empty finite maps using square brackets.\",\"expression\":\"@show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState (@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \\\"State{total_supply: 0, balances: [], allowances: []}\\\"%string\"},\"run\":{\"claim\":\"@show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState (@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \\\"State{total_supply: 0, balances: [], allowances: []}\\\"%string\",\"code\":\"From Stdlib Require Import String ZArith List.\\nFrom QuickChick Require Import QuickChick.\\nFrom ConCert.Execution Require Import Blockchain BoundedN Containers ContractCommon SerializableInstances.\\nFrom ConCert.Examples.EIP20 Require Import EIP20Token.\\n\\nImport ListNotations.\\nLocal Open Scope string_scope.\\nLocal Open Scope N_scope.\\n\\nModule TestUtils.\\n  Global Definition AddrSize : N := (2^8)%N.\\n  Global Instance LocalChainBase : ChainBase :=\\n    {| Address := BoundedN AddrSize;\\n       address_eqb := BoundedN.eqb;\\n       address_eqb_spec := BoundedN.eqb_spec;\\n       address_is_contract a := (AddrSize / 2 <=? BoundedN.to_N a)%N |}.\\n\\n  Definition string_of_FMap {A B : Type}\\n      `{countable.Countable A} `{base.EqDecision A}\\n      (showA : A -> string) (showB : B -> string) (m : FMap A B) : string :=\\n    \\\"[\\\" ++ String.concat \\\"; \\\"\\n      (map (fun '(a, b) => showA a ++ \\\"-->\\\" ++ showB b) (FMap.elements m)) ++ \\\"]\\\".\\n\\n  #[export] Instance showFMap {A B : Type}\\n      `{countable.Countable A} `{base.EqDecision A} `{Show A} `{Show B}\\n      : Show (FMap A B) := {| show := string_of_FMap show show |}.\\nEnd TestUtils.\\n\\nModule ChainPrinters.\\n  Definition Base := TestUtils.LocalChainBase.\\n  Definition sep : string := \\\", \\\".\\n\\n  #[export] Instance showBoundedN {bound : N} `{Show N}\\n      : Show (BoundedN.BoundedN bound) :=\\n    {| show bn := match bn with\\n                  | BoundedN.bounded n _ => show n ++ \\\"%\\\" ++ show bound\\n                  end |}.\\n\\n  #[export] Instance showBoundedNAddrSize :\\n      Show (BoundedN.BoundedN TestUtils.AddrSize) :=\\n    {| show := @show (BoundedN.BoundedN TestUtils.AddrSize) showBoundedN |}.\\n\\n  #[export] Instance showAddress : Show (@Address Base) :=\\n    {| show := @show (BoundedN.BoundedN TestUtils.AddrSize) showBoundedNAddrSize |}.\\nEnd ChainPrinters.\\n\\nImport TestUtils ChainPrinters.\\n\\n#[export] Instance showTokenValue : Show EIP20Token.TokenValue :=\\n  {| show v := show v |}.\\n\\n#[export] Instance showTokenState : Show EIP20Token.State :=\\n  {| show s := \\\"State{total_supply: \\\" ++ show s.(EIP20Token.total_supply) ++ sep\\n                 ++ \\\"balances: \\\" ++ show s.(EIP20Token.balances) ++ sep\\n                 ++ \\\"allowances: \\\" ++ show s.(EIP20Token.allowances) ++ \\\"}\\\" |}.\\n\\nTheorem source_empty_maps :\\n  @show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState\\n    (@EIP20Token.build_state TestUtils.LocalChainBase 0%N\\n      (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue)\\n      (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) =\\n  \\\"State{total_supply: 0, balances: [], allowances: []}\\\"%string.\\nProof.\\n  vm_compute; reflexivity.\\nQed.\\n\",\"entrypoint\":\"source_empty_maps\",\"expected_stdout\":null,\"invocation\":\"@show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState (@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue)))\",\"language\":\"coq\",\"mode\":\"prove\"},\"subject\":\"showTokenState\"},\"target\":{\"input\":{\"description\":\"The corresponding state over Fin 256 addresses with total_supply 0 and empty balance and allowance maps.\",\"expression\":\"({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase)\"},\"output\":{\"description\":\"The target printer renders both empty finite maps using braces.\",\"expression\":\"@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \\\"State{total_supply: 0, balances: {}, allowances: {}}\\\"\"},\"run\":{\"claim\":\"@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \\\"State{total_supply: 0, balances: {}, allowances: {}}\\\"\",\"code\":\"import EIP20Base.Printers\\n\\nnamespace JudgeHarness\\nopen EIP20Base\\n\\ninstance testChainBase : ChainBase where\\n  Address := Fin 256\\n  addressLinearOrder := inferInstance\\n  addressRepr := inferInstance\\n  zeroAddress := 0\\n\\ntheorem target_empty_maps :\\n  @EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \\\"State{total_supply: 0, balances: {}, allowances: {}}\\\" := by\\n  native_decide\\n\\nend JudgeHarness\\n\",\"entrypoint\":\"JudgeHarness.target_empty_maps\",\"expected_stdout\":null,\"invocation\":\"@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase)\",\"language\":\"lean\",\"mode\":\"prove\"},\"subject\":\"EIP20Base.EIP20Token.showTokenState\"}}],\"differences\":[\"The source state printer delegates balances and allowances to a finite-map Show implementation whose empty rendering is []. The target delegates both fields to showMap, whose empty rendering is {}, changing the observable output on a valid shared-domain state.\"],\"evidence\":[{\"description\":\"The source state printer renders balances through the source finite-map Show instance.\",\"file\":\"/srv/home/hantaolou/code/transformal/sources/concert/examples/eip20/EIP20TokenPrinters.v\",\"line\":44,\"side\":\"source\"},{\"description\":\"The source state printer renders allowances through the same source finite-map Show instance.\",\"file\":\"/srv/home/hantaolou/code/transformal/sources/concert/examples/eip20/EIP20TokenPrinters.v\",\"line\":45,\"side\":\"source\"},{\"description\":\"The target finite-map renderer surrounds rendered elements with braces.\",\"file\":\"/srv/home/hantaolou/code/transformal/pipeline/candidates/api-base-eip20-20260803/EIP20Base/Printers.lean\",\"line\":25,\"side\":\"target\"},{\"description\":\"The matched target state printer uses showMap for balances and allowances.\",\"file\":\"/srv/home/hantaolou/code/transformal/pipeline/candidates/api-base-eip20-20260803/EIP20Base/Printers.lean\",\"line\":48,\"side\":\"target\"}],\"examples\":[],\"failure_categories\":[\"definition_behavior_mismatch\"],\"interface_witness\":{\"compiler_validated\":false,\"explanation\":\"Not applicable: rejection is established by a two-sided behavioral counterexample in the shared input domain, not by an invocation-scope mismatch.\",\"kind\":null,\"source_interface\":\"showTokenState : Show (@EIP20Token.State TestUtils.LocalChainBase)\",\"status\":\"not_applicable\",\"target_interface\":\"[inst : EIP20Base.ChainBase] → EIP20Base.Show EIP20Base.EIP20Token.State\"},\"match_status\":\"confirmed\",\"source_id\":\"EIP20TokenPrinters.v:showTokenState:984\",\"source_summary\":\"A Show instance rendering total_supply, balances, and allowances using the source finite-map representation.\",\"suggested_target\":null,\"target_disposition\":null,\"target_id\":\"EIP20Base/Printers.lean:showTokenState:48\",\"target_summary\":\"The corresponding State Show instance, using a finite-map renderer with observably different delimiters.\"}\ndiff --git a//tmp/tmp.OJjFySBWQh/ConCert/Counterexample.v b//tmp/tmp.OJjFySBWQh/ConCert/Counterexample.v\nnew file mode 100644\nindex 0000000000000000000000000000000000000000..6f92d9d6f68a753ca42249f8d288e2781183d3a2\n--- /dev/null\n+++ b//tmp/tmp.OJjFySBWQh/ConCert/Counterexample.v\n@@ -0,0 +1,65 @@\n+From Stdlib Require Import String ZArith List.\n+From QuickChick Require Import QuickChick.\n+From ConCert.Execution Require Import Blockchain BoundedN Containers ContractCommon SerializableInstances.\n+From ConCert.Examples.EIP20 Require Import EIP20Token.\n+\n+Import ListNotations.\n+Local Open Scope string_scope.\n+Local Open Scope N_scope.\n+\n+Module TestUtils.\n+  Global Definition AddrSize : N := (2^8)%N.\n+  Global Instance LocalChainBase : ChainBase :=\n+    {| Address := BoundedN AddrSize;\n+       address_eqb := BoundedN.eqb;\n+       address_eqb_spec := BoundedN.eqb_spec;\n+       address_is_contract a := (AddrSize / 2 <=? BoundedN.to_N a)%N |}.\n+\n+  Definition string_of_FMap {A B : Type}\n+      `{countable.Countable A} `{base.EqDecision A}\n+      (showA : A -> string) (showB : B -> string) (m : FMap A B) : string :=\n+    \"[\" ++ String.concat \"; \"\n+      (map (fun '(a, b) => showA a ++ \"-->\" ++ showB b) (FMap.elements m)) ++ \"]\".\n+\n+  #[export] Instance showFMap {A B : Type}\n+      `{countable.Countable A} `{base.EqDecision A} `{Show A} `{Show B}\n+      : Show (FMap A B) := {| show := string_of_FMap show show |}.\n+End TestUtils.\n+\n+Module ChainPrinters.\n+  Definition Base := TestUtils.LocalChainBase.\n+  Definition sep : string := \", \".\n+\n+  #[export] Instance showBoundedN {bound : N} `{Show N}\n+      : Show (BoundedN.BoundedN bound) :=\n+    {| show bn := match bn with\n+                  | BoundedN.bounded n _ => show n ++ \"%\" ++ show bound\n+                  end |}.\n+\n+  #[export] Instance showBoundedNAddrSize :\n+      Show (BoundedN.BoundedN TestUtils.AddrSize) :=\n+    {| show := @show (BoundedN.BoundedN TestUtils.AddrSize) showBoundedN |}.\n+\n+  #[export] Instance showAddress : Show (@Address Base) :=\n+    {| show := @show (BoundedN.BoundedN TestUtils.AddrSize) showBoundedNAddrSize |}.\n+End ChainPrinters.\n+\n+Import TestUtils ChainPrinters.\n+\n+#[export] Instance showTokenValue : Show EIP20Token.TokenValue :=\n+  {| show v := show v |}.\n+\n+#[export] Instance showTokenState : Show EIP20Token.State :=\n+  {| show s := \"State{total_supply: \" ++ show s.(EIP20Token.total_supply) ++ sep\n+                 ++ \"balances: \" ++ show s.(EIP20Token.balances) ++ sep\n+                 ++ \"allowances: \" ++ show s.(EIP20Token.allowances) ++ \"}\" |}.\n+\n+Theorem source_empty_maps :\n+  @show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState\n+    (@EIP20Token.build_state TestUtils.LocalChainBase 0%N\n+      (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue)\n+      (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) =\n+  \"State{total_supply: 0, balances: [], allowances: []}\"%string.\n+Proof.\n+  vm_compute; reflexivity.\n+Qed.\n\ntokens used\n81,570\n",
+        "stdout": "{\"alignment\":\"not_aligned\",\"compiler_surface_checks\":[],\"confidence\":0.99,\"counterexamples\":[{\"id\":\"empty-map-rendering\",\"input_alignment\":{\"reason\":\"Both concrete inputs denote an EIP-20 state with total supply zero and empty balance and allowance maps. The source BoundedN 256 address space corresponds to the target Fin 256 address space; because the maps are empty, address representation is unobservable here.\",\"status\":\"same\"},\"output_alignment\":{\"reason\":\"The source finite-map Show implementation renders an empty map as [], while the target showMap renders it as {}. Consequently, the complete state-rendering strings differ.\",\"status\":\"different\"},\"source\":{\"input\":{\"description\":\"A state over the source LocalChainBase representation with total_supply 0 and empty balance and allowance maps.\",\"expression\":\"@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))\"},\"output\":{\"description\":\"The source printer renders both empty finite maps using square brackets.\",\"expression\":\"@show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState (@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \\\"State{total_supply: 0, balances: [], allowances: []}\\\"%string\"},\"run\":{\"claim\":\"@show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState (@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \\\"State{total_supply: 0, balances: [], allowances: []}\\\"%string\",\"code\":\"From Stdlib Require Import String ZArith List.\\nFrom QuickChick Require Import QuickChick.\\nFrom ConCert.Execution Require Import Blockchain BoundedN Containers ContractCommon SerializableInstances.\\nFrom ConCert.Examples.EIP20 Require Import EIP20Token.\\n\\nImport ListNotations.\\nLocal Open Scope string_scope.\\nLocal Open Scope N_scope.\\n\\nModule TestUtils.\\n  Global Definition AddrSize : N := (2^8)%N.\\n  Global Instance LocalChainBase : ChainBase :=\\n    {| Address := BoundedN AddrSize;\\n       address_eqb := BoundedN.eqb;\\n       address_eqb_spec := BoundedN.eqb_spec;\\n       address_is_contract a := (AddrSize / 2 <=? BoundedN.to_N a)%N |}.\\n\\n  Definition string_of_FMap {A B : Type}\\n      `{countable.Countable A} `{base.EqDecision A}\\n      (showA : A -> string) (showB : B -> string) (m : FMap A B) : string :=\\n    \\\"[\\\" ++ String.concat \\\"; \\\"\\n      (map (fun '(a, b) => showA a ++ \\\"-->\\\" ++ showB b) (FMap.elements m)) ++ \\\"]\\\".\\n\\n  #[export] Instance showFMap {A B : Type}\\n      `{countable.Countable A} `{base.EqDecision A} `{Show A} `{Show B}\\n      : Show (FMap A B) := {| show := string_of_FMap show show |}.\\nEnd TestUtils.\\n\\nModule ChainPrinters.\\n  Definition Base := TestUtils.LocalChainBase.\\n  Definition sep : string := \\\", \\\".\\n\\n  #[export] Instance showBoundedN {bound : N} `{Show N}\\n      : Show (BoundedN.BoundedN bound) :=\\n    {| show bn := match bn with\\n                  | BoundedN.bounded n _ => show n ++ \\\"%\\\" ++ show bound\\n                  end |}.\\n\\n  #[export] Instance showBoundedNAddrSize :\\n      Show (BoundedN.BoundedN TestUtils.AddrSize) :=\\n    {| show := @show (BoundedN.BoundedN TestUtils.AddrSize) showBoundedN |}.\\n\\n  #[export] Instance showAddress : Show (@Address Base) :=\\n    {| show := @show (BoundedN.BoundedN TestUtils.AddrSize) showBoundedNAddrSize |}.\\nEnd ChainPrinters.\\n\\nImport TestUtils ChainPrinters.\\n\\n#[export] Instance showTokenValue : Show EIP20Token.TokenValue :=\\n  {| show v := show v |}.\\n\\n#[export] Instance showTokenState : Show EIP20Token.State :=\\n  {| show s := \\\"State{total_supply: \\\" ++ show s.(EIP20Token.total_supply) ++ sep\\n                 ++ \\\"balances: \\\" ++ show s.(EIP20Token.balances) ++ sep\\n                 ++ \\\"allowances: \\\" ++ show s.(EIP20Token.allowances) ++ \\\"}\\\" |}.\\n\\nTheorem source_empty_maps :\\n  @show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState\\n    (@EIP20Token.build_state TestUtils.LocalChainBase 0%N\\n      (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue)\\n      (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) =\\n  \\\"State{total_supply: 0, balances: [], allowances: []}\\\"%string.\\nProof.\\n  vm_compute; reflexivity.\\nQed.\\n\",\"entrypoint\":\"source_empty_maps\",\"expected_stdout\":null,\"invocation\":\"@show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState (@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue)))\",\"language\":\"coq\",\"mode\":\"prove\"},\"subject\":\"showTokenState\"},\"target\":{\"input\":{\"description\":\"The corresponding state over Fin 256 addresses with total_supply 0 and empty balance and allowance maps.\",\"expression\":\"({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase)\"},\"output\":{\"description\":\"The target printer renders both empty finite maps using braces.\",\"expression\":\"@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \\\"State{total_supply: 0, balances: {}, allowances: {}}\\\"\"},\"run\":{\"claim\":\"@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \\\"State{total_supply: 0, balances: {}, allowances: {}}\\\"\",\"code\":\"import EIP20Base.Printers\\n\\nnamespace JudgeHarness\\nopen EIP20Base\\n\\ninstance testChainBase : ChainBase where\\n  Address := Fin 256\\n  addressLinearOrder := inferInstance\\n  addressRepr := inferInstance\\n  zeroAddress := 0\\n\\ntheorem target_empty_maps :\\n  @EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \\\"State{total_supply: 0, balances: {}, allowances: {}}\\\" := by\\n  native_decide\\n\\nend JudgeHarness\\n\",\"entrypoint\":\"JudgeHarness.target_empty_maps\",\"expected_stdout\":null,\"invocation\":\"@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase)\",\"language\":\"lean\",\"mode\":\"prove\"},\"subject\":\"EIP20Base.EIP20Token.showTokenState\"}}],\"differences\":[\"The source state printer delegates balances and allowances to a finite-map Show implementation whose empty rendering is []. The target delegates both fields to showMap, whose empty rendering is {}, changing the observable output on a valid shared-domain state.\"],\"evidence\":[{\"description\":\"The source state printer renders balances through the source finite-map Show instance.\",\"file\":\"/srv/home/hantaolou/code/transformal/sources/concert/examples/eip20/EIP20TokenPrinters.v\",\"line\":44,\"side\":\"source\"},{\"description\":\"The source state printer renders allowances through the same source finite-map Show instance.\",\"file\":\"/srv/home/hantaolou/code/transformal/sources/concert/examples/eip20/EIP20TokenPrinters.v\",\"line\":45,\"side\":\"source\"},{\"description\":\"The target finite-map renderer surrounds rendered elements with braces.\",\"file\":\"/srv/home/hantaolou/code/transformal/pipeline/candidates/api-base-eip20-20260803/EIP20Base/Printers.lean\",\"line\":25,\"side\":\"target\"},{\"description\":\"The matched target state printer uses showMap for balances and allowances.\",\"file\":\"/srv/home/hantaolou/code/transformal/pipeline/candidates/api-base-eip20-20260803/EIP20Base/Printers.lean\",\"line\":48,\"side\":\"target\"}],\"examples\":[],\"failure_categories\":[\"definition_behavior_mismatch\"],\"interface_witness\":{\"compiler_validated\":false,\"explanation\":\"Not applicable: rejection is established by a two-sided behavioral counterexample in the shared input domain, not by an invocation-scope mismatch.\",\"kind\":null,\"source_interface\":\"showTokenState : Show (@EIP20Token.State TestUtils.LocalChainBase)\",\"status\":\"not_applicable\",\"target_interface\":\"[inst : EIP20Base.ChainBase] → EIP20Base.Show EIP20Base.EIP20Token.State\"},\"match_status\":\"confirmed\",\"source_id\":\"EIP20TokenPrinters.v:showTokenState:984\",\"source_summary\":\"A Show instance rendering total_supply, balances, and allowances using the source finite-map representation.\",\"suggested_target\":null,\"target_disposition\":null,\"target_id\":\"EIP20Base/Printers.lean:showTokenState:48\",\"target_summary\":\"The corresponding State Show instance, using a finite-map renderer with observably different delimiters.\"}\n",
+        "timed_out": false
+      },
+      "prompt_sha256": "8312d4bac7e99f7c9b7393c2edff9ce0fc13291e064394ba61a3c155748d8c86",
+      "validation_errors": [],
+      "verdict": {
+        "alignment": "not_aligned",
+        "compiler_surface_checks": [],
+        "confidence": 0.99,
+        "counterexamples": [
+          {
+            "id": "empty-map-rendering",
+            "input_alignment": {
+              "reason": "Both concrete inputs denote an EIP-20 state with total supply zero and empty balance and allowance maps. The source BoundedN 256 address space corresponds to the target Fin 256 address space; because the maps are empty, address representation is unobservable here.",
+              "status": "same"
+            },
+            "output_alignment": {
+              "reason": "The source finite-map Show implementation renders an empty map as [], while the target showMap renders it as {}. Consequently, the complete state-rendering strings differ.",
+              "status": "different"
+            },
+            "source": {
+              "input": {
+                "description": "A state over the source LocalChainBase representation with total_supply 0 and empty balance and allowance maps.",
+                "expression": "@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))"
+              },
+              "output": {
+                "description": "The source printer renders both empty finite maps using square brackets.",
+                "expression": "@show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState (@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \"State{total_supply: 0, balances: [], allowances: []}\"%string"
+              },
+              "run": {
+                "claim": "@show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState (@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \"State{total_supply: 0, balances: [], allowances: []}\"%string",
+                "code": "From Stdlib Require Import String ZArith List.\nFrom QuickChick Require Import QuickChick.\nFrom ConCert.Execution Require Import Blockchain BoundedN Containers ContractCommon SerializableInstances.\nFrom ConCert.Examples.EIP20 Require Import EIP20Token.\n\nImport ListNotations.\nLocal Open Scope string_scope.\nLocal Open Scope N_scope.\n\nModule TestUtils.\n  Global Definition AddrSize : N := (2^8)%N.\n  Global Instance LocalChainBase : ChainBase :=\n    {| Address := BoundedN AddrSize;\n       address_eqb := BoundedN.eqb;\n       address_eqb_spec := BoundedN.eqb_spec;\n       address_is_contract a := (AddrSize / 2 <=? BoundedN.to_N a)%N |}.\n\n  Definition string_of_FMap {A B : Type}\n      `{countable.Countable A} `{base.EqDecision A}\n      (showA : A -> string) (showB : B -> string) (m : FMap A B) : string :=\n    \"[\" ++ String.concat \"; \"\n      (map (fun '(a, b) => showA a ++ \"-->\" ++ showB b) (FMap.elements m)) ++ \"]\".\n\n  #[export] Instance showFMap {A B : Type}\n      `{countable.Countable A} `{base.EqDecision A} `{Show A} `{Show B}\n      : Show (FMap A B) := {| show := string_of_FMap show show |}.\nEnd TestUtils.\n\nModule ChainPrinters.\n  Definition Base := TestUtils.LocalChainBase.\n  Definition sep : string := \", \".\n\n  #[export] Instance showBoundedN {bound : N} `{Show N}\n      : Show (BoundedN.BoundedN bound) :=\n    {| show bn := match bn with\n                  | BoundedN.bounded n _ => show n ++ \"%\" ++ show bound\n                  end |}.\n\n  #[export] Instance showBoundedNAddrSize :\n      Show (BoundedN.BoundedN TestUtils.AddrSize) :=\n    {| show := @show (BoundedN.BoundedN TestUtils.AddrSize) showBoundedN |}.\n\n  #[export] Instance showAddress : Show (@Address Base) :=\n    {| show := @show (BoundedN.BoundedN TestUtils.AddrSize) showBoundedNAddrSize |}.\nEnd ChainPrinters.\n\nImport TestUtils ChainPrinters.\n\n#[export] Instance showTokenValue : Show EIP20Token.TokenValue :=\n  {| show v := show v |}.\n\n#[export] Instance showTokenState : Show EIP20Token.State :=\n  {| show s := \"State{total_supply: \" ++ show s.(EIP20Token.total_supply) ++ sep\n                 ++ \"balances: \" ++ show s.(EIP20Token.balances) ++ sep\n                 ++ \"allowances: \" ++ show s.(EIP20Token.allowances) ++ \"}\" |}.\n\nTheorem source_empty_maps :\n  @show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState\n    (@EIP20Token.build_state TestUtils.LocalChainBase 0%N\n      (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue)\n      (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) =\n  \"State{total_supply: 0, balances: [], allowances: []}\"%string.\nProof.\n  vm_compute; reflexivity.\nQed.\n",
+                "entrypoint": "source_empty_maps",
+                "expected_stdout": null,
+                "invocation": "@show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState (@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue)))",
+                "language": "coq",
+                "mode": "prove"
+              },
+              "subject": "showTokenState"
+            },
+            "target": {
+              "input": {
+                "description": "The corresponding state over Fin 256 addresses with total_supply 0 and empty balance and allowance maps.",
+                "expression": "({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase)"
+              },
+              "output": {
+                "description": "The target printer renders both empty finite maps using braces.",
+                "expression": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\""
+              },
+              "run": {
+                "claim": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\"",
+                "code": "import EIP20Base.Printers\n\nnamespace JudgeHarness\nopen EIP20Base\n\ninstance testChainBase : ChainBase where\n  Address := Fin 256\n  addressLinearOrder := inferInstance\n  addressRepr := inferInstance\n  zeroAddress := 0\n\ntheorem target_empty_maps :\n  @EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\" := by\n  native_decide\n\nend JudgeHarness\n",
+                "entrypoint": "JudgeHarness.target_empty_maps",
+                "expected_stdout": null,
+                "invocation": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase)",
+                "language": "lean",
+                "mode": "prove"
+              },
+              "subject": "EIP20Base.EIP20Token.showTokenState"
+            }
+          }
+        ],
+        "differences": [
+          "The source state printer delegates balances and allowances to a finite-map Show implementation whose empty rendering is []. The target delegates both fields to showMap, whose empty rendering is {}, changing the observable output on a valid shared-domain state."
+        ],
+        "evidence": [
+          {
+            "description": "The source state printer renders balances through the source finite-map Show instance.",
+            "file": "/srv/home/hantaolou/code/transformal/sources/concert/examples/eip20/EIP20TokenPrinters.v",
+            "line": 44,
+            "side": "source"
+          },
+          {
+            "description": "The source state printer renders allowances through the same source finite-map Show instance.",
+            "file": "/srv/home/hantaolou/code/transformal/sources/concert/examples/eip20/EIP20TokenPrinters.v",
+            "line": 45,
+            "side": "source"
+          },
+          {
+            "description": "The target finite-map renderer surrounds rendered elements with braces.",
+            "file": "/srv/home/hantaolou/code/transformal/pipeline/candidates/api-base-eip20-20260803/EIP20Base/Printers.lean",
+            "line": 25,
+            "side": "target"
+          },
+          {
+            "description": "The matched target state printer uses showMap for balances and allowances.",
+            "file": "/srv/home/hantaolou/code/transformal/pipeline/candidates/api-base-eip20-20260803/EIP20Base/Printers.lean",
+            "line": 48,
+            "side": "target"
+          }
+        ],
+        "examples": [],
+        "failure_categories": [
+          "definition_behavior_mismatch"
+        ],
+        "interface_witness": {
+          "compiler_validated": false,
+          "explanation": "Not applicable: rejection is established by a two-sided behavioral counterexample in the shared input domain, not by an invocation-scope mismatch.",
+          "kind": null,
+          "source_interface": "showTokenState : Show (@EIP20Token.State TestUtils.LocalChainBase)",
+          "status": "not_applicable",
+          "target_interface": "[inst : EIP20Base.ChainBase] → EIP20Base.Show EIP20Base.EIP20Token.State"
+        },
+        "match_status": "confirmed",
+        "source_id": "EIP20TokenPrinters.v:showTokenState:984",
+        "source_summary": "A Show instance rendering total_supply, balances, and allowances using the source finite-map representation.",
+        "suggested_target": null,
+        "target_disposition": null,
+        "target_id": "EIP20Base/Printers.lean:showTokenState:48",
+        "target_summary": "The corresponding State Show instance, using a finite-map renderer with observably different delimiters."
+      }
+    }
+  ],
+  "command": {
+    "command": [
+      "bwrap",
+      "--die-with-parent",
+      "--unshare-user",
+      "--unshare-ipc",
+      "--unshare-pid",
+      "--unshare-uts",
+      "--unshare-cgroup",
+      "--ro-bind",
+      "/",
+      "/",
+      "--dev",
+      "/dev",
+      "--proc",
+      "/proc",
+      "--tmpfs",
+      "/tmp",
+      "--tmpfs",
+      "/mnt",
+      "--tmpfs",
+      "/srv/home/hantaolou/code/transformal",
+      "--tmpfs",
+      "/srv/home/hantaolou/.codex",
+      "--dir",
+      "/srv/home/hantaolou/code/transformal/pipeline",
+      "--dir",
+      "/srv/home/hantaolou/code/transformal/sources",
+      "--dir",
+      "/srv/home/hantaolou/code/transformal/pipeline/.tools",
+      "--dir",
+      "/srv/home/hantaolou/code/transformal/pipeline/candidates",
+      "--dir",
+      "/srv/home/hantaolou/code/transformal/sources/concert",
+      "--dir",
+      "/srv/home/hantaolou/code/transformal/pipeline/.tools/opam-root-reglang",
+      "--dir",
+      "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801",
+      "--dir",
+      "/srv/home/hantaolou/code/transformal/sources/concert/examples",
+      "--dir",
+      "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake",
+      "--dir",
+      "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages",
+      "--ro-bind",
+      "/srv/home/hantaolou/code/transformal/pipeline/.tools/opam-root-reglang/eip20-rocq-9.1",
+      "/srv/home/hantaolou/code/transformal/pipeline/.tools/opam-root-reglang/eip20-rocq-9.1",
+      "--ro-bind",
+      "/srv/home/hantaolou/code/transformal/pipeline/candidates/api-base-eip20-20260803",
+      "/srv/home/hantaolou/code/transformal/pipeline/candidates/api-base-eip20-20260803",
+      "--ro-bind",
+      "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/Cli",
+      "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/Cli",
+      "--ro-bind",
+      "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/LeanSearchClient",
+      "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/LeanSearchClient",
+      "--ro-bind",
+      "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/Qq",
+      "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/Qq",
+      "--ro-bind",
+      "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/aesop",
+      "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/aesop",
+      "--ro-bind",
+      "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/batteries",
+      "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/batteries",
+      "--ro-bind",
+      "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/importGraph",
+      "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/importGraph",
+      "--ro-bind",
+      "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/mathlib",
+      "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/mathlib",
+      "--ro-bind",
+      "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/plausible",
+      "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/plausible",
+      "--ro-bind",
+      "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/proofwidgets",
+      "/srv/home/hantaolou/code/transformal/pipeline/candidates/coinduction-pipeline-fixed-20260801/.lake/packages/proofwidgets",
+      "--ro-bind",
+      "/srv/home/hantaolou/code/transformal/sources/concert/examples/eip20",
+      "/srv/home/hantaolou/code/transformal/sources/concert/examples/eip20",
+      "--bind",
+      "/tmp/transformal-blind-home-gugkacwg/home",
+      "/mnt/transformal-blind-home",
+      "--bind",
+      "/tmp/transformal-judge-4brupkso",
+      "/tmp/transformal-blind-work",
+      "--setenv",
+      "HOME",
+      "/mnt/transformal-blind-home",
+      "--setenv",
+      "CODEX_HOME",
+      "/mnt/transformal-blind-home/.codex",
+      "--setenv",
+      "TRANSFORMAL_BLIND_EVAL_ACTIVE",
+      "1",
+      "--setenv",
+      "PATH",
+      "/srv/home/hantaolou/code/transformal/pipeline/.tools/opam-root-reglang/eip20-rocq-9.1/bin:/srv/home/hantaolou/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/hantaolou/.elan/bin:/home/hantaolou/.local/bin:/srv/home/hantaolou/.codex/tmp/arg0/codex-arg09WUqyi:/srv/home/hantaolou/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/hantaolou/.local/bin:/home/hantaolou/.elan/bin:/home/hantaolou/.local/bin:/srv/home/hantaolou/.local/bin:/home/hantaolou/.elan/bin:/srv/home/hantaolou/miniconda3/condabin:/home/hantaolou/.nvm/versions/node/v24.18.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+      "/srv/home/hantaolou/.nvm/versions/node/v24.18.0/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/bin/codex",
+      "exec",
+      "--dangerously-bypass-approvals-and-sandbox",
+      "--config",
+      "features.unified_exec=false",
+      "--ephemeral",
+      "--skip-git-repo-check",
+      "--ignore-user-config",
+      "--cd",
+      "/srv/home/hantaolou/code/transformal/sources/concert/examples/eip20",
+      "--add-dir",
+      "/srv/home/hantaolou/code/transformal/pipeline/candidates/api-base-eip20-20260803",
+      "--model",
+      "gpt-5.6-sol",
+      "--config",
+      "model_reasoning_effort=\"high\"",
+      "--output-schema",
+      "/tmp/transformal-blind-work/verdict-schema.json",
+      "--output-last-message",
+      "/tmp/transformal-blind-work/verdict.json",
+      "-"
+    ],
+    "returncode": 0,
+    "stderr": "nce and allowance maps. The source BoundedN 256 address space corresponds to the target Fin 256 address space; because the maps are empty, address representation is unobservable here.\",\"status\":\"same\"},\"output_alignment\":{\"reason\":\"The source finite-map Show implementation renders an empty map as [], while the target showMap renders it as {}. Consequently, the complete state-rendering strings differ.\",\"status\":\"different\"},\"source\":{\"input\":{\"description\":\"A state over the source LocalChainBase representation with total_supply 0 and empty balance and allowance maps.\",\"expression\":\"@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))\"},\"output\":{\"description\":\"The source printer renders both empty finite maps using square brackets.\",\"expression\":\"@show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState (@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \\\"State{total_supply: 0, balances: [], allowances: []}\\\"%string\"},\"run\":{\"claim\":\"@show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState (@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \\\"State{total_supply: 0, balances: [], allowances: []}\\\"%string\",\"code\":\"From Stdlib Require Import String ZArith List.\\nFrom QuickChick Require Import QuickChick.\\nFrom ConCert.Execution Require Import Blockchain BoundedN Containers ContractCommon SerializableInstances.\\nFrom ConCert.Examples.EIP20 Require Import EIP20Token.\\n\\nImport ListNotations.\\nLocal Open Scope string_scope.\\nLocal Open Scope N_scope.\\n\\nModule TestUtils.\\n  Global Definition AddrSize : N := (2^8)%N.\\n  Global Instance LocalChainBase : ChainBase :=\\n    {| Address := BoundedN AddrSize;\\n       address_eqb := BoundedN.eqb;\\n       address_eqb_spec := BoundedN.eqb_spec;\\n       address_is_contract a := (AddrSize / 2 <=? BoundedN.to_N a)%N |}.\\n\\n  Definition string_of_FMap {A B : Type}\\n      `{countable.Countable A} `{base.EqDecision A}\\n      (showA : A -> string) (showB : B -> string) (m : FMap A B) : string :=\\n    \\\"[\\\" ++ String.concat \\\"; \\\"\\n      (map (fun '(a, b) => showA a ++ \\\"-->\\\" ++ showB b) (FMap.elements m)) ++ \\\"]\\\".\\n\\n  #[export] Instance showFMap {A B : Type}\\n      `{countable.Countable A} `{base.EqDecision A} `{Show A} `{Show B}\\n      : Show (FMap A B) := {| show := string_of_FMap show show |}.\\nEnd TestUtils.\\n\\nModule ChainPrinters.\\n  Definition Base := TestUtils.LocalChainBase.\\n  Definition sep : string := \\\", \\\".\\n\\n  #[export] Instance showBoundedN {bound : N} `{Show N}\\n      : Show (BoundedN.BoundedN bound) :=\\n    {| show bn := match bn with\\n                  | BoundedN.bounded n _ => show n ++ \\\"%\\\" ++ show bound\\n                  end |}.\\n\\n  #[export] Instance showBoundedNAddrSize :\\n      Show (BoundedN.BoundedN TestUtils.AddrSize) :=\\n    {| show := @show (BoundedN.BoundedN TestUtils.AddrSize) showBoundedN |}.\\n\\n  #[export] Instance showAddress : Show (@Address Base) :=\\n    {| show := @show (BoundedN.BoundedN TestUtils.AddrSize) showBoundedNAddrSize |}.\\nEnd ChainPrinters.\\n\\nImport TestUtils ChainPrinters.\\n\\n#[export] Instance showTokenValue : Show EIP20Token.TokenValue :=\\n  {| show v := show v |}.\\n\\n#[export] Instance showTokenState : Show EIP20Token.State :=\\n  {| show s := \\\"State{total_supply: \\\" ++ show s.(EIP20Token.total_supply) ++ sep\\n                 ++ \\\"balances: \\\" ++ show s.(EIP20Token.balances) ++ sep\\n                 ++ \\\"allowances: \\\" ++ show s.(EIP20Token.allowances) ++ \\\"}\\\" |}.\\n\\nTheorem source_empty_maps :\\n  @show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState\\n    (@EIP20Token.build_state TestUtils.LocalChainBase 0%N\\n      (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue)\\n      (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) =\\n  \\\"State{total_supply: 0, balances: [], allowances: []}\\\"%string.\\nProof.\\n  vm_compute; reflexivity.\\nQed.\\n\",\"entrypoint\":\"source_empty_maps\",\"expected_stdout\":null,\"invocation\":\"@show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState (@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue)))\",\"language\":\"coq\",\"mode\":\"prove\"},\"subject\":\"showTokenState\"},\"target\":{\"input\":{\"description\":\"The corresponding state over Fin 256 addresses with total_supply 0 and empty balance and allowance maps.\",\"expression\":\"({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase)\"},\"output\":{\"description\":\"The target printer renders both empty finite maps using braces.\",\"expression\":\"@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \\\"State{total_supply: 0, balances: {}, allowances: {}}\\\"\"},\"run\":{\"claim\":\"@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \\\"State{total_supply: 0, balances: {}, allowances: {}}\\\"\",\"code\":\"import EIP20Base.Printers\\n\\nnamespace JudgeHarness\\nopen EIP20Base\\n\\ninstance testChainBase : ChainBase where\\n  Address := Fin 256\\n  addressLinearOrder := inferInstance\\n  addressRepr := inferInstance\\n  zeroAddress := 0\\n\\ntheorem target_empty_maps :\\n  @EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \\\"State{total_supply: 0, balances: {}, allowances: {}}\\\" := by\\n  native_decide\\n\\nend JudgeHarness\\n\",\"entrypoint\":\"JudgeHarness.target_empty_maps\",\"expected_stdout\":null,\"invocation\":\"@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase)\",\"language\":\"lean\",\"mode\":\"prove\"},\"subject\":\"EIP20Base.EIP20Token.showTokenState\"}}],\"differences\":[\"The source state printer delegates balances and allowances to a finite-map Show implementation whose empty rendering is []. The target delegates both fields to showMap, whose empty rendering is {}, changing the observable output on a valid shared-domain state.\"],\"evidence\":[{\"description\":\"The source state printer renders balances through the source finite-map Show instance.\",\"file\":\"/srv/home/hantaolou/code/transformal/sources/concert/examples/eip20/EIP20TokenPrinters.v\",\"line\":44,\"side\":\"source\"},{\"description\":\"The source state printer renders allowances through the same source finite-map Show instance.\",\"file\":\"/srv/home/hantaolou/code/transformal/sources/concert/examples/eip20/EIP20TokenPrinters.v\",\"line\":45,\"side\":\"source\"},{\"description\":\"The target finite-map renderer surrounds rendered elements with braces.\",\"file\":\"/srv/home/hantaolou/code/transformal/pipeline/candidates/api-base-eip20-20260803/EIP20Base/Printers.lean\",\"line\":25,\"side\":\"target\"},{\"description\":\"The matched target state printer uses showMap for balances and allowances.\",\"file\":\"/srv/home/hantaolou/code/transformal/pipeline/candidates/api-base-eip20-20260803/EIP20Base/Printers.lean\",\"line\":48,\"side\":\"target\"}],\"examples\":[],\"failure_categories\":[\"definition_behavior_mismatch\"],\"interface_witness\":{\"compiler_validated\":false,\"explanation\":\"Not applicable: rejection is established by a two-sided behavioral counterexample in the shared input domain, not by an invocation-scope mismatch.\",\"kind\":null,\"source_interface\":\"showTokenState : Show (@EIP20Token.State TestUtils.LocalChainBase)\",\"status\":\"not_applicable\",\"target_interface\":\"[inst : EIP20Base.ChainBase] → EIP20Base.Show EIP20Base.EIP20Token.State\"},\"match_status\":\"confirmed\",\"source_id\":\"EIP20TokenPrinters.v:showTokenState:984\",\"source_summary\":\"A Show instance rendering total_supply, balances, and allowances using the source finite-map representation.\",\"suggested_target\":null,\"target_disposition\":null,\"target_id\":\"EIP20Base/Printers.lean:showTokenState:48\",\"target_summary\":\"The corresponding State Show instance, using a finite-map renderer with observably different delimiters.\"}\ndiff --git a//tmp/tmp.OJjFySBWQh/ConCert/Counterexample.v b//tmp/tmp.OJjFySBWQh/ConCert/Counterexample.v\nnew file mode 100644\nindex 0000000000000000000000000000000000000000..6f92d9d6f68a753ca42249f8d288e2781183d3a2\n--- /dev/null\n+++ b//tmp/tmp.OJjFySBWQh/ConCert/Counterexample.v\n@@ -0,0 +1,65 @@\n+From Stdlib Require Import String ZArith List.\n+From QuickChick Require Import QuickChick.\n+From ConCert.Execution Require Import Blockchain BoundedN Containers ContractCommon SerializableInstances.\n+From ConCert.Examples.EIP20 Require Import EIP20Token.\n+\n+Import ListNotations.\n+Local Open Scope string_scope.\n+Local Open Scope N_scope.\n+\n+Module TestUtils.\n+  Global Definition AddrSize : N := (2^8)%N.\n+  Global Instance LocalChainBase : ChainBase :=\n+    {| Address := BoundedN AddrSize;\n+       address_eqb := BoundedN.eqb;\n+       address_eqb_spec := BoundedN.eqb_spec;\n+       address_is_contract a := (AddrSize / 2 <=? BoundedN.to_N a)%N |}.\n+\n+  Definition string_of_FMap {A B : Type}\n+      `{countable.Countable A} `{base.EqDecision A}\n+      (showA : A -> string) (showB : B -> string) (m : FMap A B) : string :=\n+    \"[\" ++ String.concat \"; \"\n+      (map (fun '(a, b) => showA a ++ \"-->\" ++ showB b) (FMap.elements m)) ++ \"]\".\n+\n+  #[export] Instance showFMap {A B : Type}\n+      `{countable.Countable A} `{base.EqDecision A} `{Show A} `{Show B}\n+      : Show (FMap A B) := {| show := string_of_FMap show show |}.\n+End TestUtils.\n+\n+Module ChainPrinters.\n+  Definition Base := TestUtils.LocalChainBase.\n+  Definition sep : string := \", \".\n+\n+  #[export] Instance showBoundedN {bound : N} `{Show N}\n+      : Show (BoundedN.BoundedN bound) :=\n+    {| show bn := match bn with\n+                  | BoundedN.bounded n _ => show n ++ \"%\" ++ show bound\n+                  end |}.\n+\n+  #[export] Instance showBoundedNAddrSize :\n+      Show (BoundedN.BoundedN TestUtils.AddrSize) :=\n+    {| show := @show (BoundedN.BoundedN TestUtils.AddrSize) showBoundedN |}.\n+\n+  #[export] Instance showAddress : Show (@Address Base) :=\n+    {| show := @show (BoundedN.BoundedN TestUtils.AddrSize) showBoundedNAddrSize |}.\n+End ChainPrinters.\n+\n+Import TestUtils ChainPrinters.\n+\n+#[export] Instance showTokenValue : Show EIP20Token.TokenValue :=\n+  {| show v := show v |}.\n+\n+#[export] Instance showTokenState : Show EIP20Token.State :=\n+  {| show s := \"State{total_supply: \" ++ show s.(EIP20Token.total_supply) ++ sep\n+                 ++ \"balances: \" ++ show s.(EIP20Token.balances) ++ sep\n+                 ++ \"allowances: \" ++ show s.(EIP20Token.allowances) ++ \"}\" |}.\n+\n+Theorem source_empty_maps :\n+  @show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState\n+    (@EIP20Token.build_state TestUtils.LocalChainBase 0%N\n+      (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue)\n+      (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) =\n+  \"State{total_supply: 0, balances: [], allowances: []}\"%string.\n+Proof.\n+  vm_compute; reflexivity.\n+Qed.\n\ntokens used\n81,570\n",
+    "stdout": "{\"alignment\":\"not_aligned\",\"compiler_surface_checks\":[],\"confidence\":0.99,\"counterexamples\":[{\"id\":\"empty-map-rendering\",\"input_alignment\":{\"reason\":\"Both concrete inputs denote an EIP-20 state with total supply zero and empty balance and allowance maps. The source BoundedN 256 address space corresponds to the target Fin 256 address space; because the maps are empty, address representation is unobservable here.\",\"status\":\"same\"},\"output_alignment\":{\"reason\":\"The source finite-map Show implementation renders an empty map as [], while the target showMap renders it as {}. Consequently, the complete state-rendering strings differ.\",\"status\":\"different\"},\"source\":{\"input\":{\"description\":\"A state over the source LocalChainBase representation with total_supply 0 and empty balance and allowance maps.\",\"expression\":\"@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))\"},\"output\":{\"description\":\"The source printer renders both empty finite maps using square brackets.\",\"expression\":\"@show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState (@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \\\"State{total_supply: 0, balances: [], allowances: []}\\\"%string\"},\"run\":{\"claim\":\"@show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState (@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \\\"State{total_supply: 0, balances: [], allowances: []}\\\"%string\",\"code\":\"From Stdlib Require Import String ZArith List.\\nFrom QuickChick Require Import QuickChick.\\nFrom ConCert.Execution Require Import Blockchain BoundedN Containers ContractCommon SerializableInstances.\\nFrom ConCert.Examples.EIP20 Require Import EIP20Token.\\n\\nImport ListNotations.\\nLocal Open Scope string_scope.\\nLocal Open Scope N_scope.\\n\\nModule TestUtils.\\n  Global Definition AddrSize : N := (2^8)%N.\\n  Global Instance LocalChainBase : ChainBase :=\\n    {| Address := BoundedN AddrSize;\\n       address_eqb := BoundedN.eqb;\\n       address_eqb_spec := BoundedN.eqb_spec;\\n       address_is_contract a := (AddrSize / 2 <=? BoundedN.to_N a)%N |}.\\n\\n  Definition string_of_FMap {A B : Type}\\n      `{countable.Countable A} `{base.EqDecision A}\\n      (showA : A -> string) (showB : B -> string) (m : FMap A B) : string :=\\n    \\\"[\\\" ++ String.concat \\\"; \\\"\\n      (map (fun '(a, b) => showA a ++ \\\"-->\\\" ++ showB b) (FMap.elements m)) ++ \\\"]\\\".\\n\\n  #[export] Instance showFMap {A B : Type}\\n      `{countable.Countable A} `{base.EqDecision A} `{Show A} `{Show B}\\n      : Show (FMap A B) := {| show := string_of_FMap show show |}.\\nEnd TestUtils.\\n\\nModule ChainPrinters.\\n  Definition Base := TestUtils.LocalChainBase.\\n  Definition sep : string := \\\", \\\".\\n\\n  #[export] Instance showBoundedN {bound : N} `{Show N}\\n      : Show (BoundedN.BoundedN bound) :=\\n    {| show bn := match bn with\\n                  | BoundedN.bounded n _ => show n ++ \\\"%\\\" ++ show bound\\n                  end |}.\\n\\n  #[export] Instance showBoundedNAddrSize :\\n      Show (BoundedN.BoundedN TestUtils.AddrSize) :=\\n    {| show := @show (BoundedN.BoundedN TestUtils.AddrSize) showBoundedN |}.\\n\\n  #[export] Instance showAddress : Show (@Address Base) :=\\n    {| show := @show (BoundedN.BoundedN TestUtils.AddrSize) showBoundedNAddrSize |}.\\nEnd ChainPrinters.\\n\\nImport TestUtils ChainPrinters.\\n\\n#[export] Instance showTokenValue : Show EIP20Token.TokenValue :=\\n  {| show v := show v |}.\\n\\n#[export] Instance showTokenState : Show EIP20Token.State :=\\n  {| show s := \\\"State{total_supply: \\\" ++ show s.(EIP20Token.total_supply) ++ sep\\n                 ++ \\\"balances: \\\" ++ show s.(EIP20Token.balances) ++ sep\\n                 ++ \\\"allowances: \\\" ++ show s.(EIP20Token.allowances) ++ \\\"}\\\" |}.\\n\\nTheorem source_empty_maps :\\n  @show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState\\n    (@EIP20Token.build_state TestUtils.LocalChainBase 0%N\\n      (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue)\\n      (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) =\\n  \\\"State{total_supply: 0, balances: [], allowances: []}\\\"%string.\\nProof.\\n  vm_compute; reflexivity.\\nQed.\\n\",\"entrypoint\":\"source_empty_maps\",\"expected_stdout\":null,\"invocation\":\"@show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState (@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue)))\",\"language\":\"coq\",\"mode\":\"prove\"},\"subject\":\"showTokenState\"},\"target\":{\"input\":{\"description\":\"The corresponding state over Fin 256 addresses with total_supply 0 and empty balance and allowance maps.\",\"expression\":\"({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase)\"},\"output\":{\"description\":\"The target printer renders both empty finite maps using braces.\",\"expression\":\"@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \\\"State{total_supply: 0, balances: {}, allowances: {}}\\\"\"},\"run\":{\"claim\":\"@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \\\"State{total_supply: 0, balances: {}, allowances: {}}\\\"\",\"code\":\"import EIP20Base.Printers\\n\\nnamespace JudgeHarness\\nopen EIP20Base\\n\\ninstance testChainBase : ChainBase where\\n  Address := Fin 256\\n  addressLinearOrder := inferInstance\\n  addressRepr := inferInstance\\n  zeroAddress := 0\\n\\ntheorem target_empty_maps :\\n  @EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \\\"State{total_supply: 0, balances: {}, allowances: {}}\\\" := by\\n  native_decide\\n\\nend JudgeHarness\\n\",\"entrypoint\":\"JudgeHarness.target_empty_maps\",\"expected_stdout\":null,\"invocation\":\"@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase)\",\"language\":\"lean\",\"mode\":\"prove\"},\"subject\":\"EIP20Base.EIP20Token.showTokenState\"}}],\"differences\":[\"The source state printer delegates balances and allowances to a finite-map Show implementation whose empty rendering is []. The target delegates both fields to showMap, whose empty rendering is {}, changing the observable output on a valid shared-domain state.\"],\"evidence\":[{\"description\":\"The source state printer renders balances through the source finite-map Show instance.\",\"file\":\"/srv/home/hantaolou/code/transformal/sources/concert/examples/eip20/EIP20TokenPrinters.v\",\"line\":44,\"side\":\"source\"},{\"description\":\"The source state printer renders allowances through the same source finite-map Show instance.\",\"file\":\"/srv/home/hantaolou/code/transformal/sources/concert/examples/eip20/EIP20TokenPrinters.v\",\"line\":45,\"side\":\"source\"},{\"description\":\"The target finite-map renderer surrounds rendered elements with braces.\",\"file\":\"/srv/home/hantaolou/code/transformal/pipeline/candidates/api-base-eip20-20260803/EIP20Base/Printers.lean\",\"line\":25,\"side\":\"target\"},{\"description\":\"The matched target state printer uses showMap for balances and allowances.\",\"file\":\"/srv/home/hantaolou/code/transformal/pipeline/candidates/api-base-eip20-20260803/EIP20Base/Printers.lean\",\"line\":48,\"side\":\"target\"}],\"examples\":[],\"failure_categories\":[\"definition_behavior_mismatch\"],\"interface_witness\":{\"compiler_validated\":false,\"explanation\":\"Not applicable: rejection is established by a two-sided behavioral counterexample in the shared input domain, not by an invocation-scope mismatch.\",\"kind\":null,\"source_interface\":\"showTokenState : Show (@EIP20Token.State TestUtils.LocalChainBase)\",\"status\":\"not_applicable\",\"target_interface\":\"[inst : EIP20Base.ChainBase] → EIP20Base.Show EIP20Base.EIP20Token.State\"},\"match_status\":\"confirmed\",\"source_id\":\"EIP20TokenPrinters.v:showTokenState:984\",\"source_summary\":\"A Show instance rendering total_supply, balances, and allowances using the source finite-map representation.\",\"suggested_target\":null,\"target_disposition\":null,\"target_id\":\"EIP20Base/Printers.lean:showTokenState:48\",\"target_summary\":\"The corresponding State Show instance, using a finite-map renderer with observably different delimiters.\"}\n",
+    "timed_out": false
+  },
+  "execution_retries": [
+    {
+      "observation_verification": {
+        "all_chains_verified": false,
+        "errors": [
+          "unverified input-to-output observation chain: counterexample empty-map-rendering: source=contradicted, target=contradicted"
+        ],
+        "records": [
+          {
+            "kind": "counterexample",
+            "observation": {
+              "id": "empty-map-rendering",
+              "input_alignment": {
+                "reason": "Both inputs denote an EIP-20 state with total supply zero and empty balance and allowance maps. Source BoundedN addresses under LocalChainBase correspond to target Fin 256 addresses; no addresses occur in these empty maps.",
+                "status": "same"
+              },
+              "output_alignment": {
+                "reason": "The source Show instance renders each empty finite map as [], while the target instance renders it as {}. Thus the observable strings differ on the same abstract state.",
+                "status": "different"
+              },
+              "source": {
+                "input": {
+                  "description": "A state over LocalChainBase with total_supply 0 and both finite maps empty.",
+                  "expression": "@EIP20Token.build_state LocalChainBase 0%N (@FMap.empty (FMap (@Address LocalChainBase) EIP20Token.TokenValue) _) (@FMap.empty (FMap (@Address LocalChainBase) (FMap (@Address LocalChainBase) EIP20Token.TokenValue)) _)"
+                },
+                "output": {
+                  "description": "The source printer renders both empty maps with square brackets.",
+                  "expression": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@FMap.empty (FMap (@Address LocalChainBase) EIP20Token.TokenValue) _) (@FMap.empty (FMap (@Address LocalChainBase) (FMap (@Address LocalChainBase) EIP20Token.TokenValue)) _)) = \"State{total_supply: 0, balances: [], allowances: []}\"%string"
+                },
+                "run": {
+                  "claim": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@FMap.empty (FMap (@Address LocalChainBase) EIP20Token.TokenValue) _) (@FMap.empty (FMap (@Address LocalChainBase) (FMap (@Address LocalChainBase) EIP20Token.TokenValue)) _)) = \"State{total_supply: 0, balances: [], allowances: []}\"%string",
+                  "code": "From Stdlib Require Import String ZArith.\nFrom ConCert.Execution Require Import Blockchain Containers ContractCommon Serializable.\n#[warnings=\"-notation-incompatible-prefix\"]\nFrom ConCert.Execution.Test Require Import QCTest TestUtils.\nFrom ConCert.Examples.EIP20 Require Import EIP20Token EIP20TokenPrinters.\n\nLocal Open Scope string_scope.\nLocal Open Scope N_scope.\n\nTheorem source_empty_maps :\n  @show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@FMap.empty (FMap (@Address LocalChainBase) EIP20Token.TokenValue) _) (@FMap.empty (FMap (@Address LocalChainBase) (FMap (@Address LocalChainBase) EIP20Token.TokenValue)) _)) = \"State{total_supply: 0, balances: [], allowances: []}\"%string.\nProof.\n  vm_compute; reflexivity.\nQed.\n",
+                  "entrypoint": "source_empty_maps",
+                  "expected_stdout": null,
+                  "invocation": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@FMap.empty (FMap (@Address LocalChainBase) EIP20Token.TokenValue) _) (@FMap.empty (FMap (@Address LocalChainBase) (FMap (@Address LocalChainBase) EIP20Token.TokenValue)) _))",
+                  "language": "coq",
+                  "mode": "prove"
+                },
+                "subject": "showTokenState"
+              },
+              "target": {
+                "input": {
+                  "description": "The corresponding state over Fin 256 addresses with total_supply 0 and both finite maps empty.",
+                  "expression": "({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State testChainBase)"
+                },
+                "output": {
+                  "description": "The target printer renders both empty maps with braces.",
+                  "expression": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\""
+                },
+                "run": {
+                  "claim": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\"",
+                  "code": "import EIP20Base.Printers\n\nnamespace JudgeHarness\nopen EIP20Base\n\ninstance testChainBase : ChainBase where\n  Address := Fin 256\n  addressLinearOrder := inferInstance\n  addressRepr := inferInstance\n  zeroAddress := 0\n\ntheorem target_empty_maps :\n  @EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\" := by\n  native_decide\n\nend JudgeHarness\n",
+                  "entrypoint": "JudgeHarness.target_empty_maps",
+                  "expected_stdout": null,
+                  "invocation": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State testChainBase)",
+                  "language": "lean",
+                  "mode": "prove"
+                },
+                "subject": "EIP20Base.EIP20Token.showTokenState"
+              }
+            },
+            "verification": {
+              "chain_verified": false,
+              "id": "empty-map-rendering",
+              "input_alignment": {
+                "reason": "Both inputs denote an EIP-20 state with total supply zero and empty balance and allowance maps. Source BoundedN addresses under LocalChainBase correspond to target Fin 256 addresses; no addresses occur in these empty maps.",
+                "status": "same"
+              },
+              "output_alignment": {
+                "reason": "The source Show instance renders each empty finite map as [], while the target instance renders it as {}. Thus the observable strings differ on the same abstract state.",
+                "status": "different"
+              },
+              "source": {
+                "actual_result": "fail",
+                "binding_status": "verified",
+                "claim_sha256": "6cd034d575e802051c0090524449a4947b05302b83ee7f1e01e53c9e7127106b",
+                "claimed_output": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@FMap.empty (FMap (@Address LocalChainBase) EIP20Token.TokenValue) _) (@FMap.empty (FMap (@Address LocalChainBase) (FMap (@Address LocalChainBase) EIP20Token.TokenValue)) _)) = \"State{total_supply: 0, balances: [], allowances: []}\"%string",
+                "code_sha256": "bd85794ad89305646479879dc91eaee0fd509ceb77b4d0f83cac986a632e27e0",
+                "expected_result": "pass",
+                "input_expression": "@EIP20Token.build_state LocalChainBase 0%N (@FMap.empty (FMap (@Address LocalChainBase) EIP20Token.TokenValue) _) (@FMap.empty (FMap (@Address LocalChainBase) (FMap (@Address LocalChainBase) EIP20Token.TokenValue)) _)",
+                "invocation": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@FMap.empty (FMap (@Address LocalChainBase) EIP20Token.TokenValue) _) (@FMap.empty (FMap (@Address LocalChainBase) (FMap (@Address LocalChainBase) EIP20Token.TokenValue)) _))",
+                "language": "coq",
+                "observed_output": null,
+                "result": {
+                  "command": [
+                    "/srv/home/hantaolou/code/transformal/pipeline/.tools/opam-root-reglang/eip20-rocq-9.1/bin/rocq",
+                    "compile",
+                    "-Q",
+                    "_build/default/utils/theories",
+                    "ConCert.Utils",
+                    "-Q",
+                    "_build/default/execution/theories",
+                    "ConCert.Execution",
+                    "-Q",
+                    "_build/default/extraction/theories",
+                    "ConCert.Extraction",
+                    "-Q",
+                    "_build/default/embedding/theories",
+                    "ConCert.Embedding",
+                    "-R",
+                    "_build/default/embedding/extraction",
+                    "ConCert.Embedding.Extraction",
+                    "-R",
+                    "_build/default/examples/eip20",
+                    "ConCert.Examples.EIP20",
+                    "/tmp/transformal-counterexample-y9n_z477/Counterexample.v"
+                  ],
+                  "returncode": 1,
+                  "stderr": "File \"/tmp/transformal-counterexample-y9n_z477/Counterexample.v\", line 4, characters 43-49:\nError: Cannot find a physical path bound to logical path\nQCTest with prefix ConCert.Execution.Test.\n\n",
+                  "stdout": "",
+                  "timed_out": false
+                },
+                "status": "contradicted",
+                "subject": "showTokenState",
+                "verification_note": null
+              },
+              "target": {
+                "actual_result": "fail",
+                "binding_status": "verified",
+                "claim_sha256": "9aa5faa97e2576a5216d96872aeff5adef935a79d7df4eb80b297d33c2d40f07",
+                "claimed_output": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\"",
+                "code_sha256": "62eb65824b6f85f52fd6f4f3565b4311269959118a00ced2c91c7f45db4cde4f",
+                "expected_result": "pass",
+                "input_expression": "({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State testChainBase)",
+                "invocation": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State testChainBase)",
+                "language": "lean",
+                "observed_output": null,
+                "result": {
+                  "command": [
+                    "lake",
+                    "env",
+                    "lean",
+                    "/tmp/transformal-counterexample-u1wmzppp/Counterexample.lean"
+                  ],
+                  "returncode": 1,
+                  "stderr": "",
+                  "stdout": "/tmp/transformal-counterexample-u1wmzppp/Counterexample.lean:18:104: error(lean.unknownIdentifier): Unknown identifier `testChainBase`\n/tmp/transformal-counterexample-u1wmzppp/Counterexample.lean:18:242: error(lean.unknownIdentifier): Unknown identifier `testChainBase`\n",
+                  "timed_out": false
+                },
+                "status": "contradicted",
+                "subject": "EIP20Base.EIP20Token.showTokenState",
+                "verification_note": null
+              }
+            }
+          }
+        ],
+        "verdict_sha256": "026b0e4ecb8af774ca96f09a29167e2df5226c57712e4b25831ae1b49b524458",
+        "version": 1
+      },
+      "validation_errors": [
+        "unverified input-to-output observation chain: counterexample empty-map-rendering: source=contradicted, target=contradicted"
+      ],
+      "verdict": {
+        "alignment": "not_aligned",
+        "compiler_surface_checks": [],
+        "confidence": 0.99,
+        "counterexamples": [
+          {
+            "id": "empty-map-rendering",
+            "input_alignment": {
+              "reason": "Both inputs denote an EIP-20 state with total supply zero and empty balance and allowance maps. Source BoundedN addresses under LocalChainBase correspond to target Fin 256 addresses; no addresses occur in these empty maps.",
+              "status": "same"
+            },
+            "output_alignment": {
+              "reason": "The source Show instance renders each empty finite map as [], while the target instance renders it as {}. Thus the observable strings differ on the same abstract state.",
+              "status": "different"
+            },
+            "source": {
+              "input": {
+                "description": "A state over LocalChainBase with total_supply 0 and both finite maps empty.",
+                "expression": "@EIP20Token.build_state LocalChainBase 0%N (@FMap.empty (FMap (@Address LocalChainBase) EIP20Token.TokenValue) _) (@FMap.empty (FMap (@Address LocalChainBase) (FMap (@Address LocalChainBase) EIP20Token.TokenValue)) _)"
+              },
+              "output": {
+                "description": "The source printer renders both empty maps with square brackets.",
+                "expression": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@FMap.empty (FMap (@Address LocalChainBase) EIP20Token.TokenValue) _) (@FMap.empty (FMap (@Address LocalChainBase) (FMap (@Address LocalChainBase) EIP20Token.TokenValue)) _)) = \"State{total_supply: 0, balances: [], allowances: []}\"%string"
+              },
+              "run": {
+                "claim": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@FMap.empty (FMap (@Address LocalChainBase) EIP20Token.TokenValue) _) (@FMap.empty (FMap (@Address LocalChainBase) (FMap (@Address LocalChainBase) EIP20Token.TokenValue)) _)) = \"State{total_supply: 0, balances: [], allowances: []}\"%string",
+                "code": "From Stdlib Require Import String ZArith.\nFrom ConCert.Execution Require Import Blockchain Containers ContractCommon Serializable.\n#[warnings=\"-notation-incompatible-prefix\"]\nFrom ConCert.Execution.Test Require Import QCTest TestUtils.\nFrom ConCert.Examples.EIP20 Require Import EIP20Token EIP20TokenPrinters.\n\nLocal Open Scope string_scope.\nLocal Open Scope N_scope.\n\nTheorem source_empty_maps :\n  @show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@FMap.empty (FMap (@Address LocalChainBase) EIP20Token.TokenValue) _) (@FMap.empty (FMap (@Address LocalChainBase) (FMap (@Address LocalChainBase) EIP20Token.TokenValue)) _)) = \"State{total_supply: 0, balances: [], allowances: []}\"%string.\nProof.\n  vm_compute; reflexivity.\nQed.\n",
+                "entrypoint": "source_empty_maps",
+                "expected_stdout": null,
+                "invocation": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@FMap.empty (FMap (@Address LocalChainBase) EIP20Token.TokenValue) _) (@FMap.empty (FMap (@Address LocalChainBase) (FMap (@Address LocalChainBase) EIP20Token.TokenValue)) _))",
+                "language": "coq",
+                "mode": "prove"
+              },
+              "subject": "showTokenState"
+            },
+            "target": {
+              "input": {
+                "description": "The corresponding state over Fin 256 addresses with total_supply 0 and both finite maps empty.",
+                "expression": "({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State testChainBase)"
+              },
+              "output": {
+                "description": "The target printer renders both empty maps with braces.",
+                "expression": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\""
+              },
+              "run": {
+                "claim": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\"",
+                "code": "import EIP20Base.Printers\n\nnamespace JudgeHarness\nopen EIP20Base\n\ninstance testChainBase : ChainBase where\n  Address := Fin 256\n  addressLinearOrder := inferInstance\n  addressRepr := inferInstance\n  zeroAddress := 0\n\ntheorem target_empty_maps :\n  @EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\" := by\n  native_decide\n\nend JudgeHarness\n",
+                "entrypoint": "JudgeHarness.target_empty_maps",
+                "expected_stdout": null,
+                "invocation": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State testChainBase)",
+                "language": "lean",
+                "mode": "prove"
+              },
+              "subject": "EIP20Base.EIP20Token.showTokenState"
+            }
+          }
+        ],
+        "differences": [
+          "The source's imported Show instance for finite maps formats a map as a bracketed semicolon-separated list (empty map: []), whereas target showMap formats it with braces (empty map: {}). showTokenState exposes this difference in both balances and allowances."
+        ],
+        "evidence": [
+          {
+            "description": "The source state printer delegates balances to the imported Show instance for finite maps.",
+            "file": "/srv/home/hantaolou/code/transformal/sources/concert/examples/eip20/EIP20TokenPrinters.v",
+            "line": 44,
+            "side": "source"
+          },
+          {
+            "description": "The source state printer likewise delegates allowances to the finite-map Show instance.",
+            "file": "/srv/home/hantaolou/code/transformal/sources/concert/examples/eip20/EIP20TokenPrinters.v",
+            "line": 45,
+            "side": "source"
+          },
+          {
+            "description": "The target finite-map printer explicitly surrounds its rendered elements with braces.",
+            "file": "/srv/home/hantaolou/code/transformal/pipeline/candidates/api-base-eip20-20260803/EIP20Base/Printers.lean",
+            "line": 25,
+            "side": "target"
+          },
+          {
+            "description": "The matched target state instance uses showMap for balances and allowances.",
+            "file": "/srv/home/hantaolou/code/transformal/pipeline/candidates/api-base-eip20-20260803/EIP20Base/Printers.lean",
+            "line": 48,
+            "side": "target"
+          }
+        ],
+        "examples": [],
+        "failure_categories": [
+          "definition_behavior_mismatch"
+        ],
+        "interface_witness": {
+          "compiler_validated": false,
+          "explanation": "Not applicable: the rejection is established by a two-sided behavioral counterexample within the shared input domain, rather than by an interface-scope loss.",
+          "kind": null,
+          "source_interface": "showTokenState : Show EIP20Token.State",
+          "status": "not_applicable",
+          "target_interface": "[inst : EIP20Base.ChainBase] → EIP20Base.Show EIP20Base.EIP20Token.State"
+        },
+        "match_status": "confirmed",
+        "source_id": "EIP20TokenPrinters.v:showTokenState:984",
+        "source_summary": "A Show instance that renders total_supply, balances, and allowances, using the source finite-map Show representation.",
+        "suggested_target": null,
+        "target_disposition": null,
+        "target_id": "EIP20Base/Printers.lean:showTokenState:48",
+        "target_summary": "The corresponding Show instance for State, but using a finite-map renderer with observably different delimiters."
+      }
+    },
+    {
+      "observation_verification": {
+        "all_chains_verified": false,
+        "errors": [
+          "unverified input-to-output observation chain: counterexample empty-map-rendering: source=contradicted, target=verified"
+        ],
+        "records": [
+          {
+            "kind": "counterexample",
+            "observation": {
+              "id": "empty-map-rendering",
+              "input_alignment": {
+                "reason": "Both inputs denote an EIP-20 state with total supply zero and empty balance and allowance maps. Source BoundedN addresses under LocalChainBase correspond to target Fin 256 addresses; because both maps are empty, no address representation affects this observation.",
+                "status": "same"
+              },
+              "output_alignment": {
+                "reason": "The source finite-map Show instance renders an empty map as [], whereas the target showMap renders it as {}. Consequently, the complete state-rendering strings differ.",
+                "status": "different"
+              },
+              "source": {
+                "input": {
+                  "description": "A state over LocalChainBase with total_supply 0 and empty balance and allowance maps.",
+                  "expression": "@EIP20Token.build_state LocalChainBase 0%N (@AddressMap.empty LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))"
+                },
+                "output": {
+                  "description": "The source printer renders both empty finite maps using square brackets.",
+                  "expression": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@AddressMap.empty LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \"State{total_supply: 0, balances: [], allowances: []}\"%string"
+                },
+                "run": {
+                  "claim": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@AddressMap.empty LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \"State{total_supply: 0, balances: [], allowances: []}\"%string",
+                  "code": "Add LoadPath \"_build/default/execution/test\" as ConCert.Execution.Test.\nFrom Stdlib Require Import String ZArith.\nFrom ConCert.Execution Require Import Blockchain Containers.\n#[warnings=\"-notation-incompatible-prefix\"]\nFrom ConCert.Execution.Test Require Import QCTest.\nFrom ConCert.Examples.EIP20 Require Import EIP20Token EIP20TokenPrinters.\n\nLocal Open Scope string_scope.\nLocal Open Scope N_scope.\n\nTheorem source_empty_maps :\n  @show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@AddressMap.empty LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \"State{total_supply: 0, balances: [], allowances: []}\"%string.\nProof.\n  vm_compute; reflexivity.\nQed.\n",
+                  "entrypoint": "source_empty_maps",
+                  "expected_stdout": null,
+                  "invocation": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@AddressMap.empty LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue)))",
+                  "language": "coq",
+                  "mode": "prove"
+                },
+                "subject": "showTokenState"
+              },
+              "target": {
+                "input": {
+                  "description": "The corresponding state over Fin 256 addresses with total_supply 0 and empty balance and allowance maps.",
+                  "expression": "({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase)"
+                },
+                "output": {
+                  "description": "The target printer renders both empty finite maps using braces.",
+                  "expression": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\""
+                },
+                "run": {
+                  "claim": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\"",
+                  "code": "import EIP20Base.Printers\n\nnamespace JudgeHarness\nopen EIP20Base\n\ninstance testChainBase : ChainBase where\n  Address := Fin 256\n  addressLinearOrder := inferInstance\n  addressRepr := inferInstance\n  zeroAddress := 0\n\ntheorem target_empty_maps :\n  @EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\" := by\n  native_decide\n\nend JudgeHarness\n",
+                  "entrypoint": "JudgeHarness.target_empty_maps",
+                  "expected_stdout": null,
+                  "invocation": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase)",
+                  "language": "lean",
+                  "mode": "prove"
+                },
+                "subject": "EIP20Base.EIP20Token.showTokenState"
+              }
+            },
+            "verification": {
+              "chain_verified": false,
+              "id": "empty-map-rendering",
+              "input_alignment": {
+                "reason": "Both inputs denote an EIP-20 state with total supply zero and empty balance and allowance maps. Source BoundedN addresses under LocalChainBase correspond to target Fin 256 addresses; because both maps are empty, no address representation affects this observation.",
+                "status": "same"
+              },
+              "output_alignment": {
+                "reason": "The source finite-map Show instance renders an empty map as [], whereas the target showMap renders it as {}. Consequently, the complete state-rendering strings differ.",
+                "status": "different"
+              },
+              "source": {
+                "actual_result": "fail",
+                "binding_status": "verified",
+                "claim_sha256": "154ed2617852f155377b1331374a25ae69f8489ea7cb0a8ed6784bc39d65f40d",
+                "claimed_output": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@AddressMap.empty LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \"State{total_supply: 0, balances: [], allowances: []}\"%string",
+                "code_sha256": "9c524c32728c46f87b1e01c751e097c3df5a8ef29718838239e0919ffa066655",
+                "expected_result": "pass",
+                "input_expression": "@EIP20Token.build_state LocalChainBase 0%N (@AddressMap.empty LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))",
+                "invocation": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@AddressMap.empty LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue)))",
+                "language": "coq",
+                "observed_output": null,
+                "result": {
+                  "command": [
+                    "/srv/home/hantaolou/code/transformal/pipeline/.tools/opam-root-reglang/eip20-rocq-9.1/bin/rocq",
+                    "compile",
+                    "-Q",
+                    "_build/default/utils/theories",
+                    "ConCert.Utils",
+                    "-Q",
+                    "_build/default/execution/theories",
+                    "ConCert.Execution",
+                    "-Q",
+                    "_build/default/extraction/theories",
+                    "ConCert.Extraction",
+                    "-Q",
+                    "_build/default/embedding/theories",
+                    "ConCert.Embedding",
+                    "-R",
+                    "_build/default/embedding/extraction",
+                    "ConCert.Embedding.Extraction",
+                    "-R",
+                    "_build/default/examples/eip20",
+                    "ConCert.Examples.EIP20",
+                    "/tmp/transformal-counterexample-7qxoq8_g/Counterexample.v"
+                  ],
+                  "returncode": 1,
+                  "stderr": "File \"/tmp/transformal-counterexample-7qxoq8_g/Counterexample.v\", line 1, characters 45-47:\nError: Syntax error: '.' expected after [command] (in [vernac_aux]).\n\n",
+                  "stdout": "",
+                  "timed_out": false
+                },
+                "status": "contradicted",
+                "subject": "showTokenState",
+                "verification_note": null
+              },
+              "target": {
+                "actual_result": "pass",
+                "binding_status": "verified",
+                "claim_sha256": "9ee64faa42fff136d327100748498e821926b5c4f3a8616e6337e7bd1da15058",
+                "claimed_output": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\"",
+                "code_sha256": "6c07ffb7e002ba6863cb7a2a0d7c023784a5388c1fcac60f99374e7350d355aa",
+                "expected_result": "pass",
+                "input_expression": "({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase)",
+                "invocation": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase)",
+                "language": "lean",
+                "observed_output": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\"",
+                "result": {
+                  "command": [
+                    "lake",
+                    "env",
+                    "lean",
+                    "/tmp/transformal-counterexample-cc79zeyo/Counterexample.lean"
+                  ],
+                  "returncode": 0,
+                  "stderr": "",
+                  "stdout": "JudgeHarness.target_empty_maps : EIP20Base.Show.render\n    { total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } =\n  \"State{total_supply: 0, balances: {}, allowances: {}}\"\n",
+                  "timed_out": false
+                },
+                "status": "verified",
+                "subject": "EIP20Base.EIP20Token.showTokenState",
+                "verification_note": null
+              }
+            }
+          }
+        ],
+        "verdict_sha256": "621b0bce8c6db103d18077875520b14bc86879fe4bf0dd4c32ce8e35ae8607fc",
+        "version": 1
+      },
+      "validation_errors": [
+        "unverified input-to-output observation chain: counterexample empty-map-rendering: source=contradicted, target=verified"
+      ],
+      "verdict": {
+        "alignment": "not_aligned",
+        "compiler_surface_checks": [],
+        "confidence": 0.99,
+        "counterexamples": [
+          {
+            "id": "empty-map-rendering",
+            "input_alignment": {
+              "reason": "Both inputs denote an EIP-20 state with total supply zero and empty balance and allowance maps. Source BoundedN addresses under LocalChainBase correspond to target Fin 256 addresses; because both maps are empty, no address representation affects this observation.",
+              "status": "same"
+            },
+            "output_alignment": {
+              "reason": "The source finite-map Show instance renders an empty map as [], whereas the target showMap renders it as {}. Consequently, the complete state-rendering strings differ.",
+              "status": "different"
+            },
+            "source": {
+              "input": {
+                "description": "A state over LocalChainBase with total_supply 0 and empty balance and allowance maps.",
+                "expression": "@EIP20Token.build_state LocalChainBase 0%N (@AddressMap.empty LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))"
+              },
+              "output": {
+                "description": "The source printer renders both empty finite maps using square brackets.",
+                "expression": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@AddressMap.empty LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \"State{total_supply: 0, balances: [], allowances: []}\"%string"
+              },
+              "run": {
+                "claim": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@AddressMap.empty LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \"State{total_supply: 0, balances: [], allowances: []}\"%string",
+                "code": "Add LoadPath \"_build/default/execution/test\" as ConCert.Execution.Test.\nFrom Stdlib Require Import String ZArith.\nFrom ConCert.Execution Require Import Blockchain Containers.\n#[warnings=\"-notation-incompatible-prefix\"]\nFrom ConCert.Execution.Test Require Import QCTest.\nFrom ConCert.Examples.EIP20 Require Import EIP20Token EIP20TokenPrinters.\n\nLocal Open Scope string_scope.\nLocal Open Scope N_scope.\n\nTheorem source_empty_maps :\n  @show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@AddressMap.empty LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \"State{total_supply: 0, balances: [], allowances: []}\"%string.\nProof.\n  vm_compute; reflexivity.\nQed.\n",
+                "entrypoint": "source_empty_maps",
+                "expected_stdout": null,
+                "invocation": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@AddressMap.empty LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue)))",
+                "language": "coq",
+                "mode": "prove"
+              },
+              "subject": "showTokenState"
+            },
+            "target": {
+              "input": {
+                "description": "The corresponding state over Fin 256 addresses with total_supply 0 and empty balance and allowance maps.",
+                "expression": "({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase)"
+              },
+              "output": {
+                "description": "The target printer renders both empty finite maps using braces.",
+                "expression": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\""
+              },
+              "run": {
+                "claim": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\"",
+                "code": "import EIP20Base.Printers\n\nnamespace JudgeHarness\nopen EIP20Base\n\ninstance testChainBase : ChainBase where\n  Address := Fin 256\n  addressLinearOrder := inferInstance\n  addressRepr := inferInstance\n  zeroAddress := 0\n\ntheorem target_empty_maps :\n  @EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\" := by\n  native_decide\n\nend JudgeHarness\n",
+                "entrypoint": "JudgeHarness.target_empty_maps",
+                "expected_stdout": null,
+                "invocation": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase)",
+                "language": "lean",
+                "mode": "prove"
+              },
+              "subject": "EIP20Base.EIP20Token.showTokenState"
+            }
+          }
+        ],
+        "differences": [
+          "The source state printer delegates balances and allowances to a finite-map Show instance whose empty rendering is []. The target delegates both fields to showMap, whose empty rendering is {}. This changes the observable output of showTokenState on a valid shared-domain state."
+        ],
+        "evidence": [
+          {
+            "description": "The source state printer renders balances through the imported finite-map Show instance.",
+            "file": "/srv/home/hantaolou/code/transformal/sources/concert/examples/eip20/EIP20TokenPrinters.v",
+            "line": 44,
+            "side": "source"
+          },
+          {
+            "description": "The source state printer renders allowances through the same finite-map Show instance.",
+            "file": "/srv/home/hantaolou/code/transformal/sources/concert/examples/eip20/EIP20TokenPrinters.v",
+            "line": 45,
+            "side": "source"
+          },
+          {
+            "description": "The target finite-map renderer explicitly surrounds rendered elements with braces.",
+            "file": "/srv/home/hantaolou/code/transformal/pipeline/candidates/api-base-eip20-20260803/EIP20Base/Printers.lean",
+            "line": 25,
+            "side": "target"
+          },
+          {
+            "description": "The matched target state printer uses showMap for balances and allowances.",
+            "file": "/srv/home/hantaolou/code/transformal/pipeline/candidates/api-base-eip20-20260803/EIP20Base/Printers.lean",
+            "line": 48,
+            "side": "target"
+          }
+        ],
+        "examples": [],
+        "failure_categories": [
+          "definition_behavior_mismatch"
+        ],
+        "interface_witness": {
+          "compiler_validated": false,
+          "explanation": "Not applicable: the rejection is based on a two-sided behavioral counterexample within the shared source/target input domain, not an invocation-scope mismatch.",
+          "kind": null,
+          "source_interface": "showTokenState : Show EIP20Token.State",
+          "status": "not_applicable",
+          "target_interface": "[inst : EIP20Base.ChainBase] → EIP20Base.Show EIP20Base.EIP20Token.State"
+        },
+        "match_status": "confirmed",
+        "source_id": "EIP20TokenPrinters.v:showTokenState:984",
+        "source_summary": "A Show instance rendering total_supply, balances, and allowances using the source finite-map representation.",
+        "suggested_target": null,
+        "target_disposition": null,
+        "target_id": "EIP20Base/Printers.lean:showTokenState:48",
+        "target_summary": "The corresponding State Show instance, using a finite-map renderer with observably different delimiters."
+      }
+    },
+    {
+      "observation_verification": {
+        "all_chains_verified": false,
+        "errors": [
+          "unverified input-to-output observation chain: counterexample empty-map-rendering: source=contradicted, target=verified"
+        ],
+        "records": [
+          {
+            "kind": "counterexample",
+            "observation": {
+              "id": "empty-map-rendering",
+              "input_alignment": {
+                "reason": "Both inputs denote an EIP-20 state with total supply zero and empty balance and allowance maps. Source BoundedN addresses under LocalChainBase correspond to target Fin 256 addresses; because both maps are empty, address representation does not affect this observation.",
+                "status": "same"
+              },
+              "output_alignment": {
+                "reason": "The source finite-map Show instance renders an empty map as [], whereas the target showMap renders it as {}. The complete state-rendering strings therefore differ.",
+                "status": "different"
+              },
+              "source": {
+                "input": {
+                  "description": "A state over LocalChainBase with total_supply 0 and empty balance and allowance maps.",
+                  "expression": "@EIP20Token.build_state LocalChainBase 0%N (@AddressMap.empty LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))"
+                },
+                "output": {
+                  "description": "The source printer renders both empty finite maps using square brackets.",
+                  "expression": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@AddressMap.empty LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \"State{total_supply: 0, balances: [], allowances: []}\"%string"
+                },
+                "run": {
+                  "claim": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@AddressMap.empty LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \"State{total_supply: 0, balances: [], allowances: []}\"%string",
+                  "code": "From Stdlib Require Import String ZArith.\nFrom ConCert.Execution Require Import Blockchain Containers.\n#[warnings=\"-notation-incompatible-prefix\"]\nFrom ConCert.Execution.Test Require Import QCTest.\nFrom ConCert.Examples.EIP20 Require Import EIP20Token EIP20TokenPrinters.\n\nLocal Open Scope string_scope.\nLocal Open Scope N_scope.\n\nTheorem source_empty_maps :\n  @show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@AddressMap.empty LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \"State{total_supply: 0, balances: [], allowances: []}\"%string.\nProof.\n  vm_compute; reflexivity.\nQed.\n",
+                  "entrypoint": "source_empty_maps",
+                  "expected_stdout": null,
+                  "invocation": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@AddressMap.empty LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue)))",
+                  "language": "coq",
+                  "mode": "prove"
+                },
+                "subject": "showTokenState"
+              },
+              "target": {
+                "input": {
+                  "description": "The corresponding state over Fin 256 addresses with total_supply 0 and empty balance and allowance maps.",
+                  "expression": "({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase)"
+                },
+                "output": {
+                  "description": "The target printer renders both empty finite maps using braces.",
+                  "expression": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\""
+                },
+                "run": {
+                  "claim": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\"",
+                  "code": "import EIP20Base.Printers\n\nnamespace JudgeHarness\nopen EIP20Base\n\ninstance testChainBase : ChainBase where\n  Address := Fin 256\n  addressLinearOrder := inferInstance\n  addressRepr := inferInstance\n  zeroAddress := 0\n\ntheorem target_empty_maps :\n  @EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\" := by\n  native_decide\n\nend JudgeHarness\n",
+                  "entrypoint": "JudgeHarness.target_empty_maps",
+                  "expected_stdout": null,
+                  "invocation": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase)",
+                  "language": "lean",
+                  "mode": "prove"
+                },
+                "subject": "EIP20Base.EIP20Token.showTokenState"
+              }
+            },
+            "verification": {
+              "chain_verified": false,
+              "id": "empty-map-rendering",
+              "input_alignment": {
+                "reason": "Both inputs denote an EIP-20 state with total supply zero and empty balance and allowance maps. Source BoundedN addresses under LocalChainBase correspond to target Fin 256 addresses; because both maps are empty, address representation does not affect this observation.",
+                "status": "same"
+              },
+              "output_alignment": {
+                "reason": "The source finite-map Show instance renders an empty map as [], whereas the target showMap renders it as {}. The complete state-rendering strings therefore differ.",
+                "status": "different"
+              },
+              "source": {
+                "actual_result": "fail",
+                "binding_status": "verified",
+                "claim_sha256": "154ed2617852f155377b1331374a25ae69f8489ea7cb0a8ed6784bc39d65f40d",
+                "claimed_output": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@AddressMap.empty LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \"State{total_supply: 0, balances: [], allowances: []}\"%string",
+                "code_sha256": "bf541acdde615570ab5d69c69b062e94dc6d10fdc3681d007a719643b4a91c49",
+                "expected_result": "pass",
+                "input_expression": "@EIP20Token.build_state LocalChainBase 0%N (@AddressMap.empty LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))",
+                "invocation": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@AddressMap.empty LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue)))",
+                "language": "coq",
+                "observed_output": null,
+                "result": {
+                  "command": [
+                    "/srv/home/hantaolou/code/transformal/pipeline/.tools/opam-root-reglang/eip20-rocq-9.1/bin/rocq",
+                    "compile",
+                    "-Q",
+                    "_build/default/utils/theories",
+                    "ConCert.Utils",
+                    "-Q",
+                    "_build/default/execution/theories",
+                    "ConCert.Execution",
+                    "-Q",
+                    "_build/default/extraction/theories",
+                    "ConCert.Extraction",
+                    "-Q",
+                    "_build/default/embedding/theories",
+                    "ConCert.Embedding",
+                    "-R",
+                    "_build/default/embedding/extraction",
+                    "ConCert.Embedding.Extraction",
+                    "-R",
+                    "_build/default/examples/eip20",
+                    "ConCert.Examples.EIP20",
+                    "/tmp/transformal-counterexample-zq00bc_h/Counterexample.v"
+                  ],
+                  "returncode": 1,
+                  "stderr": "File \"/tmp/transformal-counterexample-zq00bc_h/Counterexample.v\", line 4, characters 43-49:\nError: Cannot find a physical path bound to logical path\nQCTest with prefix ConCert.Execution.Test.\n\n",
+                  "stdout": "",
+                  "timed_out": false
+                },
+                "status": "contradicted",
+                "subject": "showTokenState",
+                "verification_note": null
+              },
+              "target": {
+                "actual_result": "pass",
+                "binding_status": "verified",
+                "claim_sha256": "9ee64faa42fff136d327100748498e821926b5c4f3a8616e6337e7bd1da15058",
+                "claimed_output": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\"",
+                "code_sha256": "6c07ffb7e002ba6863cb7a2a0d7c023784a5388c1fcac60f99374e7350d355aa",
+                "expected_result": "pass",
+                "input_expression": "({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase)",
+                "invocation": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase)",
+                "language": "lean",
+                "observed_output": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\"",
+                "result": {
+                  "command": [
+                    "lake",
+                    "env",
+                    "lean",
+                    "/tmp/transformal-counterexample-xtp441ng/Counterexample.lean"
+                  ],
+                  "returncode": 0,
+                  "stderr": "",
+                  "stdout": "JudgeHarness.target_empty_maps : EIP20Base.Show.render\n    { total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } =\n  \"State{total_supply: 0, balances: {}, allowances: {}}\"\n",
+                  "timed_out": false
+                },
+                "status": "verified",
+                "subject": "EIP20Base.EIP20Token.showTokenState",
+                "verification_note": null
+              }
+            }
+          }
+        ],
+        "verdict_sha256": "b3cdfc8a3123d93589baeb39d5ec48eb0a68b10f4fe71b3d9827a29c1539442d",
+        "version": 1
+      },
+      "validation_errors": [
+        "unverified input-to-output observation chain: counterexample empty-map-rendering: source=contradicted, target=verified"
+      ],
+      "verdict": {
+        "alignment": "not_aligned",
+        "compiler_surface_checks": [],
+        "confidence": 0.99,
+        "counterexamples": [
+          {
+            "id": "empty-map-rendering",
+            "input_alignment": {
+              "reason": "Both inputs denote an EIP-20 state with total supply zero and empty balance and allowance maps. Source BoundedN addresses under LocalChainBase correspond to target Fin 256 addresses; because both maps are empty, address representation does not affect this observation.",
+              "status": "same"
+            },
+            "output_alignment": {
+              "reason": "The source finite-map Show instance renders an empty map as [], whereas the target showMap renders it as {}. The complete state-rendering strings therefore differ.",
+              "status": "different"
+            },
+            "source": {
+              "input": {
+                "description": "A state over LocalChainBase with total_supply 0 and empty balance and allowance maps.",
+                "expression": "@EIP20Token.build_state LocalChainBase 0%N (@AddressMap.empty LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))"
+              },
+              "output": {
+                "description": "The source printer renders both empty finite maps using square brackets.",
+                "expression": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@AddressMap.empty LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \"State{total_supply: 0, balances: [], allowances: []}\"%string"
+              },
+              "run": {
+                "claim": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@AddressMap.empty LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \"State{total_supply: 0, balances: [], allowances: []}\"%string",
+                "code": "From Stdlib Require Import String ZArith.\nFrom ConCert.Execution Require Import Blockchain Containers.\n#[warnings=\"-notation-incompatible-prefix\"]\nFrom ConCert.Execution.Test Require Import QCTest.\nFrom ConCert.Examples.EIP20 Require Import EIP20Token EIP20TokenPrinters.\n\nLocal Open Scope string_scope.\nLocal Open Scope N_scope.\n\nTheorem source_empty_maps :\n  @show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@AddressMap.empty LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \"State{total_supply: 0, balances: [], allowances: []}\"%string.\nProof.\n  vm_compute; reflexivity.\nQed.\n",
+                "entrypoint": "source_empty_maps",
+                "expected_stdout": null,
+                "invocation": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@AddressMap.empty LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue)))",
+                "language": "coq",
+                "mode": "prove"
+              },
+              "subject": "showTokenState"
+            },
+            "target": {
+              "input": {
+                "description": "The corresponding state over Fin 256 addresses with total_supply 0 and empty balance and allowance maps.",
+                "expression": "({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase)"
+              },
+              "output": {
+                "description": "The target printer renders both empty finite maps using braces.",
+                "expression": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\""
+              },
+              "run": {
+                "claim": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\"",
+                "code": "import EIP20Base.Printers\n\nnamespace JudgeHarness\nopen EIP20Base\n\ninstance testChainBase : ChainBase where\n  Address := Fin 256\n  addressLinearOrder := inferInstance\n  addressRepr := inferInstance\n  zeroAddress := 0\n\ntheorem target_empty_maps :\n  @EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\" := by\n  native_decide\n\nend JudgeHarness\n",
+                "entrypoint": "JudgeHarness.target_empty_maps",
+                "expected_stdout": null,
+                "invocation": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase)",
+                "language": "lean",
+                "mode": "prove"
+              },
+              "subject": "EIP20Base.EIP20Token.showTokenState"
+            }
+          }
+        ],
+        "differences": [
+          "The source state printer delegates balances and allowances to a finite-map Show instance whose empty rendering is []. The target delegates both fields to showMap, whose empty rendering is {}. This changes the observable output of showTokenState on a valid shared-domain state."
+        ],
+        "evidence": [
+          {
+            "description": "The source state printer renders balances through the imported finite-map Show instance.",
+            "file": "/srv/home/hantaolou/code/transformal/sources/concert/examples/eip20/EIP20TokenPrinters.v",
+            "line": 44,
+            "side": "source"
+          },
+          {
+            "description": "The source state printer renders allowances through the same finite-map Show instance.",
+            "file": "/srv/home/hantaolou/code/transformal/sources/concert/examples/eip20/EIP20TokenPrinters.v",
+            "line": 45,
+            "side": "source"
+          },
+          {
+            "description": "The target finite-map renderer surrounds rendered elements with braces.",
+            "file": "/srv/home/hantaolou/code/transformal/pipeline/candidates/api-base-eip20-20260803/EIP20Base/Printers.lean",
+            "line": 25,
+            "side": "target"
+          },
+          {
+            "description": "The matched target state printer uses showMap for balances and allowances.",
+            "file": "/srv/home/hantaolou/code/transformal/pipeline/candidates/api-base-eip20-20260803/EIP20Base/Printers.lean",
+            "line": 48,
+            "side": "target"
+          }
+        ],
+        "examples": [],
+        "failure_categories": [
+          "definition_behavior_mismatch"
+        ],
+        "interface_witness": {
+          "compiler_validated": false,
+          "explanation": "Not applicable: the rejection is based on a two-sided behavioral counterexample within the shared source/target input domain, not an invocation-scope mismatch.",
+          "kind": null,
+          "source_interface": "showTokenState : Show EIP20Token.State",
+          "status": "not_applicable",
+          "target_interface": "[inst : EIP20Base.ChainBase] → EIP20Base.Show EIP20Base.EIP20Token.State"
+        },
+        "match_status": "confirmed",
+        "source_id": "EIP20TokenPrinters.v:showTokenState:984",
+        "source_summary": "A Show instance rendering total_supply, balances, and allowances using the source finite-map representation.",
+        "suggested_target": null,
+        "target_disposition": null,
+        "target_id": "EIP20Base/Printers.lean:showTokenState:48",
+        "target_summary": "The corresponding State Show instance, using a finite-map renderer with observably different delimiters."
+      }
+    }
+  ],
+  "execution_retry": {
+    "observation_verification": {
+      "all_chains_verified": false,
+      "errors": [
+        "unverified input-to-output observation chain: counterexample empty-map-rendering: source=contradicted, target=contradicted"
+      ],
+      "records": [
+        {
+          "kind": "counterexample",
+          "observation": {
+            "id": "empty-map-rendering",
+            "input_alignment": {
+              "reason": "Both inputs denote an EIP-20 state with total supply zero and empty balance and allowance maps. Source BoundedN addresses under LocalChainBase correspond to target Fin 256 addresses; no addresses occur in these empty maps.",
+              "status": "same"
+            },
+            "output_alignment": {
+              "reason": "The source Show instance renders each empty finite map as [], while the target instance renders it as {}. Thus the observable strings differ on the same abstract state.",
+              "status": "different"
+            },
+            "source": {
+              "input": {
+                "description": "A state over LocalChainBase with total_supply 0 and both finite maps empty.",
+                "expression": "@EIP20Token.build_state LocalChainBase 0%N (@FMap.empty (FMap (@Address LocalChainBase) EIP20Token.TokenValue) _) (@FMap.empty (FMap (@Address LocalChainBase) (FMap (@Address LocalChainBase) EIP20Token.TokenValue)) _)"
+              },
+              "output": {
+                "description": "The source printer renders both empty maps with square brackets.",
+                "expression": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@FMap.empty (FMap (@Address LocalChainBase) EIP20Token.TokenValue) _) (@FMap.empty (FMap (@Address LocalChainBase) (FMap (@Address LocalChainBase) EIP20Token.TokenValue)) _)) = \"State{total_supply: 0, balances: [], allowances: []}\"%string"
+              },
+              "run": {
+                "claim": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@FMap.empty (FMap (@Address LocalChainBase) EIP20Token.TokenValue) _) (@FMap.empty (FMap (@Address LocalChainBase) (FMap (@Address LocalChainBase) EIP20Token.TokenValue)) _)) = \"State{total_supply: 0, balances: [], allowances: []}\"%string",
+                "code": "From Stdlib Require Import String ZArith.\nFrom ConCert.Execution Require Import Blockchain Containers ContractCommon Serializable.\n#[warnings=\"-notation-incompatible-prefix\"]\nFrom ConCert.Execution.Test Require Import QCTest TestUtils.\nFrom ConCert.Examples.EIP20 Require Import EIP20Token EIP20TokenPrinters.\n\nLocal Open Scope string_scope.\nLocal Open Scope N_scope.\n\nTheorem source_empty_maps :\n  @show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@FMap.empty (FMap (@Address LocalChainBase) EIP20Token.TokenValue) _) (@FMap.empty (FMap (@Address LocalChainBase) (FMap (@Address LocalChainBase) EIP20Token.TokenValue)) _)) = \"State{total_supply: 0, balances: [], allowances: []}\"%string.\nProof.\n  vm_compute; reflexivity.\nQed.\n",
+                "entrypoint": "source_empty_maps",
+                "expected_stdout": null,
+                "invocation": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@FMap.empty (FMap (@Address LocalChainBase) EIP20Token.TokenValue) _) (@FMap.empty (FMap (@Address LocalChainBase) (FMap (@Address LocalChainBase) EIP20Token.TokenValue)) _))",
+                "language": "coq",
+                "mode": "prove"
+              },
+              "subject": "showTokenState"
+            },
+            "target": {
+              "input": {
+                "description": "The corresponding state over Fin 256 addresses with total_supply 0 and both finite maps empty.",
+                "expression": "({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State testChainBase)"
+              },
+              "output": {
+                "description": "The target printer renders both empty maps with braces.",
+                "expression": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\""
+              },
+              "run": {
+                "claim": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\"",
+                "code": "import EIP20Base.Printers\n\nnamespace JudgeHarness\nopen EIP20Base\n\ninstance testChainBase : ChainBase where\n  Address := Fin 256\n  addressLinearOrder := inferInstance\n  addressRepr := inferInstance\n  zeroAddress := 0\n\ntheorem target_empty_maps :\n  @EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\" := by\n  native_decide\n\nend JudgeHarness\n",
+                "entrypoint": "JudgeHarness.target_empty_maps",
+                "expected_stdout": null,
+                "invocation": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State testChainBase)",
+                "language": "lean",
+                "mode": "prove"
+              },
+              "subject": "EIP20Base.EIP20Token.showTokenState"
+            }
+          },
+          "verification": {
+            "chain_verified": false,
+            "id": "empty-map-rendering",
+            "input_alignment": {
+              "reason": "Both inputs denote an EIP-20 state with total supply zero and empty balance and allowance maps. Source BoundedN addresses under LocalChainBase correspond to target Fin 256 addresses; no addresses occur in these empty maps.",
+              "status": "same"
+            },
+            "output_alignment": {
+              "reason": "The source Show instance renders each empty finite map as [], while the target instance renders it as {}. Thus the observable strings differ on the same abstract state.",
+              "status": "different"
+            },
+            "source": {
+              "actual_result": "fail",
+              "binding_status": "verified",
+              "claim_sha256": "6cd034d575e802051c0090524449a4947b05302b83ee7f1e01e53c9e7127106b",
+              "claimed_output": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@FMap.empty (FMap (@Address LocalChainBase) EIP20Token.TokenValue) _) (@FMap.empty (FMap (@Address LocalChainBase) (FMap (@Address LocalChainBase) EIP20Token.TokenValue)) _)) = \"State{total_supply: 0, balances: [], allowances: []}\"%string",
+              "code_sha256": "bd85794ad89305646479879dc91eaee0fd509ceb77b4d0f83cac986a632e27e0",
+              "expected_result": "pass",
+              "input_expression": "@EIP20Token.build_state LocalChainBase 0%N (@FMap.empty (FMap (@Address LocalChainBase) EIP20Token.TokenValue) _) (@FMap.empty (FMap (@Address LocalChainBase) (FMap (@Address LocalChainBase) EIP20Token.TokenValue)) _)",
+              "invocation": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@FMap.empty (FMap (@Address LocalChainBase) EIP20Token.TokenValue) _) (@FMap.empty (FMap (@Address LocalChainBase) (FMap (@Address LocalChainBase) EIP20Token.TokenValue)) _))",
+              "language": "coq",
+              "observed_output": null,
+              "result": {
+                "command": [
+                  "/srv/home/hantaolou/code/transformal/pipeline/.tools/opam-root-reglang/eip20-rocq-9.1/bin/rocq",
+                  "compile",
+                  "-Q",
+                  "_build/default/utils/theories",
+                  "ConCert.Utils",
+                  "-Q",
+                  "_build/default/execution/theories",
+                  "ConCert.Execution",
+                  "-Q",
+                  "_build/default/extraction/theories",
+                  "ConCert.Extraction",
+                  "-Q",
+                  "_build/default/embedding/theories",
+                  "ConCert.Embedding",
+                  "-R",
+                  "_build/default/embedding/extraction",
+                  "ConCert.Embedding.Extraction",
+                  "-R",
+                  "_build/default/examples/eip20",
+                  "ConCert.Examples.EIP20",
+                  "/tmp/transformal-counterexample-y9n_z477/Counterexample.v"
+                ],
+                "returncode": 1,
+                "stderr": "File \"/tmp/transformal-counterexample-y9n_z477/Counterexample.v\", line 4, characters 43-49:\nError: Cannot find a physical path bound to logical path\nQCTest with prefix ConCert.Execution.Test.\n\n",
+                "stdout": "",
+                "timed_out": false
+              },
+              "status": "contradicted",
+              "subject": "showTokenState",
+              "verification_note": null
+            },
+            "target": {
+              "actual_result": "fail",
+              "binding_status": "verified",
+              "claim_sha256": "9aa5faa97e2576a5216d96872aeff5adef935a79d7df4eb80b297d33c2d40f07",
+              "claimed_output": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\"",
+              "code_sha256": "62eb65824b6f85f52fd6f4f3565b4311269959118a00ced2c91c7f45db4cde4f",
+              "expected_result": "pass",
+              "input_expression": "({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State testChainBase)",
+              "invocation": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State testChainBase)",
+              "language": "lean",
+              "observed_output": null,
+              "result": {
+                "command": [
+                  "lake",
+                  "env",
+                  "lean",
+                  "/tmp/transformal-counterexample-u1wmzppp/Counterexample.lean"
+                ],
+                "returncode": 1,
+                "stderr": "",
+                "stdout": "/tmp/transformal-counterexample-u1wmzppp/Counterexample.lean:18:104: error(lean.unknownIdentifier): Unknown identifier `testChainBase`\n/tmp/transformal-counterexample-u1wmzppp/Counterexample.lean:18:242: error(lean.unknownIdentifier): Unknown identifier `testChainBase`\n",
+                "timed_out": false
+              },
+              "status": "contradicted",
+              "subject": "EIP20Base.EIP20Token.showTokenState",
+              "verification_note": null
+            }
+          }
+        }
+      ],
+      "verdict_sha256": "026b0e4ecb8af774ca96f09a29167e2df5226c57712e4b25831ae1b49b524458",
+      "version": 1
+    },
+    "validation_errors": [
+      "unverified input-to-output observation chain: counterexample empty-map-rendering: source=contradicted, target=contradicted"
+    ],
+    "verdict": {
+      "alignment": "not_aligned",
+      "compiler_surface_checks": [],
+      "confidence": 0.99,
+      "counterexamples": [
+        {
+          "id": "empty-map-rendering",
+          "input_alignment": {
+            "reason": "Both inputs denote an EIP-20 state with total supply zero and empty balance and allowance maps. Source BoundedN addresses under LocalChainBase correspond to target Fin 256 addresses; no addresses occur in these empty maps.",
+            "status": "same"
+          },
+          "output_alignment": {
+            "reason": "The source Show instance renders each empty finite map as [], while the target instance renders it as {}. Thus the observable strings differ on the same abstract state.",
+            "status": "different"
+          },
+          "source": {
+            "input": {
+              "description": "A state over LocalChainBase with total_supply 0 and both finite maps empty.",
+              "expression": "@EIP20Token.build_state LocalChainBase 0%N (@FMap.empty (FMap (@Address LocalChainBase) EIP20Token.TokenValue) _) (@FMap.empty (FMap (@Address LocalChainBase) (FMap (@Address LocalChainBase) EIP20Token.TokenValue)) _)"
+            },
+            "output": {
+              "description": "The source printer renders both empty maps with square brackets.",
+              "expression": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@FMap.empty (FMap (@Address LocalChainBase) EIP20Token.TokenValue) _) (@FMap.empty (FMap (@Address LocalChainBase) (FMap (@Address LocalChainBase) EIP20Token.TokenValue)) _)) = \"State{total_supply: 0, balances: [], allowances: []}\"%string"
+            },
+            "run": {
+              "claim": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@FMap.empty (FMap (@Address LocalChainBase) EIP20Token.TokenValue) _) (@FMap.empty (FMap (@Address LocalChainBase) (FMap (@Address LocalChainBase) EIP20Token.TokenValue)) _)) = \"State{total_supply: 0, balances: [], allowances: []}\"%string",
+              "code": "From Stdlib Require Import String ZArith.\nFrom ConCert.Execution Require Import Blockchain Containers ContractCommon Serializable.\n#[warnings=\"-notation-incompatible-prefix\"]\nFrom ConCert.Execution.Test Require Import QCTest TestUtils.\nFrom ConCert.Examples.EIP20 Require Import EIP20Token EIP20TokenPrinters.\n\nLocal Open Scope string_scope.\nLocal Open Scope N_scope.\n\nTheorem source_empty_maps :\n  @show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@FMap.empty (FMap (@Address LocalChainBase) EIP20Token.TokenValue) _) (@FMap.empty (FMap (@Address LocalChainBase) (FMap (@Address LocalChainBase) EIP20Token.TokenValue)) _)) = \"State{total_supply: 0, balances: [], allowances: []}\"%string.\nProof.\n  vm_compute; reflexivity.\nQed.\n",
+              "entrypoint": "source_empty_maps",
+              "expected_stdout": null,
+              "invocation": "@show (@EIP20Token.State LocalChainBase) (@showTokenState LocalChainBase) (@EIP20Token.build_state LocalChainBase 0%N (@FMap.empty (FMap (@Address LocalChainBase) EIP20Token.TokenValue) _) (@FMap.empty (FMap (@Address LocalChainBase) (FMap (@Address LocalChainBase) EIP20Token.TokenValue)) _))",
+              "language": "coq",
+              "mode": "prove"
+            },
+            "subject": "showTokenState"
+          },
+          "target": {
+            "input": {
+              "description": "The corresponding state over Fin 256 addresses with total_supply 0 and both finite maps empty.",
+              "expression": "({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State testChainBase)"
+            },
+            "output": {
+              "description": "The target printer renders both empty maps with braces.",
+              "expression": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\""
+            },
+            "run": {
+              "claim": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\"",
+              "code": "import EIP20Base.Printers\n\nnamespace JudgeHarness\nopen EIP20Base\n\ninstance testChainBase : ChainBase where\n  Address := Fin 256\n  addressLinearOrder := inferInstance\n  addressRepr := inferInstance\n  zeroAddress := 0\n\ntheorem target_empty_maps :\n  @EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\" := by\n  native_decide\n\nend JudgeHarness\n",
+              "entrypoint": "JudgeHarness.target_empty_maps",
+              "expected_stdout": null,
+              "invocation": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State testChainBase)",
+              "language": "lean",
+              "mode": "prove"
+            },
+            "subject": "EIP20Base.EIP20Token.showTokenState"
+          }
+        }
+      ],
+      "differences": [
+        "The source's imported Show instance for finite maps formats a map as a bracketed semicolon-separated list (empty map: []), whereas target showMap formats it with braces (empty map: {}). showTokenState exposes this difference in both balances and allowances."
+      ],
+      "evidence": [
+        {
+          "description": "The source state printer delegates balances to the imported Show instance for finite maps.",
+          "file": "/srv/home/hantaolou/code/transformal/sources/concert/examples/eip20/EIP20TokenPrinters.v",
+          "line": 44,
+          "side": "source"
+        },
+        {
+          "description": "The source state printer likewise delegates allowances to the finite-map Show instance.",
+          "file": "/srv/home/hantaolou/code/transformal/sources/concert/examples/eip20/EIP20TokenPrinters.v",
+          "line": 45,
+          "side": "source"
+        },
+        {
+          "description": "The target finite-map printer explicitly surrounds its rendered elements with braces.",
+          "file": "/srv/home/hantaolou/code/transformal/pipeline/candidates/api-base-eip20-20260803/EIP20Base/Printers.lean",
+          "line": 25,
+          "side": "target"
+        },
+        {
+          "description": "The matched target state instance uses showMap for balances and allowances.",
+          "file": "/srv/home/hantaolou/code/transformal/pipeline/candidates/api-base-eip20-20260803/EIP20Base/Printers.lean",
+          "line": 48,
+          "side": "target"
+        }
+      ],
+      "examples": [],
+      "failure_categories": [
+        "definition_behavior_mismatch"
+      ],
+      "interface_witness": {
+        "compiler_validated": false,
+        "explanation": "Not applicable: the rejection is established by a two-sided behavioral counterexample within the shared input domain, rather than by an interface-scope loss.",
+        "kind": null,
+        "source_interface": "showTokenState : Show EIP20Token.State",
+        "status": "not_applicable",
+        "target_interface": "[inst : EIP20Base.ChainBase] → EIP20Base.Show EIP20Base.EIP20Token.State"
+      },
+      "match_status": "confirmed",
+      "source_id": "EIP20TokenPrinters.v:showTokenState:984",
+      "source_summary": "A Show instance that renders total_supply, balances, and allowances, using the source finite-map Show representation.",
+      "suggested_target": null,
+      "target_disposition": null,
+      "target_id": "EIP20Base/Printers.lean:showTokenState:48",
+      "target_summary": "The corresponding Show instance for State, but using a finite-map renderer with observably different delimiters."
+    }
+  },
+  "job_key": "judge-3e5eaf1b07793615dc02",
+  "observation_verification": {
+    "all_chains_verified": true,
+    "errors": [],
+    "records": [
+      {
+        "kind": "counterexample",
+        "observation": {
+          "id": "empty-map-rendering",
+          "input_alignment": {
+            "reason": "Both concrete inputs denote an EIP-20 state with total supply zero and empty balance and allowance maps. The source BoundedN 256 address space corresponds to the target Fin 256 address space; because the maps are empty, address representation is unobservable here.",
+            "status": "same"
+          },
+          "output_alignment": {
+            "reason": "The source finite-map Show implementation renders an empty map as [], while the target showMap renders it as {}. Consequently, the complete state-rendering strings differ.",
+            "status": "different"
+          },
+          "source": {
+            "input": {
+              "description": "A state over the source LocalChainBase representation with total_supply 0 and empty balance and allowance maps.",
+              "expression": "@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))"
+            },
+            "output": {
+              "description": "The source printer renders both empty finite maps using square brackets.",
+              "expression": "@show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState (@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \"State{total_supply: 0, balances: [], allowances: []}\"%string"
+            },
+            "run": {
+              "claim": "@show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState (@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \"State{total_supply: 0, balances: [], allowances: []}\"%string",
+              "code": "From Stdlib Require Import String ZArith List.\nFrom QuickChick Require Import QuickChick.\nFrom ConCert.Execution Require Import Blockchain BoundedN Containers ContractCommon SerializableInstances.\nFrom ConCert.Examples.EIP20 Require Import EIP20Token.\n\nImport ListNotations.\nLocal Open Scope string_scope.\nLocal Open Scope N_scope.\n\nModule TestUtils.\n  Global Definition AddrSize : N := (2^8)%N.\n  Global Instance LocalChainBase : ChainBase :=\n    {| Address := BoundedN AddrSize;\n       address_eqb := BoundedN.eqb;\n       address_eqb_spec := BoundedN.eqb_spec;\n       address_is_contract a := (AddrSize / 2 <=? BoundedN.to_N a)%N |}.\n\n  Definition string_of_FMap {A B : Type}\n      `{countable.Countable A} `{base.EqDecision A}\n      (showA : A -> string) (showB : B -> string) (m : FMap A B) : string :=\n    \"[\" ++ String.concat \"; \"\n      (map (fun '(a, b) => showA a ++ \"-->\" ++ showB b) (FMap.elements m)) ++ \"]\".\n\n  #[export] Instance showFMap {A B : Type}\n      `{countable.Countable A} `{base.EqDecision A} `{Show A} `{Show B}\n      : Show (FMap A B) := {| show := string_of_FMap show show |}.\nEnd TestUtils.\n\nModule ChainPrinters.\n  Definition Base := TestUtils.LocalChainBase.\n  Definition sep : string := \", \".\n\n  #[export] Instance showBoundedN {bound : N} `{Show N}\n      : Show (BoundedN.BoundedN bound) :=\n    {| show bn := match bn with\n                  | BoundedN.bounded n _ => show n ++ \"%\" ++ show bound\n                  end |}.\n\n  #[export] Instance showBoundedNAddrSize :\n      Show (BoundedN.BoundedN TestUtils.AddrSize) :=\n    {| show := @show (BoundedN.BoundedN TestUtils.AddrSize) showBoundedN |}.\n\n  #[export] Instance showAddress : Show (@Address Base) :=\n    {| show := @show (BoundedN.BoundedN TestUtils.AddrSize) showBoundedNAddrSize |}.\nEnd ChainPrinters.\n\nImport TestUtils ChainPrinters.\n\n#[export] Instance showTokenValue : Show EIP20Token.TokenValue :=\n  {| show v := show v |}.\n\n#[export] Instance showTokenState : Show EIP20Token.State :=\n  {| show s := \"State{total_supply: \" ++ show s.(EIP20Token.total_supply) ++ sep\n                 ++ \"balances: \" ++ show s.(EIP20Token.balances) ++ sep\n                 ++ \"allowances: \" ++ show s.(EIP20Token.allowances) ++ \"}\" |}.\n\nTheorem source_empty_maps :\n  @show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState\n    (@EIP20Token.build_state TestUtils.LocalChainBase 0%N\n      (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue)\n      (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) =\n  \"State{total_supply: 0, balances: [], allowances: []}\"%string.\nProof.\n  vm_compute; reflexivity.\nQed.\n",
+              "entrypoint": "source_empty_maps",
+              "expected_stdout": null,
+              "invocation": "@show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState (@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue)))",
+              "language": "coq",
+              "mode": "prove"
+            },
+            "subject": "showTokenState"
+          },
+          "target": {
+            "input": {
+              "description": "The corresponding state over Fin 256 addresses with total_supply 0 and empty balance and allowance maps.",
+              "expression": "({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase)"
+            },
+            "output": {
+              "description": "The target printer renders both empty finite maps using braces.",
+              "expression": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\""
+            },
+            "run": {
+              "claim": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\"",
+              "code": "import EIP20Base.Printers\n\nnamespace JudgeHarness\nopen EIP20Base\n\ninstance testChainBase : ChainBase where\n  Address := Fin 256\n  addressLinearOrder := inferInstance\n  addressRepr := inferInstance\n  zeroAddress := 0\n\ntheorem target_empty_maps :\n  @EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\" := by\n  native_decide\n\nend JudgeHarness\n",
+              "entrypoint": "JudgeHarness.target_empty_maps",
+              "expected_stdout": null,
+              "invocation": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase)",
+              "language": "lean",
+              "mode": "prove"
+            },
+            "subject": "EIP20Base.EIP20Token.showTokenState"
+          }
+        },
+        "verification": {
+          "chain_verified": true,
+          "id": "empty-map-rendering",
+          "input_alignment": {
+            "reason": "Both concrete inputs denote an EIP-20 state with total supply zero and empty balance and allowance maps. The source BoundedN 256 address space corresponds to the target Fin 256 address space; because the maps are empty, address representation is unobservable here.",
+            "status": "same"
+          },
+          "output_alignment": {
+            "reason": "The source finite-map Show implementation renders an empty map as [], while the target showMap renders it as {}. Consequently, the complete state-rendering strings differ.",
+            "status": "different"
+          },
+          "source": {
+            "actual_result": "pass",
+            "binding_status": "verified",
+            "claim_sha256": "79ef5cca18c156851e7e57aeed855e82b355ca79c0d9fc7769360934e41c08a2",
+            "claimed_output": "@show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState (@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \"State{total_supply: 0, balances: [], allowances: []}\"%string",
+            "code_sha256": "9050e7ea4eea7da2bbc11308dca6bd5955de70b5b38345964e9db36e6f45834c",
+            "expected_result": "pass",
+            "input_expression": "@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))",
+            "invocation": "@show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState (@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue)))",
+            "language": "coq",
+            "observed_output": "@show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState (@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \"State{total_supply: 0, balances: [], allowances: []}\"%string",
+            "result": {
+              "command": [
+                "/srv/home/hantaolou/code/transformal/pipeline/.tools/opam-root-reglang/eip20-rocq-9.1/bin/rocq",
+                "compile",
+                "-Q",
+                "_build/default/utils/theories",
+                "ConCert.Utils",
+                "-Q",
+                "_build/default/execution/theories",
+                "ConCert.Execution",
+                "-Q",
+                "_build/default/extraction/theories",
+                "ConCert.Extraction",
+                "-Q",
+                "_build/default/embedding/theories",
+                "ConCert.Embedding",
+                "-R",
+                "_build/default/embedding/extraction",
+                "ConCert.Embedding.Extraction",
+                "-R",
+                "_build/default/examples/eip20",
+                "ConCert.Examples.EIP20",
+                "/tmp/transformal-counterexample-r670urlr/Counterexample.v"
+              ],
+              "returncode": 0,
+              "stderr": "",
+              "stdout": "source_empty_maps\n:\nshow\n  {|\n    total_supply := 0;\n    balances := AddressMap.empty;\n    allowances := AddressMap.empty\n  |} =\n\"State{total_supply: 0, balances: [], allowances: []}\"\n     : show\n         {|\n           total_supply := 0;\n           balances := AddressMap.empty;\n           allowances := AddressMap.empty\n         |} =\n       \"State{total_supply: 0, balances: [], allowances: []}\"\n",
+              "timed_out": false
+            },
+            "status": "verified",
+            "subject": "showTokenState",
+            "verification_note": null
+          },
+          "target": {
+            "actual_result": "pass",
+            "binding_status": "verified",
+            "claim_sha256": "9ee64faa42fff136d327100748498e821926b5c4f3a8616e6337e7bd1da15058",
+            "claimed_output": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\"",
+            "code_sha256": "6c07ffb7e002ba6863cb7a2a0d7c023784a5388c1fcac60f99374e7350d355aa",
+            "expected_result": "pass",
+            "input_expression": "({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase)",
+            "invocation": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase)",
+            "language": "lean",
+            "observed_output": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\"",
+            "result": {
+              "command": [
+                "lake",
+                "env",
+                "lean",
+                "/tmp/transformal-counterexample-gbk2x1kb/Counterexample.lean"
+              ],
+              "returncode": 0,
+              "stderr": "",
+              "stdout": "JudgeHarness.target_empty_maps : EIP20Base.Show.render\n    { total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } =\n  \"State{total_supply: 0, balances: {}, allowances: {}}\"\n",
+              "timed_out": false
+            },
+            "status": "verified",
+            "subject": "EIP20Base.EIP20Token.showTokenState",
+            "verification_note": null
+          }
+        }
+      }
+    ],
+    "verdict_sha256": "cba0ebd10b48f783e28ed0bc766933738f2e27d6f6d40d07ec3e900d962e0863",
+    "version": 1
+  },
+  "prompt_sha256": "20869c3aa4004e9126fda305934139c61295eb2b9d0ad540e038a8b9c0c5453d",
+  "runner": {
+    "auth": {
+      "mode": "subscription_cli",
+      "status": "Logged in using ChatGPT"
+    },
+    "backend": "codex_subscription",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "high"
+  },
+  "validation_errors": [],
+  "verdict": {
+    "alignment": "not_aligned",
+    "compiler_surface_checks": [],
+    "confidence": 0.99,
+    "counterexamples": [
+      {
+        "id": "empty-map-rendering",
+        "input_alignment": {
+          "reason": "Both concrete inputs denote an EIP-20 state with total supply zero and empty balance and allowance maps. The source BoundedN 256 address space corresponds to the target Fin 256 address space; because the maps are empty, address representation is unobservable here.",
+          "status": "same"
+        },
+        "output_alignment": {
+          "reason": "The source finite-map Show implementation renders an empty map as [], while the target showMap renders it as {}. Consequently, the complete state-rendering strings differ.",
+          "status": "different"
+        },
+        "source": {
+          "input": {
+            "description": "A state over the source LocalChainBase representation with total_supply 0 and empty balance and allowance maps.",
+            "expression": "@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))"
+          },
+          "output": {
+            "description": "The source printer renders both empty finite maps using square brackets.",
+            "expression": "@show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState (@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \"State{total_supply: 0, balances: [], allowances: []}\"%string"
+          },
+          "run": {
+            "claim": "@show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState (@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) = \"State{total_supply: 0, balances: [], allowances: []}\"%string",
+            "code": "From Stdlib Require Import String ZArith List.\nFrom QuickChick Require Import QuickChick.\nFrom ConCert.Execution Require Import Blockchain BoundedN Containers ContractCommon SerializableInstances.\nFrom ConCert.Examples.EIP20 Require Import EIP20Token.\n\nImport ListNotations.\nLocal Open Scope string_scope.\nLocal Open Scope N_scope.\n\nModule TestUtils.\n  Global Definition AddrSize : N := (2^8)%N.\n  Global Instance LocalChainBase : ChainBase :=\n    {| Address := BoundedN AddrSize;\n       address_eqb := BoundedN.eqb;\n       address_eqb_spec := BoundedN.eqb_spec;\n       address_is_contract a := (AddrSize / 2 <=? BoundedN.to_N a)%N |}.\n\n  Definition string_of_FMap {A B : Type}\n      `{countable.Countable A} `{base.EqDecision A}\n      (showA : A -> string) (showB : B -> string) (m : FMap A B) : string :=\n    \"[\" ++ String.concat \"; \"\n      (map (fun '(a, b) => showA a ++ \"-->\" ++ showB b) (FMap.elements m)) ++ \"]\".\n\n  #[export] Instance showFMap {A B : Type}\n      `{countable.Countable A} `{base.EqDecision A} `{Show A} `{Show B}\n      : Show (FMap A B) := {| show := string_of_FMap show show |}.\nEnd TestUtils.\n\nModule ChainPrinters.\n  Definition Base := TestUtils.LocalChainBase.\n  Definition sep : string := \", \".\n\n  #[export] Instance showBoundedN {bound : N} `{Show N}\n      : Show (BoundedN.BoundedN bound) :=\n    {| show bn := match bn with\n                  | BoundedN.bounded n _ => show n ++ \"%\" ++ show bound\n                  end |}.\n\n  #[export] Instance showBoundedNAddrSize :\n      Show (BoundedN.BoundedN TestUtils.AddrSize) :=\n    {| show := @show (BoundedN.BoundedN TestUtils.AddrSize) showBoundedN |}.\n\n  #[export] Instance showAddress : Show (@Address Base) :=\n    {| show := @show (BoundedN.BoundedN TestUtils.AddrSize) showBoundedNAddrSize |}.\nEnd ChainPrinters.\n\nImport TestUtils ChainPrinters.\n\n#[export] Instance showTokenValue : Show EIP20Token.TokenValue :=\n  {| show v := show v |}.\n\n#[export] Instance showTokenState : Show EIP20Token.State :=\n  {| show s := \"State{total_supply: \" ++ show s.(EIP20Token.total_supply) ++ sep\n                 ++ \"balances: \" ++ show s.(EIP20Token.balances) ++ sep\n                 ++ \"allowances: \" ++ show s.(EIP20Token.allowances) ++ \"}\" |}.\n\nTheorem source_empty_maps :\n  @show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState\n    (@EIP20Token.build_state TestUtils.LocalChainBase 0%N\n      (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue)\n      (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue))) =\n  \"State{total_supply: 0, balances: [], allowances: []}\"%string.\nProof.\n  vm_compute; reflexivity.\nQed.\n",
+            "entrypoint": "source_empty_maps",
+            "expected_stdout": null,
+            "invocation": "@show (@EIP20Token.State TestUtils.LocalChainBase) showTokenState (@EIP20Token.build_state TestUtils.LocalChainBase 0%N (@AddressMap.empty TestUtils.LocalChainBase EIP20Token.TokenValue) (@AddressMap.empty TestUtils.LocalChainBase (AddressMap.AddrMap EIP20Token.TokenValue)))",
+            "language": "coq",
+            "mode": "prove"
+          },
+          "subject": "showTokenState"
+        },
+        "target": {
+          "input": {
+            "description": "The corresponding state over Fin 256 addresses with total_supply 0 and empty balance and allowance maps.",
+            "expression": "({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase)"
+          },
+          "output": {
+            "description": "The target printer renders both empty finite maps using braces.",
+            "expression": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\""
+          },
+          "run": {
+            "claim": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\"",
+            "code": "import EIP20Base.Printers\n\nnamespace JudgeHarness\nopen EIP20Base\n\ninstance testChainBase : ChainBase where\n  Address := Fin 256\n  addressLinearOrder := inferInstance\n  addressRepr := inferInstance\n  zeroAddress := 0\n\ntheorem target_empty_maps :\n  @EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase) = \"State{total_supply: 0, balances: {}, allowances: {}}\" := by\n  native_decide\n\nend JudgeHarness\n",
+            "entrypoint": "JudgeHarness.target_empty_maps",
+            "expected_stdout": null,
+            "invocation": "@EIP20Base.Show.render _ (@EIP20Base.EIP20Token.showTokenState JudgeHarness.testChainBase) ({ total_supply := 0, balances := EIP20Base.FMap.empty, allowances := EIP20Base.FMap.empty } : @EIP20Base.EIP20Token.State JudgeHarness.testChainBase)",
+            "language": "lean",
+            "mode": "prove"
+          },
+          "subject": "EIP20Base.EIP20Token.showTokenState"
+        }
+      }
+    ],
+    "differences": [
+      "The source state printer delegates balances and allowances to a finite-map Show implementation whose empty rendering is []. The target delegates both fields to showMap, whose empty rendering is {}, changing the observable output on a valid shared-domain state."
+    ],
+    "evidence": [
+      {
+        "description": "The source state printer renders balances through the source finite-map Show instance.",
+        "file": "/srv/home/hantaolou/code/transformal/sources/concert/examples/eip20/EIP20TokenPrinters.v",
+        "line": 44,
+        "side": "source"
+      },
+      {
+        "description": "The source state printer renders allowances through the same source finite-map Show instance.",
+        "file": "/srv/home/hantaolou/code/transformal/sources/concert/examples/eip20/EIP20TokenPrinters.v",
+        "line": 45,
+        "side": "source"
+      },
+      {
+        "description": "The target finite-map renderer surrounds rendered elements with braces.",
+        "file": "/srv/home/hantaolou/code/transformal/pipeline/candidates/api-base-eip20-20260803/EIP20Base/Printers.lean",
+        "line": 25,
+        "side": "target"
+      },
+      {
+        "description": "The matched target state printer uses showMap for balances and allowances.",
+        "file": "/srv/home/hantaolou/code/transformal/pipeline/candidates/api-base-eip20-20260803/EIP20Base/Printers.lean",
+        "line": 48,
+        "side": "target"
+      }
+    ],
+    "examples": [],
+    "failure_categories": [
+      "definition_behavior_mismatch"
+    ],
+    "interface_witness": {
+      "compiler_validated": false,
+      "explanation": "Not applicable: rejection is established by a two-sided behavioral counterexample in the shared input domain, not by an invocation-scope mismatch.",
+      "kind": null,
+      "source_interface": "showTokenState : Show (@EIP20Token.State TestUtils.LocalChainBase)",
+      "status": "not_applicable",
+      "target_interface": "[inst : EIP20Base.ChainBase] → EIP20Base.Show EIP20Base.EIP20Token.State"
+    },
+    "match_status": "confirmed",
+    "source_id": "EIP20TokenPrinters.v:showTokenState:984",
+    "source_summary": "A Show instance rendering total_supply, balances, and allowances using the source finite-map representation.",
+    "suggested_target": null,
+    "target_disposition": null,
+    "target_id": "EIP20Base/Printers.lean:showTokenState:48",
+    "target_summary": "The corresponding State Show instance, using a finite-map renderer with observably different delimiters."
+  },
+  "version": 9
+}
